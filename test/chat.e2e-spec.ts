@@ -154,7 +154,7 @@ describe('Chat (e2e)', () => {
       .join('');
     expect(text).toContain('> The speed of light is 3.0 × 10$^{8}$ m/s');
     expect(text).toContain('Related question from your papers');
-    expect(text).toContain('Physics · Optics · Page 4 · physics.pdf');
+    expect(text).toContain('Physics · Optics · 2024 · Page 4 · physics.pdf');
     expect(finishOf(parts)).toMatchObject({
       finishReason: 'stop',
       messageMetadata: { status: 'answered' },

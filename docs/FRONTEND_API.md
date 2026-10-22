@@ -490,8 +490,9 @@ data: [DONE]
 | Where on assistant message | Content |
 | --- | --- |
 | `parts` `type: "text"` | Markdown answer (see §8.3) |
-| `parts` `type: "source-document"` | `{ sourceId, mediaType, title, filename? }` — one per related/cited question |
-| `metadata` | `{ status, activeSubject, kind, answerOrigin }` — `status`: `"answered" \| "insufficient" \| "out_of_scope" \| "guidance"`; `answerOrigin`: `"knowledge_base" \| "general" \| "guidance" \| "transformed" \| null` |
+| `parts` `type: "source-document"` | `{ sourceId, mediaType, title, filename?, providerMetadata.edusearch.questionText }` — one per related/cited question. `title` is `Subject · Topic · Year · Page N`. The Markdown card only previews long questions (≈280 characters, ending in "…"); use `questionText` here for an expandable full view. |
+| `metadata` | `{ status, activeSubject, kind, answerOrigin, suggestions }` — `status`: `"answered" \| "insufficient" \| "out_of_scope" \| "guidance"`; `answerOrigin`: `"knowledge_base" \| "general" \| "guidance" \| "transformed" \| "paper_questions" \| null` |
+| `metadata.suggestions` | `Array<{ label, prompt }>` — follow-ups for this answer (Explain simply, Give an example, Practice questions, Related exam questions). Render as chips; on tap call `sendMessage({ text: prompt })`. Empty after greetings, refusals and clarifying questions. The reply text also ends with a "_You can also ask:_ …" line until chips exist (backend constant `SUGGESTIONS_AS_TEXT`). |
 
 ### 8.3 Markdown per status
 

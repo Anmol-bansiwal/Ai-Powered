@@ -35,7 +35,13 @@ const NOT_FOLLOWED =
 const SOCIAL_REPLY = 'Happy to help! What would you like to study next?';
 
 export type AnswerOrigin =
-  'knowledge_base' | 'general' | 'guidance' | 'transformed' | null;
+  | 'knowledge_base'
+  | 'general'
+  | 'guidance'
+  | 'transformed'
+  /** A list of real past-paper questions on a topic, not an answer. */
+  | 'paper_questions'
+  | null;
 
 export type AnswerResponse = {
   status: 'answered' | 'insufficient' | 'out_of_scope' | 'guidance';
@@ -275,6 +281,17 @@ export class AnswersService {
       return guidance(SOCIAL_REPLY, { ...meta, kind: 'greeting' });
     }
 
+    if (decision.action === 'find_questions') {
+      return decision.standaloneQuery
+        ? this.paperQuestions(
+            body,
+            decision.standaloneQuery,
+            subjectOf(body) ?? decision.subject,
+            meta,
+          )
+        : null;
+    }
+
     if (decision.action === 'clarify') {
       const alreadyAsked =
         priorTurns.at(-1)?.role === 'assistant' &&
@@ -318,6 +335,57 @@ export class AnswersService {
         activeSubject: subject,
       },
     );
+  }
+
+  /**
+   * Real past-paper questions on a topic ("show related exam questions").
+   * Same search and the same topic-word check as an answer, so a high score
+   * alone never lists an unrelated question. None found → say so; the
+   * practice-questions suggestion is offered instead of inventing any.
+   */
+  private async paperQuestions(
+    body: unknown,
+    topic: string,
+    subject: string | null,
+    meta: UnderstandingMeta,
+  ): Promise<AnswerWithHits> {
+    const query = enrichWithSubject(topic, subject);
+    const { results } = await this.questions.search(
+      withQueryAndSubject(body, query, subject),
+    );
+    const related = relatedHits(results);
+    const found = selectRelevantSources(
+      topic,
+      query,
+      related.map((hit) => ({
+        id: hit.id,
+        questionText: hit.questionText,
+        pageReference: hit.pageReference,
+        score: hit.score,
+      })),
+    );
+    return {
+      response: {
+        status: 'insufficient',
+        answer:
+          found.length > 0
+            ? `Questions from your exam papers on “${topic}”:`
+            : `I couldn't find past-paper questions on “${topic}” in your exam archive. You can ask for practice questions instead.`,
+        explanation: null,
+        sources: found,
+        answerOrigin: 'paper_questions',
+      },
+      related,
+      understanding: {
+        ...meta,
+        corrected: query,
+        intent: 'academic',
+        kind: 'question_search',
+        needsClarification: false,
+        activeSubject: subject,
+        topic,
+      },
+    };
   }
 
   /**

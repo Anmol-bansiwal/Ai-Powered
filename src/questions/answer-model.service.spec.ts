@@ -363,6 +363,30 @@ describe('AnswerModelService — conversation decision', () => {
     await expect(service.decide('hmm', turns, subjects)).resolves.toBeNull();
   });
 
+  it('accepts find_questions with a topic, and practice as a rework', async () => {
+    modelReply(
+      decision({ action: 'find_questions', standaloneQuery: 'inertia' }),
+    );
+    await expect(
+      service.decide('Show related exam questions', turns, subjects),
+    ).resolves.toMatchObject({
+      action: 'find_questions',
+      standaloneQuery: 'inertia',
+    });
+
+    modelReply(decision({ action: 'find_questions', standaloneQuery: null }));
+    await expect(
+      service.decide('Show related exam questions', turns, subjects),
+    ).resolves.toBeNull();
+
+    modelReply(
+      decision({ action: 'transform_previous', transformation: 'practice' }),
+    );
+    await expect(
+      service.decide('Give me practice questions', turns, subjects),
+    ).resolves.toMatchObject({ transformation: 'practice' });
+  });
+
   it('accepts out_of_scope and clears fields that do not apply', async () => {
     modelReply(
       decision({

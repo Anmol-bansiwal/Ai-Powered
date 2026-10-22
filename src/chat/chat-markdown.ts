@@ -1,4 +1,7 @@
-import type { AnswerWithHits } from '../questions/answers.service';
+import type {
+  AnswerResponse,
+  AnswerWithHits,
+} from '../questions/answers.service';
 import { selectRelevantSources } from '../questions/quote-check';
 import type { SearchHit } from '../questions/questions.repository';
 
@@ -12,16 +15,49 @@ export type ChatSource = {
   figureUrls: string[];
 };
 
+/** A follow-up the student can send with one tap; `prompt` is sent as typed. */
+export type ChatSuggestion = { label: string; prompt: string };
+
 export type ChatReply = {
   markdown: string;
   sources: ChatSource[];
+  suggestions: ChatSuggestion[];
 };
 
 export const AI_NOTE =
   'General educational explanation — not retrieved from your exam papers.';
 export const REWRITTEN_NOTE = 'AI-rewritten explanation';
 export const BASED_ON_NOTE = 'Based on these paper sources';
+export const PRACTICE_NOTE =
+  'AI-generated practice questions — not from your exam papers';
 const RELATED_HEADING = '**Related question from your papers**';
+const PAPER_HEADING = '**From your exam papers**';
+
+/** Inline cards preview the question; the full text is in the source part. */
+const CARD_PREVIEW_CHARS = 280;
+
+/**
+ * Suggestions are also written as one line of text until the frontend shows
+ * metadata.suggestions as chips; then set this to false.
+ */
+const SUGGESTIONS_AS_TEXT = true;
+const SUGGESTIONS_LEAD = '_You can also ask:_';
+/**
+ * Prompts must reach the model decision, not a rule: avoid wording such as
+ * "show me … papers", which the whole-paper browse rule answers.
+ */
+export const SUGGESTIONS = {
+  simplify: { label: 'Explain simply', prompt: 'Explain it simply' },
+  example: { label: 'Give an example', prompt: 'Give me an example' },
+  practice: {
+    label: 'Practice questions',
+    prompt: 'Give me practice questions on this',
+  },
+  related: {
+    label: 'Related exam questions',
+    prompt: 'Related exam questions on this topic',
+  },
+} satisfies Record<string, ChatSuggestion>;
 
 const SCRIPT = /([\^_])\{([-−–+]?[0-9A-Za-z]{1,8})\}/g;
 const MARKDOWN_PUNCTUATION = /[\\`*_[\]<>#|~$&]/g;
@@ -76,7 +112,9 @@ export function sourceOf(hit: SearchHit | undefined, id: string): ChatSource {
       figureUrls: [],
     };
   }
-  const heading = [hit.subject, hit.topic].filter(Boolean).join(' · ');
+  const heading = [hit.subject, hit.topic, hit.examYear]
+    .filter(Boolean)
+    .join(' · ');
   const withPage = hit.pageReference
     ? `${heading} · Page ${hit.pageReference}`
     : heading;
@@ -103,13 +141,49 @@ function relatedQuestionCard(
   return [
     RELATED_HEADING,
     `*${sourceLabel(meta)}*`,
-    quoteBlock(source.questionText),
+    quoteBlock(preview(source.questionText)),
     '_From your exam archive_',
   ];
 }
 
 function basedOnCard(source: { questionText: string }, meta: ChatSource) {
-  return [`*${sourceLabel(meta)}*`, quoteBlock(source.questionText)];
+  return [`*${sourceLabel(meta)}*`, quoteBlock(preview(source.questionText))];
+}
+
+/** The start of a stored question, cut at a word, for a compact card. */
+function preview(text: string): string {
+  const joined = lines(text).join('\n');
+  if (joined.length <= CARD_PREVIEW_CHARS) {
+    return joined;
+  }
+  const head = joined.slice(0, CARD_PREVIEW_CHARS);
+  const space = head.lastIndexOf(' ');
+  return `${(space > CARD_PREVIEW_CHARS / 2 ? head.slice(0, space) : head).trimEnd()} …`;
+}
+
+/** Next steps after a study answer, minus the one the student just took. */
+function suggestionsFor(response: AnswerResponse): ChatSuggestion[] {
+  // Only after something to build on: a paper answer, a rework, an
+  // explanation, or a list of paper questions (which may be empty and then
+  // still offers practice questions). A bare refusal gets none.
+  const studyReply =
+    response.status === 'answered' ||
+    response.answerOrigin === 'paper_questions' ||
+    (response.status !== 'guidance' && Boolean(response.explanation));
+  if (!studyReply) {
+    return [];
+  }
+  const justDone =
+    response.answerOrigin === 'paper_questions'
+      ? 'related'
+      : response.transformation === 'simplify' ||
+          response.transformation === 'example' ||
+          response.transformation === 'practice'
+        ? response.transformation
+        : null;
+  return Object.entries(SUGGESTIONS)
+    .filter(([key]) => key !== justDone)
+    .map(([, suggestion]) => suggestion);
 }
 
 /**
@@ -118,17 +192,24 @@ function basedOnCard(source: { questionText: string }, meta: ChatSource) {
  * Markdown escaping added by formatLine is undone.
  */
 export function plainAnswerText(markdown: string): string {
-  const cardStarts = [RELATED_HEADING, `**${BASED_ON_NOTE}**`]
-    .map((heading) => markdown.indexOf(heading))
+  // Practice replies put past-paper cards first; the text is after its label.
+  const practice = markdown.indexOf(`**${PRACTICE_NOTE}**`);
+  const text = practice >= 0 ? markdown.slice(practice) : markdown;
+  const cardStarts = [
+    RELATED_HEADING,
+    `**${BASED_ON_NOTE}**`,
+    PAPER_HEADING,
+    SUGGESTIONS_LEAD,
+  ]
+    .map((heading) => text.indexOf(heading))
     .filter((index) => index >= 0);
   const body =
-    cardStarts.length > 0
-      ? markdown.slice(0, Math.min(...cardStarts))
-      : markdown;
+    cardStarts.length > 0 ? text.slice(0, Math.min(...cardStarts)) : text;
   const labels = new Set([
     `_${escapeText(AI_NOTE)}_`,
     `**${escapeText(AI_NOTE)}**`,
     `**${REWRITTEN_NOTE}**`,
+    `**${PRACTICE_NOTE}**`,
   ]);
   return body
     .replace(/\r\n?/g, '\n')
@@ -142,11 +223,25 @@ export function plainAnswerText(markdown: string): string {
     .trim();
 }
 
-export function chatReply({
+export function chatReply(result: AnswerWithHits): ChatReply {
+  const body = replyBody(result);
+  const suggestions = suggestionsFor(result.response);
+  const line =
+    SUGGESTIONS_AS_TEXT && suggestions.length > 0
+      ? `${SUGGESTIONS_LEAD} ${suggestions.map((s) => escapeText(s.label)).join(' · ')}`
+      : null;
+  return {
+    markdown: line ? `${body.markdown}\n\n${line}` : body.markdown,
+    sources: body.sources,
+    suggestions,
+  };
+}
+
+function replyBody({
   response,
   related,
   understanding,
-}: AnswerWithHits): ChatReply {
+}: AnswerWithHits): Omit<ChatReply, 'suggestions'> {
   const byId = new Map(related.map((hit) => [hit.id, hit]));
   const original =
     understanding?.topic?.trim() || understanding?.original?.trim() || '';
@@ -166,6 +261,24 @@ export function chatReply({
   // A reworked earlier answer is model wording, never a verified quote.
   // Shorter/simpler keeps the papers it was based on; an example or a
   // longer explanation may add general knowledge, so it says so.
+  if (
+    response.answerOrigin === 'transformed' &&
+    response.transformation === 'practice'
+  ) {
+    // Real past-paper questions first, then the labelled AI ones.
+    const cards = cited.flatMap((source, index) =>
+      basedOnCard(source, sources[index]),
+    );
+    return {
+      markdown: [
+        ...(cards.length > 0 ? [PAPER_HEADING, ...cards] : []),
+        `**${PRACTICE_NOTE}**`,
+        paragraphs(response.answer),
+      ].join('\n\n'),
+      sources,
+    };
+  }
+
   if (response.answerOrigin === 'transformed') {
     const restates =
       response.transformation === 'shorten' ||
@@ -189,14 +302,19 @@ export function chatReply({
   }
 
   if (response.status === 'out_of_scope') {
-    const parts = [paragraphs(response.answer)];
+    // With an explanation, the student sees the answer first and a small
+    // note on where it came from, as for "insufficient" — not a failure
+    // message. Without one, the refusal or "not found" text is the reply.
     if (response.explanation) {
-      parts.push(
-        `**${escapeText(AI_NOTE)}**`,
-        paragraphs(response.explanation),
-      );
+      return {
+        markdown: [
+          paragraphs(response.explanation),
+          `_${escapeText(AI_NOTE)}_`,
+        ].join('\n\n'),
+        sources: [],
+      };
     }
-    return { markdown: parts.join('\n\n'), sources: [] };
+    return { markdown: paragraphs(response.answer), sources: [] };
   }
 
   if (response.status === 'answered') {

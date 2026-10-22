@@ -92,6 +92,8 @@ export class ChatService {
             activeSubject: result.understanding?.activeSubject ?? null,
             kind: result.understanding?.kind ?? null,
             answerOrigin: result.response.answerOrigin ?? null,
+            // Tap-to-send follow-ups for the frontend to show as chips.
+            suggestions: reply.suggestions,
           },
         });
       },

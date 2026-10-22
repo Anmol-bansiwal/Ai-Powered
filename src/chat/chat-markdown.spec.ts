@@ -8,10 +8,14 @@ import {
   AI_NOTE,
   chatReply,
   deltasOf,
+  PRACTICE_NOTE,
   quoteBlock,
   plainAnswerText,
   sourceOf,
 } from './chat-markdown';
+
+const SUGGESTION_LINE =
+  '_You can also ask:_ Explain simply · Give an example · Practice questions · Related exam questions';
 
 function hit(overrides: Partial<SearchHit>): SearchHit {
   return {
@@ -70,7 +74,7 @@ describe('sourceOf', () => {
   it('names the subject, topic, page and file without the hash', () => {
     expect(sourceOf(hit({}), 'q1')).toEqual({
       id: 'q1',
-      title: 'Physics · Topic · Page 2',
+      title: 'Physics · Topic · 2024 · Page 2',
       filename: 'cbse-physics-xii-2024-25-sqp.pdf',
       questionText: hit({}).questionText,
       figureUrls: [],
@@ -122,15 +126,16 @@ describe('chatReply', () => {
       [
         '> The speed of light is 3.0 × 10$^{8}$ m/s',
         '**Related question from your papers**',
-        '*Physics · Topic · Page 4 · cbse-physics-xii-2024-25-sqp.pdf*',
+        '*Physics · Topic · 2024 · Page 4 · cbse-physics-xii-2024-25-sqp.pdf*',
         '> The speed of light is 3.0 × 10$^{8}$ m/s in vacuum.',
         '_From your exam archive_',
+        SUGGESTION_LINE,
       ].join('\n\n'),
     );
     expect(reply.sources).toEqual([
       {
         id: 'light',
-        title: 'Physics · Topic · Page 4',
+        title: 'Physics · Topic · 2024 · Page 4',
         filename: 'cbse-physics-xii-2024-25-sqp.pdf',
         questionText: light.questionText,
         figureUrls: [],
@@ -160,7 +165,7 @@ describe('chatReply', () => {
       [
         INSUFFICIENT_ANSWER,
         '**Related question from your papers**',
-        '*Physics · Topic · Page 4 · cbse-physics-xii-2024-25-sqp.pdf*',
+        '*Physics · Topic · 2024 · Page 4 · cbse-physics-xii-2024-25-sqp.pdf*',
         '> The speed of light is 3.0 × 10$^{8}$ m/s in vacuum.',
         '_From your exam archive_',
       ].join('\n\n'),
@@ -192,9 +197,10 @@ describe('chatReply', () => {
         'It is a \\*constant\\*.',
         `_${AI_NOTE}_`,
         '**Related question from your papers**',
-        '*Physics · Topic · Page 4 · cbse-physics-xii-2024-25-sqp.pdf*',
+        '*Physics · Topic · 2024 · Page 4 · cbse-physics-xii-2024-25-sqp.pdf*',
         '> The speed of light is 3.0 × 10$^{8}$ m/s in vacuum.',
         '_From your exam archive_',
+        SUGGESTION_LINE,
       ].join('\n\n'),
     );
   });
@@ -281,7 +287,153 @@ describe('chatReply', () => {
         },
         related: [],
       }),
-    ).toEqual({ markdown: OUT_OF_SCOPE_ANSWER, sources: [] });
+    ).toEqual({ markdown: OUT_OF_SCOPE_ANSWER, sources: [], suggestions: [] });
+  });
+
+  it('leads with the general explanation, not a "could not find" message', () => {
+    const reply = chatReply({
+      response: {
+        status: 'out_of_scope',
+        answer: "I couldn't find a matching answer in your exam archive.",
+        explanation: 'Velocity is the rate of change of displacement.',
+        sources: [],
+        answerOrigin: 'general',
+      },
+      related: [],
+    });
+
+    expect(reply.markdown).toBe(
+      `Velocity is the rate of change of displacement.\n\n_${AI_NOTE}_\n\n${SUGGESTION_LINE}`,
+    );
+    expect(reply.markdown).not.toMatch(/couldn't find/);
+  });
+});
+
+describe('chatReply — follow-up suggestions and compact cards', () => {
+  function insufficient(overrides: Record<string, unknown> = {}) {
+    return chatReply({
+      response: {
+        status: 'insufficient',
+        answer: 'unused',
+        explanation: 'Inertia is resistance to a change in motion.',
+        sources: [],
+        answerOrigin: 'general',
+        ...overrides,
+      },
+      related: [],
+    });
+  }
+
+  it('offers the four follow-ups as chips and as one line of text', () => {
+    const reply = insufficient();
+
+    expect(reply.suggestions.map((s) => s.label)).toEqual([
+      'Explain simply',
+      'Give an example',
+      'Practice questions',
+      'Related exam questions',
+    ]);
+    expect(reply.suggestions[2].prompt).toBe(
+      'Give me practice questions on this',
+    );
+    expect(reply.markdown.endsWith(SUGGESTION_LINE)).toBe(true);
+  });
+
+  it('does not offer the step the student just took', () => {
+    const practice = insufficient({
+      status: 'answered',
+      answerOrigin: 'transformed',
+      transformation: 'practice',
+    });
+    expect(practice.suggestions.map((s) => s.label)).not.toContain(
+      'Practice questions',
+    );
+
+    const listed = insufficient({
+      explanation: null,
+      answerOrigin: 'paper_questions',
+    });
+    expect(listed.suggestions.map((s) => s.label)).toEqual([
+      'Explain simply',
+      'Give an example',
+      'Practice questions',
+    ]);
+  });
+
+  it('offers nothing after guidance or a bare refusal', () => {
+    expect(
+      chatReply({
+        response: {
+          status: 'guidance',
+          answer: 'Hi!',
+          explanation: null,
+          sources: [],
+        },
+        related: [],
+      }).suggestions,
+    ).toEqual([]);
+  });
+
+  it('shows real paper questions before the labelled AI practice questions', () => {
+    const paper = hit({ id: 'q1', questionText: 'Define inertia.' });
+    const reply = chatReply({
+      response: {
+        status: 'answered',
+        answer:
+          '1. Why do passengers lurch forward?\n2. Which has more inertia?',
+        explanation: null,
+        sources: [
+          {
+            id: 'q1',
+            questionText: 'Define inertia.',
+            pageReference: '2',
+            score: 0,
+          },
+        ],
+        answerOrigin: 'transformed',
+        transformation: 'practice',
+      },
+      related: [paper],
+    });
+
+    const paperAt = reply.markdown.indexOf('**From your exam papers**');
+    const aiAt = reply.markdown.indexOf(`**${PRACTICE_NOTE}**`);
+    expect(paperAt).toBeGreaterThanOrEqual(0);
+    expect(aiAt).toBeGreaterThan(paperAt);
+    expect(plainAnswerText(reply.markdown)).toBe(
+      '1. Why do passengers lurch forward?\n\n2. Which has more inertia?',
+    );
+  });
+
+  it('previews a long paper question in the card; the source keeps it all', () => {
+    const long = `${'The weights of the male sheep are normally distributed. '.repeat(10)}Find x.`;
+    const sheep = hit({ id: 'sheep', questionText: long });
+    const reply = chatReply({
+      response: {
+        status: 'insufficient',
+        answer: 'unused',
+        explanation: 'Use the normal distribution.',
+        sources: [
+          { id: 'sheep', questionText: long, pageReference: '2', score: 0.6 },
+        ],
+      },
+      related: [sheep],
+      understanding: {
+        original: 'sheep weights normally distributed',
+        corrected: 'sheep weights normally distributed',
+        intent: 'academic',
+      },
+    });
+
+    expect(reply.markdown).toContain(' …');
+    expect(reply.markdown).not.toContain('Find x.');
+    expect(reply.sources[0].questionText).toBe(long);
+  });
+
+  it('drops the suggestion line when reading a reply back for the next turn', () => {
+    expect(plainAnswerText(insufficient().markdown)).toBe(
+      'Inertia is resistance to a change in motion.',
+    );
   });
 });
 

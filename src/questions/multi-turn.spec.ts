@@ -1,4 +1,5 @@
 import { ServiceUnavailableException } from '@nestjs/common';
+import { SUGGESTIONS } from '../chat/chat-markdown';
 import { Difficulty, QuestionType } from '../generated/prisma/enums';
 import {
   AnswerModelService,
@@ -409,6 +410,102 @@ describe('multi-turn conversations', () => {
       });
 
       expect(result.understanding?.kind).toBe('greeting');
+    });
+  });
+
+  describe('follow-up suggestions: practice and related exam questions', () => {
+    it('"Give me practice questions on this" reworks the answer into practice questions', async () => {
+      decided({ action: 'transform_previous', transformation: 'practice' });
+      transform.mockResolvedValue('1. Why do passengers lurch forward?');
+
+      const result = await service.answerWithHits({
+        query: 'Give me practice questions on this',
+        priorTurns: inertiaChat,
+      });
+
+      expect(search).not.toHaveBeenCalled();
+      expect(transform).toHaveBeenCalledWith('practice', inertiaChat[1].text, [
+        { id: INERTIA_ID, questionText: inertiaHit().questionText },
+      ]);
+      expect(result.response).toMatchObject({
+        answerOrigin: 'transformed',
+        transformation: 'practice',
+      });
+      // The real past-paper question it was based on stays as a source.
+      expect(result.response.sources.map((s) => s.id)).toEqual([INERTIA_ID]);
+    });
+
+    it('"Show related exam questions" lists matching paper questions only', async () => {
+      decided({
+        action: 'find_questions',
+        standaloneQuery: 'inertia',
+        subject: 'Physics',
+      });
+      search.mockResolvedValue({
+        results: [
+          hit({
+            id: 'inertia-q',
+            questionText: 'Define inertia and give one example.',
+            score: 0.66,
+          }),
+          hit({
+            id: 'cover',
+            questionText: 'GENERAL INSTRUCTIONS. Write your candidate number.',
+            score: 0.7,
+          }),
+        ],
+      });
+
+      const result = await service.answerWithHits({
+        query: 'Related exam questions on this topic',
+        priorTurns: inertiaChat,
+      });
+
+      expect(search).toHaveBeenCalledWith(
+        expect.objectContaining({
+          query: 'Physics: inertia',
+          subject: 'Physics',
+        }),
+      );
+      expect(proposeQuotes).not.toHaveBeenCalled();
+      expect(explain).not.toHaveBeenCalled();
+      expect(result.response).toMatchObject({
+        status: 'insufficient',
+        answerOrigin: 'paper_questions',
+        answer: 'Questions from your exam papers on “inertia”:',
+      });
+      expect(result.response.sources.map((s) => s.id)).toEqual(['inertia-q']);
+    });
+
+    it.each(Object.values(SUGGESTIONS).map((s) => [s.label, s.prompt]))(
+      'the "%s" chip reaches the model decision, not a rule',
+      async (_label, prompt) => {
+        await service.answerWithHits({
+          query: prompt,
+          priorTurns: inertiaChat,
+        });
+
+        expect(decide).toHaveBeenCalledWith(
+          prompt,
+          expect.any(Array),
+          expect.any(Array),
+        );
+      },
+    );
+
+    it('says so when no paper question matches, instead of inventing one', async () => {
+      decided({ action: 'find_questions', standaloneQuery: 'photosynthesis' });
+      search.mockResolvedValue({ results: [] });
+
+      const result = await service.answerWithHits({
+        query: 'Related exam questions on this topic',
+        priorTurns: inertiaChat,
+      });
+
+      expect(result.response.sources).toEqual([]);
+      expect(result.response.answer).toMatch(
+        /couldn't find past-paper questions on “photosynthesis”.*practice questions/,
+      );
     });
   });
 

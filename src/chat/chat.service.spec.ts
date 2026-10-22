@@ -105,7 +105,7 @@ describe('ChatService', () => {
       type: 'source-document',
       sourceId: 'light',
       mediaType: 'text/plain',
-      title: 'Physics · Optics · Page 4',
+      title: 'Physics · Optics · 2024 · Page 4',
       filename: 'physics.pdf',
       providerMetadata: {
         edusearch: {
@@ -123,6 +123,18 @@ describe('ChatService', () => {
         activeSubject: null,
         kind: null,
         answerOrigin: null,
+        suggestions: [
+          { label: 'Explain simply', prompt: 'Explain it simply' },
+          { label: 'Give an example', prompt: 'Give me an example' },
+          {
+            label: 'Practice questions',
+            prompt: 'Give me practice questions on this',
+          },
+          {
+            label: 'Related exam questions',
+            prompt: 'Related exam questions on this topic',
+          },
+        ],
       },
     });
   });
@@ -160,6 +172,7 @@ describe('ChatService', () => {
         activeSubject: 'Physics',
         kind: 'subject_selection',
         answerOrigin: null,
+        suggestions: [],
       },
     });
   });

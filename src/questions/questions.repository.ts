@@ -9,6 +9,7 @@ import { PrismaService } from '../prisma/prisma.service';
 import { sanitizeDatabaseError } from '../prisma/sanitize-database-error';
 import { EMBEDDING_DIMENSIONS } from './embedding.service';
 import { uniqueFigureUrls } from './question-figures';
+import { withoutAnswerLines } from './question-text';
 import { CreateQuestionInput, isQuestionId } from './question.validation';
 
 const EXPECTED_DATABASE = 'edusearch_ai';
@@ -392,7 +393,10 @@ export class QuestionsRepository {
         ) DESC, id ASC
         LIMIT CAST(${filters.limit} AS integer)
       `;
-      return rows;
+      return rows.map((row) => ({
+        ...row,
+        questionText: withoutAnswerLines(row.questionText),
+      }));
     } catch (error) {
       if (error instanceof HttpException) {
         throw error;
@@ -644,6 +648,8 @@ function mapSearchHit(row: QuestionRow): SearchHit {
   }
   return {
     ...mapCommon(row),
+    // What students see and the model reads: no blank answer lines.
+    questionText: withoutAnswerLines(row.questionText),
     score,
   };
 }
