@@ -1,0 +1,73 @@
+
+
+// NestJS compiles this project as CommonJS, so the generated client matches that.
+// Difficulty, QuestionType, and EmbeddingStatus are the source of truth for those values.
+// subject, topic, and subtopic stay text so new categories do not need a migration.
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum QuestionType {
+  MCQ
+  SHORT
+  LONG
+}
+
+enum EmbeddingStatus {
+  PENDING
+  READY
+  FAILED
+}
+
+model Question {
+  id              String           @id @default(uuid()) @db.Uuid
+  questionText    String           @map("question_text")
+  subject         String
+  topic           String
+  subtopic        String?
+  examYear        Int?             @map("exam_year")
+  examType        String?          @map("exam_type")
+  difficulty      Difficulty
+  questionType    QuestionType     @map("question_type")
+  sourceDocument  String?          @map("source_document")
+  /** Cloudinary (or later S3) HTTPS URL for the original PDF. */
+  fileUrl         String?          @map("file_url")
+  pageReference   String?          @map("page_reference")
+  embeddingStatus EmbeddingStatus  @default(PENDING) @map("embedding_status")
+  embeddingModel  String?          @map("embedding_model")
+  embedding       Unsupported("vector(1536)")?
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @default(now()) @updatedAt @map("updated_at")
+  figures         QuestionFigure[]
+
+  @@index([subject, examYear, difficulty])
+  @@map("questions")
+}
+
+/** Linked paper diagrams for a question (Cloudinary HTTPS or Nest /papers/figures/...). */
+model QuestionFigure {
+  id            String   @id @default(uuid()) @db.Uuid
+  questionId    String   @map("question_id") @db.Uuid
+  url           String
+  pageReference String?  @map("page_reference")
+  sortOrder     Int      @default(0) @map("sort_order")
+  createdAt     DateTime @default(now()) @map("created_at")
+  question      Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([questionId, url])
+  @@index([questionId])
+  @@map("question_figures")
+}

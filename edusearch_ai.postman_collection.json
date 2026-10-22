@@ -1,0 +1,704 @@
+{
+  "info": {
+    "_postman_id": "edusearch-ai-collection-v1",
+    "name": "EduSearch AI API",
+    "description": "Complete Postman collection for EduSearch AI backend.\n\nIncludes endpoints for:\n- Health checks\n- Filter options metadata\n- Semantic Vector Search\n- Hybrid Search (Vector + Lexical with RRF)\n- Query Rewriting Search\n- Quote-Only Grounded Answer API\n- Streaming Chat API (Vercel AI SDK format)\n- PDF Question Extraction & Approval\n- Figure asset retrieval & HTML UI views",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string",
+      "description": "Base URL of the running EduSearch AI server"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Health & System",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            },
+            "description": "Checks backend and database connectivity. Returns { status: 'ok' } with HTTP 200."
+          },
+          "response": [
+            {
+              "name": "Healthy Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/health",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["health"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"status\": \"ok\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. Questions & Search",
+      "item": [
+        {
+          "name": "Get Filter Options",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/questions/filters",
+              "host": ["{{baseUrl}}"],
+              "path": ["questions", "filters"]
+            },
+            "description": "Returns counts and available choices for Subject, Exam Year, Difficulty, and Precomputed Time Periods (e.g. Last 5 years, Last 10 years)."
+          },
+          "response": [
+            {
+              "name": "Sample Filters",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/questions/filters",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "filters"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"subjects\": [\n    {\n      \"value\": \"Physics\",\n      \"count\": 7\n    }\n  ],\n  \"years\": [\n    {\n      \"value\": 2024,\n      \"count\": 7\n    }\n  ],\n  \"difficulties\": [\n    {\n      \"value\": \"MEDIUM\",\n      \"count\": 5\n    },\n    {\n      \"value\": \"EASY\",\n      \"count\": 2\n    }\n  ],\n  \"timePeriods\": [\n    {\n      \"label\": \"Last 5 years (2020 - 2024)\",\n      \"yearFrom\": 2020,\n      \"yearTo\": 2024,\n      \"count\": 7\n    }\n  ],\n  \"total\": 7\n}"
+            }
+          ]
+        },
+        {
+          "name": "Semantic Vector Search",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"State the principle of inertia and explain Newton's first law\",\n  \"subject\": \"Physics\",\n  \"difficulty\": \"MEDIUM\",\n  \"yearFrom\": 2015,\n  \"yearTo\": 2025,\n  \"limit\": 5\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions/search",
+              "host": ["{{baseUrl}}"],
+              "path": ["questions", "search"]
+            },
+            "description": "Embeds the query with OpenAI text-embedding-3-small and searches pgvector by cosine distance.\n\nOptional filters:\n- subject (string)\n- examYear (number, 1950..2100)\n- yearFrom (number)\n- yearTo (number)\n- difficulty ('EASY' | 'MEDIUM' | 'HARD')\n- limit (number 1..20, default 5)"
+          },
+          "response": [
+            {
+              "name": "Search Results",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"inertia\",\n  \"limit\": 3\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions/search",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "search"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"results\": [\n    {\n      \"id\": 1,\n      \"questionText\": \"(a) Define inertia. (b) Give one practical example illustrating the law of inertia.\",\n      \"subject\": \"Physics\",\n      \"topic\": \"Laws of Motion\",\n      \"subtopic\": \"Newton's First Law\",\n      \"examYear\": 2024,\n      \"examType\": \"CBSE Board\",\n      \"difficulty\": \"EASY\",\n      \"questionType\": \"SHORT\",\n      \"sourceDocument\": \"cbse_physics_2024.pdf\",\n      \"pageReference\": \"Page 3, Q1\",\n      \"score\": 0.8842\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Hybrid Search (Vector + Lexical RRF)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"Find question containing 10 ohm resistor and 8V AC voltage source\",\n  \"subject\": \"Physics\",\n  \"limit\": 5\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions/search/hybrid",
+              "host": ["{{baseUrl}}"],
+              "path": ["questions", "search", "hybrid"]
+            },
+            "description": "Performs both Vector Search (pgvector) and Lexical Search (PostgreSQL full-text tsvector/ts_rank_cd) in parallel, then fuses rankings using Reciprocal Rank Fusion (RRF with k=60).\n\nReturns separate lists for 'vector', 'lexical', and merged 'hybrid'."
+          },
+          "response": [
+            {
+              "name": "Hybrid Results",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"10 ohm resistor\",\n  \"limit\": 2\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions/search/hybrid",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "search", "hybrid"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"vector\": [\n    {\n      \"id\": 3,\n      \"questionText\": \"In a series LCR circuit, R = 10 Ω, L = 28.4 mH and C = 9.8 µF...\",\n      \"pageReference\": \"Page 5, Q3\",\n      \"rank\": 1\n    }\n  ],\n  \"lexical\": [\n    {\n      \"id\": 3,\n      \"questionText\": \"In a series LCR circuit, R = 10 Ω, L = 28.4 mH and C = 9.8 µF...\",\n      \"pageReference\": \"Page 5, Q3\",\n      \"rank\": 1\n    }\n  ],\n  \"hybrid\": [\n    {\n      \"id\": 3,\n      \"questionText\": \"In a series LCR circuit, R = 10 Ω, L = 28.4 mH and C = 9.8 µF...\",\n      \"pageReference\": \"Page 5, Q3\",\n      \"rank\": 1,\n      \"vectorRank\": 1,\n      \"lexicalRank\": 1\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Rewritten Query Search",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"that glass sphere light refraction problem\",\n  \"limit\": 5\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions/search/rewritten",
+              "host": ["{{baseUrl}}"],
+              "path": ["questions", "search", "rewritten"]
+            },
+            "description": "Evaluates user query through query rewriting. Compares retrieval using the original query vs. the rewritten query side-by-side."
+          },
+          "response": [
+            {
+              "name": "Rewritten Search Result",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"glass sphere refraction\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions/search/rewritten",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "search", "rewritten"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"originalQuery\": \"glass sphere refraction\",\n  \"rewrittenQuery\": \"A ray of light incident on a glass sphere of refractive index\",\n  \"rewritten\": true,\n  \"original\": [\n    {\n      \"id\": 4,\n      \"questionText\": \"A ray of light incident on a glass sphere of refractive index √3...\",\n      \"score\": 0.81\n    }\n  ],\n  \"rewrittenResults\": [\n    {\n      \"id\": 4,\n      \"questionText\": \"A ray of light incident on a glass sphere of refractive index √3...\",\n      \"score\": 0.92\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Question Manually",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"questionText\": \"A parallel plate capacitor with air between the plates has a capacitance of 8 pF. What will be the capacitance if the distance between the plates is reduced by half, and the space between them is filled with a substance of dielectric constant 6?\",\n  \"subject\": \"Physics\",\n  \"topic\": \"Electrostatic Potential and Capacitance\",\n  \"subtopic\": \"Capacitors\",\n  \"examYear\": 2024,\n  \"examType\": \"CBSE Board\",\n  \"difficulty\": \"MEDIUM\",\n  \"questionType\": \"SHORT\",\n  \"sourceDocument\": \"cbse_class_12_physics_2024.pdf\",\n  \"pageReference\": \"Page 4, Q6\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions",
+              "host": ["{{baseUrl}}"],
+              "path": ["questions"]
+            },
+            "description": "Creates a question in the database and automatically generates its 1536-dimensional vector embedding with OpenAI text-embedding-3-small.\n\nRequired fields:\n- questionText (string, max 4000)\n- subject (string, max 200)\n- topic (string, max 200)\n- difficulty ('EASY' | 'MEDIUM' | 'HARD')\n- questionType ('MCQ' | 'SHORT' | 'LONG')\n\nOptional fields:\n- subtopic (string)\n- examYear (number, 1950..2100)\n- examType (string)\n- sourceDocument (string)\n- pageReference (string)"
+          },
+          "response": [
+            {
+              "name": "Created Response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"questionText\": \"Sample question\",\n  \"subject\": \"Physics\",\n  \"topic\": \"Mechanics\",\n  \"difficulty\": \"EASY\",\n  \"questionType\": \"SHORT\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"id\": 8,\n  \"questionText\": \"Sample question\",\n  \"subject\": \"Physics\",\n  \"topic\": \"Mechanics\",\n  \"subtopic\": null,\n  \"examYear\": null,\n  \"examType\": null,\n  \"difficulty\": \"EASY\",\n  \"questionType\": \"SHORT\",\n  \"sourceDocument\": null,\n  \"pageReference\": null,\n  \"createdAt\": \"2026-10-16T05:30:00.000Z\",\n  \"updatedAt\": \"2026-10-16T05:30:00.000Z\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. Answers & Chat",
+      "item": [
+        {
+          "name": "Grounded Quote-Only Answer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"What is inertia?\",\n  \"subject\": \"Physics\",\n  \"difficulty\": \"MEDIUM\",\n  \"limit\": 5\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions/answer",
+              "host": ["{{baseUrl}}"],
+              "path": ["questions", "answer"]
+            },
+            "description": "Performs grounded quote-only question answering:\n1. Searches closest questions using semantic similarity.\n2. If similarity < 0.70 or no hit: returns status 'out_of_scope'.\n3. Asks OpenAI to cite exact substring quotes from stored text only.\n4. Server rigorously verifies that quoted text is an exact substring of stored documents.\n5. If quotes are verified: returns status 'answered' with cited sources.\n6. If quotes are invalid or partial: returns status 'insufficient'."
+          },
+          "response": [
+            {
+              "name": "Answered Scenario",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"inertia\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions/answer",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "answer"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"status\": \"answered\",\n  \"answer\": \"(a) Define inertia.\",\n  \"explanation\": \"Quoted directly from the stored question stem.\",\n  \"sources\": [\n    {\n      \"id\": 1,\n      \"pageReference\": \"Page 3, Q1\"\n    }\n  ]\n}"
+            },
+            {
+              "name": "Insufficient Scenario",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"Newton's second law calculation of acceleration\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions/answer",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "answer"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"status\": \"insufficient\",\n  \"answer\": \"I could not find a complete answer to that in the approved questions.\",\n  \"explanation\": null,\n  \"sources\": []\n}"
+            },
+            {
+              "name": "Out Of Scope Scenario",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": \"What is the capital of France?\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/questions/answer",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["questions", "answer"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"status\": \"out_of_scope\",\n  \"answer\": \"I can only answer questions related to the saved examination papers.\",\n  \"explanation\": null,\n  \"sources\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Streaming AI Chat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"What is the formula for the capacitance of a parallel plate capacitor?\"\n        }\n      ]\n    }\n  ],\n  \"filters\": {\n    \"subject\": \"Physics\",\n    \"difficulty\": \"Medium\",\n    \"timePeriod\": \"Last 5 years (2020 - 2024)\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/chat",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "chat"]
+            },
+            "description": "Vercel AI SDK compatible streaming chat endpoint.\n\nExtracts the latest user message text, evaluates filters, and streams tokens and citations via UI message stream format."
+          },
+          "response": [
+            {
+              "name": "Streaming Response (Chunk format)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"Define inertia\"\n        }\n      ]\n    }\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/chat",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["api", "chat"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain; charset=utf-8"
+                }
+              ],
+              "body": "0:\"(a) Define inertia.\"\ne:{\"finishReason\":\"stop\",\"usage\":{\"promptTokens\":120,\"completionTokens\":14}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "4. Papers (PDF Ingestion & Admin)",
+      "item": [
+        {
+          "name": "Extract Questions from PDF",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "",
+                  "description": "Select an exam paper PDF file to extract"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/papers/extract",
+              "host": ["{{baseUrl}}"],
+              "path": ["papers", "extract"]
+            },
+            "description": "Uploads a question paper PDF (up to 10MB). Runs PDF text extraction, question splitting, math notation normalization, and figure image extraction.\n\nReturns a structured draft with metadata and parsed questions."
+          },
+          "response": [
+            {
+              "name": "Extraction Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/papers/extract",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["papers", "extract"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"fileHash\": \"a3b890f9...\",\n  \"totalPages\": 8,\n  \"metadata\": {\n    \"subject\": \"Physics\",\n    \"examYear\": 2024,\n    \"examType\": \"CBSE Board\"\n  },\n  \"questions\": [\n    {\n      \"questionNumber\": \"1\",\n      \"pageNumber\": 2,\n      \"questionText\": \"State the law of inertia.\",\n      \"difficulty\": \"EASY\",\n      \"questionType\": \"SHORT\",\n      \"figures\": []\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Approve Extracted Questions Draft",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "",
+                  "description": "The original PDF file"
+                },
+                {
+                  "key": "draft",
+                  "value": "{\n  \"subject\": \"Physics\",\n  \"examYear\": 2024,\n  \"examType\": \"CBSE Board\",\n  \"questions\": [\n    {\n      \"questionText\": \"(a) Define inertia. (b) Give one practical example.\",\n      \"topic\": \"Laws of Motion\",\n      \"subtopic\": \"Inertia\",\n      \"difficulty\": \"EASY\",\n      \"questionType\": \"SHORT\",\n      \"pageReference\": \"Page 3, Q1\"\n    }\n  ]\n}",
+                  "type": "text",
+                  "description": "Reviewed and edited JSON draft from the review screen"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/papers/approve",
+              "host": ["{{baseUrl}}"],
+              "path": ["papers", "approve"]
+            },
+            "description": "Approves an extracted paper draft. Saves each approved question into PostgreSQL and computes vector embeddings. Returns saved items and any failures."
+          },
+          "response": [
+            {
+              "name": "Approval Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "draft",
+                      "value": "{...}",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/papers/approve",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["papers", "approve"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                }
+              ],
+              "body": "{\n  \"saved\": [\n    {\n      \"id\": 9,\n      \"questionText\": \"(a) Define inertia.\",\n      \"pageReference\": \"Page 3, Q1\"\n    }\n  ],\n  \"failed\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Extracted Figure Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/papers/figures/:fileHash/:page/:index",
+              "host": ["{{baseUrl}}"],
+              "path": ["papers", "figures", ":fileHash", ":page", ":index"],
+              "variable": [
+                {
+                  "key": "fileHash",
+                  "value": "example_hash",
+                  "description": "Hash of uploaded PDF file"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number (1-indexed)"
+                },
+                {
+                  "key": "index",
+                  "value": "0",
+                  "description": "Figure index on that page (0-indexed)"
+                }
+              ]
+            },
+            "description": "Streams an extracted PNG diagram/figure from the PDF."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "5. UI & Playground Pages",
+      "item": [
+        {
+          "name": "Admin Review Page HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/papers/review",
+              "host": ["{{baseUrl}}"],
+              "path": ["papers", "review"]
+            },
+            "description": "Serves the interactive Admin PDF Review & Approval HTML page."
+          },
+          "response": []
+        },
+        {
+          "name": "API Playground Page HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/playground",
+              "host": ["{{baseUrl}}"],
+              "path": ["playground"]
+            },
+            "description": "Serves the built-in REST API testing playground."
+          },
+          "response": []
+        },
+        {
+          "name": "Student Search Demo Page HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/demo",
+              "host": ["{{baseUrl}}"],
+              "path": ["demo"]
+            },
+            "description": "Serves the Figma-style student search & answer screen."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

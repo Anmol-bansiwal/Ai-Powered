@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduSearch AI — Student query collection</title>
+  <style>
+    :root { font-family: "Segoe UI", system-ui, sans-serif; color: #102a43; }
+    body { max-width: 720px; margin: 2rem auto; padding: 0 1rem; background: #f5f7fa; }
+    h1 { font-size: 1.4rem; }
+    .card { background: #fff; border: 1px solid #d9e2ec; border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+    label { display: block; font-weight: 600; margin: 0.75rem 0 0.35rem; }
+    input, select, textarea { width: 100%; box-sizing: border-box; padding: 0.55rem 0.7rem; border: 1px solid #bcccdc; border-radius: 8px; font: inherit; }
+    textarea { min-height: 90px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    button { margin-top: 1rem; background: #243b53; color: #fff; border: 0; border-radius: 999px; padding: 0.65rem 1.2rem; font: inherit; font-weight: 600; cursor: pointer; }
+    button.secondary { background: #627d98; margin-left: 0.5rem; }
+    .hint { color: #486581; font-size: 0.92rem; line-height: 1.45; }
+    .warn { background: #fff3cd; border: 1px solid #ffecb5; padding: 0.75rem 1rem; border-radius: 8px; }
+    pre { background: #102a43; color: #f0f4f8; padding: 1rem; border-radius: 8px; overflow: auto; font-size: 0.85rem; }
+    #status { margin-top: 0.75rem; min-height: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>EduSearch AI — Student query collection</h1>
+  <p class="warn"><strong>Do not show the question bank</strong> before the student writes their query. Paste their wording exactly — do not fix grammar or rewrite.</p>
+
+  <div class="card">
+    <label for="query">Student's exact query</label>
+    <textarea id="query" required placeholder="e.g. that LCR one where 10 volt is across each"></textarea>
+
+    <div class="row">
+      <div>
+        <label for="subject">Subject</label>
+        <select id="subject">
+          <option>Physics</option>
+          <option>Chemistry</option>
+          <option>Mathematics</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="queryStyle">Query style</label>
+        <select id="queryStyle">
+          <option value="informal">Informal / remembered question</option>
+          <option value="conceptual">Conceptual question</option>
+          <option value="numeric">Numerical / equation</option>
+          <option value="exact">Exact or near-exact wording</option>
+          <option value="incomplete">Incomplete or ambiguous description</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="sawBank">Had the student seen the question bank?</label>
+        <select id="sawBank">
+          <option value="false" selected>No</option>
+          <option value="true">Yes</option>
+        </select>
+      </div>
+      <div>
+        <label for="studentRef">Optional studentRef</label>
+        <input id="studentRef" placeholder="S01" />
+      </div>
+    </div>
+
+    <label for="notes">Optional notes</label>
+    <input id="notes" placeholder="Collector notes (not shown to model)" />
+
+    <label for="nextId">Next id</label>
+    <input id="nextId" value="s001" />
+
+    <button type="button" id="copy">Copy query record as JSON</button>
+    <button type="button" class="secondary" id="preview">Preview</button>
+    <div id="status" class="hint"></div>
+  </div>
+
+  <div class="card">
+    <p class="hint">Paste each copied object into <code>eval/student-queries.json</code> under <code>queries</code>. After collection, label with <code>relevant</code> / <code>no-relevant-result</code> / <code>unresolved</code>. Then run <code>npm run validate:student-queries</code> and <code>npm run eval:student</code>.</p>
+    <pre id="out">{}</pre>
+  </div>
+
+  <script>
+    function record() {
+      var id = document.getElementById('nextId').value.trim() || 's001';
+      var query = document.getElementById('query').value;
+      var ref = document.getElementById('studentRef').value.trim();
+      var notes = document.getElementById('notes').value.trim();
+      var item = {
+        id: id,
+        query: query,
+        subject: document.getElementById('subject').value,
+        queryStyle: document.getElementById('queryStyle').value,
+        studentRef: ref || null,
+        collectedOn: new Date().toISOString().slice(0, 10),
+        sawBank: document.getElementById('sawBank').value === 'true',
+        notes: notes || null,
+        label: {
+          status: 'pending',
+          relevantIds: [],
+          suggestedIds: [],
+          reason: '',
+          labeledBy: ''
+        }
+      };
+      return item;
+    }
+
+    function show(msg) {
+      document.getElementById('status').textContent = msg;
+    }
+
+    function render() {
+      var item = record();
+      document.getElementById('out').textContent = JSON.stringify(item, null, 2);
+      return item;
+    }
+
+    document.getElementById('preview').addEventListener('click', function () {
+      render();
+      show('Preview updated.');
+    });
+
+    document.getElementById('copy').addEventListener('click', async function () {
+      var item = render();
+      if (!item.query.trim()) {
+        show('Query text is required.');
+        return;
+      }
+      var text = JSON.stringify(item, null, 2) + ',';
+      try {
+        await navigator.clipboard.writeText(text);
+        show('Copied. Paste into eval/student-queries.json → queries array.');
+        var match = /^s(\d+)$/i.exec(item.id);
+        if (match) {
+          var n = String(Number(match[1]) + 1).padStart(match[1].length, '0');
+          document.getElementById('nextId').value = 's' + n;
+        }
+      } catch (err) {
+        show('Clipboard blocked — copy from the preview box instead.');
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>

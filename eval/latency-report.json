@@ -1,0 +1,936 @@
+{
+  "generatedAt": "2026-10-16T09:01:17.719Z",
+  "baseUrl": "http://localhost:3517",
+  "repeatsPerQuery": 20,
+  "note": "Cold = first call per query/path after process start of that series. Warm = remaining repeats. Production unchanged.",
+  "overall": {
+    "vector": {
+      "cold": {
+        "n": 10,
+        "min": 447,
+        "median": 704,
+        "p95": 2925,
+        "max": 2925,
+        "mean": 909
+      },
+      "warm": {
+        "n": 190,
+        "min": 422,
+        "median": 720,
+        "p95": 835,
+        "max": 1569,
+        "mean": 724
+      }
+    },
+    "hybrid": {
+      "cold": {
+        "n": 10,
+        "min": 763,
+        "median": 888,
+        "p95": 1015,
+        "max": 1015,
+        "mean": 895
+      },
+      "warm": {
+        "n": 190,
+        "min": 412,
+        "median": 727,
+        "p95": 845,
+        "max": 1496,
+        "mean": 735
+      }
+    }
+  },
+  "perQuery": [
+    {
+      "query": "Newton's second law of motion",
+      "vector": {
+        "query": "Newton's second law of motion",
+        "path": "/questions/search",
+        "coldMs": 2925,
+        "warm": {
+          "n": 19,
+          "min": 671,
+          "median": 737,
+          "p95": 1318,
+          "max": 1318,
+          "mean": 764
+        },
+        "all": {
+          "n": 20,
+          "min": 671,
+          "median": 737,
+          "p95": 1318,
+          "max": 2925,
+          "mean": 872
+        },
+        "samples": [
+          2925,
+          1318,
+          749,
+          786,
+          720,
+          753,
+          735,
+          737,
+          728,
+          818,
+          702,
+          741,
+          738,
+          729,
+          742,
+          671,
+          717,
+          703,
+          684,
+          742
+        ]
+      },
+      "hybrid": {
+        "query": "Newton's second law of motion",
+        "path": "/questions/search/hybrid",
+        "coldMs": 810,
+        "warm": {
+          "n": 19,
+          "min": 437,
+          "median": 723,
+          "p95": 779,
+          "max": 779,
+          "mean": 710
+        },
+        "all": {
+          "n": 20,
+          "min": 437,
+          "median": 723,
+          "p95": 779,
+          "max": 810,
+          "mean": 715
+        },
+        "samples": [
+          810,
+          698,
+          703,
+          725,
+          738,
+          779,
+          723,
+          715,
+          770,
+          740,
+          729,
+          725,
+          437,
+          708,
+          713,
+          724,
+          700,
+          739,
+          720,
+          711
+        ]
+      }
+    },
+    {
+      "query": "series LCR circuit, 10 V across each element",
+      "vector": {
+        "query": "series LCR circuit, 10 V across each element",
+        "path": "/questions/search",
+        "coldMs": 707,
+        "warm": {
+          "n": 19,
+          "min": 510,
+          "median": 720,
+          "p95": 795,
+          "max": 795,
+          "mean": 717
+        },
+        "all": {
+          "n": 20,
+          "min": 510,
+          "median": 718,
+          "p95": 794,
+          "max": 795,
+          "mean": 716
+        },
+        "samples": [
+          707,
+          671,
+          715,
+          732,
+          718,
+          743,
+          718,
+          794,
+          715,
+          729,
+          696,
+          510,
+          707,
+          735,
+          720,
+          720,
+          754,
+          747,
+          795,
+          698
+        ]
+      },
+      "hybrid": {
+        "query": "series LCR circuit, 10 V across each element",
+        "path": "/questions/search/hybrid",
+        "coldMs": 959,
+        "warm": {
+          "n": 19,
+          "min": 686,
+          "median": 736,
+          "p95": 909,
+          "max": 909,
+          "mean": 743
+        },
+        "all": {
+          "n": 20,
+          "min": 686,
+          "median": 736,
+          "p95": 909,
+          "max": 959,
+          "mean": 754
+        },
+        "samples": [
+          959,
+          762,
+          712,
+          736,
+          712,
+          738,
+          764,
+          717,
+          738,
+          718,
+          728,
+          776,
+          909,
+          726,
+          765,
+          749,
+          706,
+          721,
+          759,
+          686
+        ]
+      }
+    },
+    {
+      "query": "glass sphere of radius 6 cm and refractive index 1.5",
+      "vector": {
+        "query": "glass sphere of radius 6 cm and refractive index 1.5",
+        "path": "/questions/search",
+        "coldMs": 756,
+        "warm": {
+          "n": 19,
+          "min": 670,
+          "median": 712,
+          "p95": 801,
+          "max": 801,
+          "mean": 720
+        },
+        "all": {
+          "n": 20,
+          "min": 670,
+          "median": 712,
+          "p95": 794,
+          "max": 801,
+          "mean": 722
+        },
+        "samples": [
+          756,
+          801,
+          684,
+          742,
+          688,
+          727,
+          672,
+          707,
+          712,
+          694,
+          730,
+          691,
+          746,
+          794,
+          710,
+          732,
+          707,
+          670,
+          724,
+          752
+        ]
+      },
+      "hybrid": {
+        "query": "glass sphere of radius 6 cm and refractive index 1.5",
+        "path": "/questions/search/hybrid",
+        "coldMs": 935,
+        "warm": {
+          "n": 19,
+          "min": 452,
+          "median": 756,
+          "p95": 1309,
+          "max": 1309,
+          "mean": 786
+        },
+        "all": {
+          "n": 20,
+          "min": 452,
+          "median": 756,
+          "p95": 1019,
+          "max": 1309,
+          "mean": 794
+        },
+        "samples": [
+          935,
+          756,
+          759,
+          836,
+          757,
+          734,
+          452,
+          840,
+          721,
+          734,
+          715,
+          737,
+          722,
+          777,
+          1019,
+          1309,
+          815,
+          747,
+          739,
+          770
+        ]
+      }
+    },
+    {
+      "query": "that LCR one where 10 volt is across each",
+      "vector": {
+        "query": "that LCR one where 10 volt is across each",
+        "path": "/questions/search",
+        "coldMs": 746,
+        "warm": {
+          "n": 19,
+          "min": 481,
+          "median": 721,
+          "p95": 863,
+          "max": 863,
+          "mean": 714
+        },
+        "all": {
+          "n": 20,
+          "min": 481,
+          "median": 721,
+          "p95": 784,
+          "max": 863,
+          "mean": 716
+        },
+        "samples": [
+          746,
+          863,
+          734,
+          732,
+          761,
+          734,
+          784,
+          667,
+          481,
+          748,
+          707,
+          721,
+          712,
+          715,
+          661,
+          704,
+          744,
+          680,
+          736,
+          683
+        ]
+      },
+      "hybrid": {
+        "query": "that LCR one where 10 volt is across each",
+        "path": "/questions/search/hybrid",
+        "coldMs": 763,
+        "warm": {
+          "n": 19,
+          "min": 535,
+          "median": 717,
+          "p95": 752,
+          "max": 752,
+          "mean": 709
+        },
+        "all": {
+          "n": 20,
+          "min": 535,
+          "median": 717,
+          "p95": 752,
+          "max": 763,
+          "mean": 712
+        },
+        "samples": [
+          763,
+          735,
+          717,
+          535,
+          752,
+          736,
+          725,
+          678,
+          750,
+          687,
+          737,
+          714,
+          707,
+          693,
+          746,
+          702,
+          718,
+          705,
+          708,
+          732
+        ]
+      }
+    },
+    {
+      "query": "p-nitrotoluene Etard reaction",
+      "vector": {
+        "query": "p-nitrotoluene Etard reaction",
+        "path": "/questions/search",
+        "coldMs": 736,
+        "warm": {
+          "n": 19,
+          "min": 673,
+          "median": 726,
+          "p95": 1038,
+          "max": 1038,
+          "mean": 740
+        },
+        "all": {
+          "n": 20,
+          "min": 673,
+          "median": 726,
+          "p95": 776,
+          "max": 1038,
+          "mean": 740
+        },
+        "samples": [
+          736,
+          705,
+          726,
+          710,
+          739,
+          776,
+          711,
+          707,
+          738,
+          759,
+          683,
+          726,
+          741,
+          722,
+          717,
+          1038,
+          673,
+          730,
+          735,
+          728
+        ]
+      },
+      "hybrid": {
+        "query": "p-nitrotoluene Etard reaction",
+        "path": "/questions/search/hybrid",
+        "coldMs": 930,
+        "warm": {
+          "n": 19,
+          "min": 700,
+          "median": 732,
+          "p95": 806,
+          "max": 806,
+          "mean": 737
+        },
+        "all": {
+          "n": 20,
+          "min": 700,
+          "median": 732,
+          "p95": 806,
+          "max": 930,
+          "mean": 747
+        },
+        "samples": [
+          930,
+          731,
+          739,
+          714,
+          719,
+          716,
+          738,
+          757,
+          806,
+          730,
+          739,
+          732,
+          726,
+          749,
+          796,
+          702,
+          755,
+          700,
+          735,
+          722
+        ]
+      }
+    },
+    {
+      "query": "electric dipole in field 2 x 10^{5} N/C at 30 degrees",
+      "vector": {
+        "query": "electric dipole in field 2 x 10^{5} N/C at 30 degrees",
+        "path": "/questions/search",
+        "coldMs": 447,
+        "warm": {
+          "n": 19,
+          "min": 422,
+          "median": 747,
+          "p95": 866,
+          "max": 866,
+          "mean": 742
+        },
+        "all": {
+          "n": 20,
+          "min": 422,
+          "median": 733,
+          "p95": 841,
+          "max": 866,
+          "mean": 727
+        },
+        "samples": [
+          447,
+          762,
+          707,
+          730,
+          866,
+          750,
+          768,
+          702,
+          726,
+          422,
+          777,
+          841,
+          789,
+          801,
+          733,
+          702,
+          711,
+          747,
+          729,
+          835
+        ]
+      },
+      "hybrid": {
+        "query": "electric dipole in field 2 x 10^{5} N/C at 30 degrees",
+        "path": "/questions/search/hybrid",
+        "coldMs": 888,
+        "warm": {
+          "n": 19,
+          "min": 444,
+          "median": 731,
+          "p95": 773,
+          "max": 773,
+          "mean": 707
+        },
+        "all": {
+          "n": 20,
+          "min": 444,
+          "median": 731,
+          "p95": 773,
+          "max": 888,
+          "mean": 716
+        },
+        "samples": [
+          888,
+          731,
+          444,
+          710,
+          742,
+          753,
+          697,
+          754,
+          706,
+          741,
+          773,
+          719,
+          733,
+          764,
+          735,
+          767,
+          714,
+          709,
+          717,
+          532
+        ]
+      }
+    },
+    {
+      "query": "Who painted the Mona Lisa?",
+      "vector": {
+        "query": "Who painted the Mona Lisa?",
+        "path": "/questions/search",
+        "coldMs": 681,
+        "warm": {
+          "n": 19,
+          "min": 680,
+          "median": 718,
+          "p95": 1569,
+          "max": 1569,
+          "mean": 761
+        },
+        "all": {
+          "n": 20,
+          "min": 680,
+          "median": 711,
+          "p95": 747,
+          "max": 1569,
+          "mean": 757
+        },
+        "samples": [
+          681,
+          735,
+          711,
+          708,
+          732,
+          737,
+          707,
+          747,
+          710,
+          727,
+          1569,
+          688,
+          718,
+          720,
+          692,
+          704,
+          740,
+          690,
+          735,
+          680
+        ]
+      },
+      "hybrid": {
+        "query": "Who painted the Mona Lisa?",
+        "path": "/questions/search/hybrid",
+        "coldMs": 865,
+        "warm": {
+          "n": 19,
+          "min": 412,
+          "median": 709,
+          "p95": 1238,
+          "max": 1238,
+          "mean": 704
+        },
+        "all": {
+          "n": 20,
+          "min": 412,
+          "median": 709,
+          "p95": 865,
+          "max": 1238,
+          "mean": 712
+        },
+        "samples": [
+          865,
+          697,
+          709,
+          465,
+          725,
+          798,
+          723,
+          451,
+          717,
+          696,
+          685,
+          708,
+          412,
+          728,
+          706,
+          749,
+          675,
+          749,
+          1238,
+          747
+        ]
+      }
+    },
+    {
+      "query": "What is the capital of Japan?",
+      "vector": {
+        "query": "What is the capital of Japan?",
+        "path": "/questions/search",
+        "coldMs": 704,
+        "warm": {
+          "n": 19,
+          "min": 672,
+          "median": 716,
+          "p95": 914,
+          "max": 914,
+          "mean": 722
+        },
+        "all": {
+          "n": 20,
+          "min": 672,
+          "median": 714,
+          "p95": 755,
+          "max": 914,
+          "mean": 721
+        },
+        "samples": [
+          704,
+          674,
+          672,
+          698,
+          914,
+          709,
+          683,
+          723,
+          705,
+          735,
+          718,
+          724,
+          731,
+          706,
+          716,
+          683,
+          720,
+          714,
+          755,
+          732
+        ]
+      },
+      "hybrid": {
+        "query": "What is the capital of Japan?",
+        "path": "/questions/search/hybrid",
+        "coldMs": 917,
+        "warm": {
+          "n": 19,
+          "min": 448,
+          "median": 744,
+          "p95": 1496,
+          "max": 1496,
+          "mean": 801
+        },
+        "all": {
+          "n": 20,
+          "min": 448,
+          "median": 744,
+          "p95": 1146,
+          "max": 1496,
+          "mean": 807
+        },
+        "samples": [
+          917,
+          742,
+          727,
+          1006,
+          461,
+          784,
+          1146,
+          727,
+          713,
+          679,
+          1496,
+          448,
+          453,
+          844,
+          805,
+          1066,
+          845,
+          791,
+          744,
+          738
+        ]
+      }
+    },
+    {
+      "query": "tendency of a body to resist a change in motion",
+      "vector": {
+        "query": "tendency of a body to resist a change in motion",
+        "path": "/questions/search",
+        "coldMs": 697,
+        "warm": {
+          "n": 19,
+          "min": 685,
+          "median": 720,
+          "p95": 934,
+          "max": 934,
+          "mean": 735
+        },
+        "all": {
+          "n": 20,
+          "min": 685,
+          "median": 711,
+          "p95": 841,
+          "max": 934,
+          "mean": 733
+        },
+        "samples": [
+          697,
+          707,
+          738,
+          726,
+          711,
+          751,
+          689,
+          740,
+          761,
+          699,
+          841,
+          720,
+          685,
+          710,
+          706,
+          934,
+          724,
+          734,
+          687,
+          696
+        ]
+      },
+      "hybrid": {
+        "query": "tendency of a body to resist a change in motion",
+        "path": "/questions/search/hybrid",
+        "coldMs": 1015,
+        "warm": {
+          "n": 19,
+          "min": 687,
+          "median": 720,
+          "p95": 908,
+          "max": 908,
+          "mean": 730
+        },
+        "all": {
+          "n": 20,
+          "min": 687,
+          "median": 720,
+          "p95": 908,
+          "max": 1015,
+          "mean": 744
+        },
+        "samples": [
+          1015,
+          721,
+          720,
+          701,
+          706,
+          708,
+          736,
+          710,
+          724,
+          714,
+          724,
+          908,
+          710,
+          742,
+          750,
+          732,
+          687,
+          708,
+          716,
+          747
+        ]
+      }
+    },
+    {
+      "query": "2 kg box pushed with a net force of 8 N",
+      "vector": {
+        "query": "2 kg box pushed with a net force of 8 N",
+        "path": "/questions/search",
+        "coldMs": 692,
+        "warm": {
+          "n": 19,
+          "min": 431,
+          "median": 699,
+          "p95": 769,
+          "max": 769,
+          "mean": 629
+        },
+        "all": {
+          "n": 20,
+          "min": 431,
+          "median": 694,
+          "p95": 740,
+          "max": 769,
+          "mean": 632
+        },
+        "samples": [
+          692,
+          431,
+          466,
+          436,
+          769,
+          721,
+          740,
+          703,
+          706,
+          718,
+          718,
+          686,
+          694,
+          690,
+          451,
+          699,
+          710,
+          440,
+          731,
+          433
+        ]
+      },
+      "hybrid": {
+        "query": "2 kg box pushed with a net force of 8 N",
+        "path": "/questions/search/hybrid",
+        "coldMs": 863,
+        "warm": {
+          "n": 19,
+          "min": 665,
+          "median": 725,
+          "p95": 774,
+          "max": 774,
+          "mean": 726
+        },
+        "all": {
+          "n": 20,
+          "min": 665,
+          "median": 725,
+          "p95": 774,
+          "max": 863,
+          "mean": 732
+        },
+        "samples": [
+          863,
+          734,
+          772,
+          665,
+          724,
+          735,
+          717,
+          708,
+          679,
+          732,
+          717,
+          774,
+          752,
+          724,
+          705,
+          729,
+          736,
+          692,
+          765,
+          725
+        ]
+      }
+    }
+  ]
+}

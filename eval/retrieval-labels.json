@@ -1,0 +1,451 @@
+{
+  "purpose": "Frozen labeller set for method comparison (vector vs hybrid vs rewrite). Do not tune hybrid RRF weights against this file until independent student-queries.json labels exist. Score accepted / confirmed / informal / round2 positives; unrelated and no-relevant-result as hard negatives. unresolved is not scored. Prototype evidence only — not a production rollout claim.",
+  "corpus": {
+    "database": "edusearch_ai",
+    "questionCount": 26,
+    "limitation": "expandedConfirmed has been checked against the 26 stored questions and is separate from the earlier scored set. The drift-velocity query remains unresolved and is not scored. The bank is still one Physics paper plus three earlier questions."
+  },
+  "questions": [
+    {
+      "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "pageReference": "96",
+      "questionText": "State Newton's second law of motion."
+    },
+    {
+      "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "pageReference": "1",
+      "questionText": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+    },
+    {
+      "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+      "pageReference": "2",
+      "questionText": "2. Define inertia as the tendency of a body to resist a change in its state of motion."
+    },
+    {
+      "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+      "pageReference": "2",
+      "questionText": "Q1. A uniform electric field pointing in positive X-direction exists in a region. Let A be the origin, B be the point on the X-axis at x = +1 cm and C be the point on the Y-axis at y = +1 cm. Then the potential at points A, B and C satisfy. (A) VA < VB (B) VA > VB. (C) VA < VC (D) VA > VC"
+    },
+    {
+      "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "pageReference": "2",
+      "questionText": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and inductance is 10 V each. If the capacitance is short circuited the voltage across the inductance will be (A) 10 V (B) 10√2 V (C) 10/√2 V (D) 20 V"
+    },
+    {
+      "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "pageReference": "3",
+      "questionText": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and refractive index 1.5. The distance of virtual image from the surface of the sphere is (A) 2 cm (B) 4 cm (C) 6 cm (D) 12 cm"
+    },
+    {
+      "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+      "pageReference": "7",
+      "questionText": "Q23. Find the expression for the capacitance of a parallel plate capacitor of plate area A and plate separation d when (I) a dielectric slab of thickness t and (II) a metallic slab of thickness t, where (t < d) are introduced one by one between the plates of the capacitor. In which case would the capacitance be more and why?"
+    }
+  ],
+  "informal": [
+    {
+      "type": "informal",
+      "query": "that LCR one where 10 volt is across each",
+      "relevantIds": ["e9188da0-76f0-4de0-bd49-15c98e80e4d9"],
+      "reason": "Same labelled target as the confirmed LCR technical-term query; informal student phrasing for the rewrite experiment."
+    },
+    {
+      "type": "informal",
+      "query": "the glass ball one with 1.5 refractive index",
+      "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+      "reason": "Same labelled target as the confirmed glass-sphere numeric query; informal phrasing for the rewrite experiment."
+    },
+    {
+      "type": "informal",
+      "query": "box thing where they push 2 kg with 8 N",
+      "relevantIds": ["581a3c26-2918-4c0c-8ed9-971825a13a17"],
+      "reason": "Same labelled target as the confirmed 2 kg / 8 N numeric query."
+    },
+    {
+      "type": "informal",
+      "query": "that inertia resist change in motion thing",
+      "relevantIds": ["927411e9-1a8a-4077-a247-917dd4acde54"],
+      "reason": "Same labelled target as the confirmed inertia paraphrase query."
+    }
+  ],
+  "confirmed": [
+    {
+      "type": "exact",
+      "query": "Newton's second law of motion",
+      "relevantIds": ["2b137a0c-a1c6-4e1d-bf03-882086acc5ad"]
+    },
+    {
+      "type": "paraphrase",
+      "query": "tendency of a body to resist a change in motion",
+      "relevantIds": ["927411e9-1a8a-4077-a247-917dd4acde54"]
+    },
+    {
+      "type": "numeric",
+      "query": "glass sphere of radius 6 cm and refractive index 1.5",
+      "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"]
+    },
+    {
+      "type": "technical-term",
+      "query": "series LCR circuit, 10 V across each element",
+      "relevantIds": ["e9188da0-76f0-4de0-bd49-15c98e80e4d9"]
+    },
+    {
+      "type": "numeric",
+      "query": "2 kg box pushed with a net force of 8 N",
+      "relevantIds": ["581a3c26-2918-4c0c-8ed9-971825a13a17"]
+    },
+    {
+      "type": "technical-term",
+      "query": "parallel plate capacitor with a dielectric slab",
+      "relevantIds": ["bbb1988e-d60a-40c6-bd18-20a84c45874d"]
+    },
+    {
+      "type": "unrelated",
+      "query": "capital of France",
+      "relevantIds": []
+    }
+  ],
+  "reviewedConfirmed": [
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "query": "series LCR circuit",
+      "relevantIds": ["e9188da0-76f0-4de0-bd49-15c98e80e4d9"],
+      "reason": "Q6 is a series LCR circuit problem and states that setup."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "query": "refractive index 1.5",
+      "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+      "reason": "Q9 states the glass sphere has refractive index 1.5."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "query": "net force of 8 N",
+      "relevantIds": ["581a3c26-2918-4c0c-8ed9-971825a13a17"],
+      "reason": "The box question states that the net force is 8 N."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "equation",
+      "query": "10√2 V",
+      "relevantIds": [],
+      "reason": "Q6 lists 10√2 V only as option (B). It does not state that this is the voltage."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "equation",
+      "query": "VA < VB",
+      "relevantIds": [],
+      "reason": "Q1 lists VA < VB only as option (A). It does not state that the relation is true."
+    },
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "query": "radius 6 cm",
+      "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+      "reason": "Q9 states that the glass sphere has radius 6 cm."
+    },
+    {
+      "decision": "accepted",
+      "type": "paraphrase",
+      "query": "object at the centre of a glass ball",
+      "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+      "reason": "Q9 states that a point object is at the centre of a glass sphere."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "paraphrase",
+      "query": "voltage across the inductance when the capacitance is short circuited",
+      "relevantIds": [],
+      "reason": "Q6 asks for that voltage and does not give it. No stored question answers it."
+    },
+    {
+      "decision": "accepted",
+      "type": "paraphrase",
+      "query": "potential at points in a uniform electric field",
+      "relevantIds": ["45b183ed-2893-4d1b-a4b7-4a007ef52bfb"],
+      "reason": "Q1 is the stored problem about potential at points in a uniform electric field. It does not state which potential relation is true."
+    },
+    {
+      "decision": "accepted",
+      "type": "typo",
+      "query": "Newtons secod law of motion",
+      "relevantIds": ["2b137a0c-a1c6-4e1d-bf03-882086acc5ad"],
+      "reason": "Same information need as the confirmed Newton query. The stored question is the request to state that law."
+    },
+    {
+      "decision": "accepted",
+      "type": "typo",
+      "query": "refractive indx 1.5",
+      "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+      "reason": "Misspelling of refractive index 1.5, which Q9 states."
+    },
+    {
+      "decision": "accepted",
+      "type": "typo",
+      "query": "paralell plate capaciter dielectric slab",
+      "relevantIds": ["bbb1988e-d60a-40c6-bd18-20a84c45874d"],
+      "reason": "Misspelling of the confirmed capacitor query. Q23 is that problem."
+    },
+    {
+      "decision": "accepted",
+      "type": "typo",
+      "query": "seris LCR circut",
+      "relevantIds": ["e9188da0-76f0-4de0-bd49-15c98e80e4d9"],
+      "reason": "Misspelling of series LCR circuit. Q6 is that problem."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "Who wrote Hamlet?",
+      "relevantIds": [],
+      "reason": "None of the seven questions is about Hamlet."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "What is the boiling point of ethanol?",
+      "relevantIds": [],
+      "reason": "None of the seven questions is about ethanol."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "Explain photosynthesis.",
+      "relevantIds": [],
+      "reason": "None of the seven questions is about photosynthesis."
+    }
+  ],
+  "unresolved": [
+    {
+      "decision": "unresolved",
+      "type": "equation",
+      "query": "t < d",
+      "suggestedRelevantIds": ["bbb1988e-d60a-40c6-bd18-20a84c45874d"],
+      "reason": "Q23 states t < d as a condition of the slab. The query does not say whether that condition is the information need, so the suggestion is not accepted."
+    },
+    {
+      "decision": "unresolved",
+      "type": "paraphrase",
+      "query": "average drift velocity of electrons over one cycle of a sinusoidal current",
+      "suggestedRelevantIds": ["292e853c-7ae8-4737-a3a5-1edb36e710bd"],
+      "reason": "Q21 asks for that average drift velocity and does not give it. The query may mean either the unstated value or the stored problem, so the suggestion is not accepted."
+    }
+  ],
+  "expandedConfirmed": [
+    {
+      "decision": "accepted",
+      "type": "exact",
+      "query": "The diffraction effect can be observed in",
+      "relevantIds": ["0286ff02-b519-4173-bf77-9d42d440d337"],
+      "reason": "Q4 asks this. Q10 lists Diffraction only as an option about colours on a CD."
+    },
+    {
+      "decision": "accepted",
+      "type": "exact",
+      "query": "Colours observed on a CD",
+      "relevantIds": ["379ec404-6ffe-4c97-a703-db2b98db5682"],
+      "reason": "Q10 states that colours on a compact disk are due to one of the listed effects."
+    },
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "query": "parallel plates of area 0.001 m2 separated by 0.0001 m with voltage changing at 10^8 V/s",
+      "relevantIds": ["26f1a76c-a785-4eda-885d-ea035c2cd332"],
+      "reason": "Q5 states those plate dimensions and that rate of voltage change."
+    },
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "query": "copper wire radius decreases by 0.1 percent",
+      "relevantIds": ["e5ed64ef-e880-46a4-8150-6e0f8a92a446"],
+      "reason": "Q12 states that the copper wire's radius decreases by 0.1%."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "query": "displacement current through a capacitor",
+      "relevantIds": ["26f1a76c-a785-4eda-885d-ea035c2cd332"],
+      "reason": "Q5 is the only stored question about displacement current through a capacitor. It asks for the value and does not state it."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "query": "de Broglie wavelength of a freely falling body",
+      "relevantIds": ["1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"],
+      "reason": "Q16 states that assertion. It does not say whether the assertion is true."
+    },
+    {
+      "decision": "accepted",
+      "type": "paraphrase",
+      "query": "platinum surface with work function 5.63 eV illuminated at 1.6 times 10 to the 15 Hz",
+      "relevantIds": ["6c812f85-b95d-43b8-8e64-122308637b54"],
+      "reason": "Q17 states that platinum surface, work function, and frequency."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "query": "Cassegrain telescope",
+      "relevantIds": ["b1f9f287-c30a-4657-89ac-df286297b2fe"],
+      "reason": "Q24 is the Cassegrain telescope question. Q33 is a refracting telescope and a microscope."
+    },
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "query": "objective focal length 15 m and eyepiece focal length 1.0 cm",
+      "relevantIds": ["65074e52-d13a-4486-a6cb-396894d6f810"],
+      "reason": "Q33 states an objective focal length of 15 m and an eyepiece focal length of 1.0 cm."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "Who painted the Mona Lisa?",
+      "relevantIds": [],
+      "reason": "None of the 26 stored questions is about the Mona Lisa."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "What is the capital of Japan?",
+      "relevantIds": [],
+      "reason": "None of the 26 stored questions is about Japan."
+    }
+  ],
+  "round2": [
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "subject": "Chemistry",
+      "query": "Nitrogen gas soluble in water KH 76.48 kbar at 293 K",
+      "relevantIds": ["228d4c31-bea9-4089-9970-64b2410746a2"],
+      "reason": "Q17 states KH = 76.48 kbar at 293 K for nitrogen in water."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "subject": "Chemistry",
+      "query": "p-nitrotoluene Etard reaction",
+      "relevantIds": ["a43eb3e1-5806-4a70-9051-f2e11ebb7aa1"],
+      "reason": "Q24 asks for the Etard reaction of p-nitrotoluene."
+    },
+    {
+      "decision": "accepted",
+      "type": "equation",
+      "subject": "Chemistry",
+      "query": "Sn4+ Al cell equilibrium constant 4.617 x 10^{184}",
+      "relevantIds": ["07d8195f-ce4c-4cd3-8bf7-1bcfe21654b6"],
+      "reason": "Q28 states that cell reaction and K = 4.617 x 10^{184}."
+    },
+    {
+      "decision": "accepted",
+      "type": "paraphrase",
+      "subject": "Chemistry",
+      "query": "Neeta lab experiment dehydration of alcohols reactivity",
+      "relevantIds": ["c707251d-4af1-498d-bb2f-cc2c38dac415"],
+      "reason": "Q26 is the Neeta alcohols reactivity / dehydration experiment."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "subject": "Chemistry",
+      "query": "electrolysis of copper chloride on inert electrodes",
+      "relevantIds": ["48d47583-6596-4163-86e5-b5f8eb6d5de9"],
+      "reason": "Q22 asks for the inert-electrode electrolysis of copper chloride."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "subject": "Chemistry",
+      "query": "actinoid [Rn] 5f76d17s2 match with Ce Lu Cm",
+      "relevantIds": ["af3a7244-cb40-4f80-b761-cfcc3ba88312"],
+      "reason": "Q3 is the column-matching actinoid/lanthanoid question with Ce, Lu, Cm."
+    },
+    {
+      "decision": "accepted",
+      "type": "technical-term",
+      "subject": "Physics",
+      "query": "Motion of Charge in Magnetic Field case study electron",
+      "relevantIds": ["02584fed-663c-40ed-9510-45a806e3ad2f"],
+      "reason": "Q29 case study is specifically titled Motion of Charge in Magnetic Field."
+    },
+    {
+      "decision": "accepted",
+      "type": "paraphrase",
+      "subject": "Physics",
+      "query": "which EM spectrum part produces heating effect and is absorbed by ozone",
+      "relevantIds": ["1387812d-a4c0-4262-8f97-ea22bc1f5911"],
+      "reason": "Q27 asks which spectrum parts produce heating and are absorbed by ozone."
+    },
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "subject": "Physics",
+      "query": "electric dipole in field 2 x 10^{5} N/C at 30 degrees",
+      "relevantIds": ["73164ae4-0a8a-4975-b046-632aae6a3d88"],
+      "reason": "Q2 states intensity 2 x 10^{5} N/C and angle 30°."
+    },
+    {
+      "decision": "accepted",
+      "type": "numeric",
+      "subject": "Physics",
+      "query": "Young interference two wavelengths 4000 A and 6000 A",
+      "relevantIds": ["e7fc5f20-7015-4d3c-953e-d39f6d6c586e"],
+      "reason": "Q18 states a beam with wavelengths 4000 Å and 6000 Å for YDSE."
+    },
+    {
+      "decision": "accepted",
+      "type": "informal",
+      "subject": "Chemistry",
+      "query": "that etard one with p nitro toluene",
+      "relevantIds": ["a43eb3e1-5806-4a70-9051-f2e11ebb7aa1"],
+      "reason": "Informal phrasing for the same Etard / p-nitrotoluene question."
+    },
+    {
+      "decision": "accepted",
+      "type": "informal",
+      "subject": "Physics",
+      "query": "the dipole torque one with 2 times 10 to the 5 field",
+      "relevantIds": ["73164ae4-0a8a-4975-b046-632aae6a3d88"],
+      "reason": "Informal phrasing for the electric dipole torque question."
+    },
+    {
+      "decision": "accepted",
+      "type": "informal",
+      "subject": "Chemistry",
+      "query": "sn and aluminium cell K value huge number 10 to 184",
+      "relevantIds": ["07d8195f-ce4c-4cd3-8bf7-1bcfe21654b6"],
+      "reason": "Informal phrasing for the Sn4+/Al equilibrium-constant question."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "Who discovered penicillin?",
+      "relevantIds": [],
+      "reason": "No stored Physics/Chemistry board question is about penicillin."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "What is the capital of Australia?",
+      "relevantIds": [],
+      "reason": "No stored question is about Australia."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "How do I bake sourdough bread?",
+      "relevantIds": [],
+      "reason": "No stored question is about baking."
+    },
+    {
+      "decision": "no-relevant-result",
+      "type": "unrelated",
+      "query": "Summarize the plot of Pride and Prejudice",
+      "relevantIds": [],
+      "reason": "No stored question is about literature."
+    }
+  ]
+}

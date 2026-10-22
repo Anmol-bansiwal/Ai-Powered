@@ -1,0 +1,4741 @@
+{
+  "generatedAt": "2026-10-16T07:15:06.397Z",
+  "baseUrl": "http://localhost:3517",
+  "queriesFile": "eval/edusearch_100_candidate_queries.labeled.json",
+  "requireIndependent": false,
+  "onlyIds": [],
+  "experiment": "Candidate / labeller-constructed queries — vector vs hybrid (NOT the promotion sample)",
+  "productionBaseline": "Original-query text-embedding-3-small. Production endpoints unchanged.",
+  "promotionDecision": "Preliminary only. Do not use this report for hybrid promotion. Collect real independent queries in student-queries.json.",
+  "notIndependentPromotionSample": true,
+  "validationCounts": null,
+  "skipped": [],
+  "counts": {
+    "positives": 68,
+    "hardNegatives": 32,
+    "skipped": 0
+  },
+  "retrieval": {
+    "overall": {
+      "vector": {
+        "n": 68,
+        "recallAt1": 0.9705882352941176,
+        "recallAt3": 1,
+        "mrr": 0.9852941176470589
+      },
+      "hybrid": {
+        "n": 68,
+        "recallAt1": 0.9558823529411765,
+        "recallAt3": 1,
+        "mrr": 0.9779411764705882
+      }
+    },
+    "byType": {
+      "informal": {
+        "vector": {
+          "n": 24,
+          "recallAt1": 0.9583333333333334,
+          "recallAt3": 1,
+          "mrr": 0.9791666666666666
+        },
+        "hybrid": {
+          "n": 24,
+          "recallAt1": 0.9583333333333334,
+          "recallAt3": 1,
+          "mrr": 0.9791666666666666
+        }
+      },
+      "numeric": {
+        "vector": {
+          "n": 12,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        },
+        "hybrid": {
+          "n": 12,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        }
+      },
+      "conceptual": {
+        "vector": {
+          "n": 22,
+          "recallAt1": 0.9545454545454546,
+          "recallAt3": 1,
+          "mrr": 0.9772727272727273
+        },
+        "hybrid": {
+          "n": 22,
+          "recallAt1": 0.9090909090909091,
+          "recallAt3": 1,
+          "mrr": 0.9545454545454546
+        }
+      },
+      "exact": {
+        "vector": {
+          "n": 9,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        },
+        "hybrid": {
+          "n": 9,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        }
+      },
+      "physics": {
+        "vector": {
+          "n": 1,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        },
+        "hybrid": {
+          "n": 1,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        }
+      }
+    },
+    "bySubject": {
+      "Physics": {
+        "vector": {
+          "n": 63,
+          "recallAt1": 0.9682539682539683,
+          "recallAt3": 1,
+          "mrr": 0.9841269841269841
+        },
+        "hybrid": {
+          "n": 63,
+          "recallAt1": 0.9523809523809523,
+          "recallAt3": 1,
+          "mrr": 0.9761904761904762
+        }
+      },
+      " find acceleration": {
+        "vector": {
+          "n": 1,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        },
+        "hybrid": {
+          "n": 1,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        }
+      },
+      "Chemistry": {
+        "vector": {
+          "n": 4,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        },
+        "hybrid": {
+          "n": 4,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        }
+      }
+    },
+    "rankingWins": {
+      "hybridBetter": 0,
+      "vectorBetter": 1,
+      "tied": 67
+    },
+    "improvedQueries": [],
+    "regressedQueries": [
+      {
+        "id": "CAND-059",
+        "query": "define inertia as resistance to a change in the state of rest or motion",
+        "vectorRank": 1,
+        "hybridRank": 2
+      }
+    ],
+    "latencyMsSinglePass": {
+      "vectorMean": 701,
+      "hybridMean": 702,
+      "note": "Use npm run eval:latency for median/p95 cold+warm."
+    }
+  },
+  "hardNegatives": {
+    "relatedThreshold": 0.45,
+    "retrievalFalsePositiveRateVector": 0,
+    "answerability": {
+      "outOfScopeRate": 1,
+      "correctlyRejectedRate": 1,
+      "answeredFalsePositiveRate": 0,
+      "byStatus": {
+        "out_of_scope": 32
+      }
+    }
+  },
+  "positives": [
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "that LCR question where the voltage across resistance capacitance and inductance is 10 volts each",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "studentId": "CAND-001",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.691804264185839,
+      "vectorLatencyMs": 1153,
+      "hybridLatencyMs": 1253,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.691804264185839,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.4558346261133269,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.3899760367100502,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "series LCR circuit, VR = VC = VL = 10 V; what happens if the capacitor is short-circuited?",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "studentId": "CAND-002",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5843150128615326,
+      "vectorLatencyMs": 700,
+      "hybridLatencyMs": 915,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5843150128615326,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.38446107903438986,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "score": 0.3302324755156303,
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "find the voltage across the inductor after shorting the capacitor in the LCR problem",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "studentId": "CAND-003",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5647384154302193,
+      "vectorLatencyMs": 861,
+      "hybridLatencyMs": 733,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5647384154302193,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.38899541630480405,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.35688996463089406,
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the glass ball problem with radius 6 cm and refractive index 1.5",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "studentId": "CAND-004",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6389715464150933,
+      "vectorLatencyMs": 1140,
+      "hybridLatencyMs": 784,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.6389715464150933,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.507366580734134,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.3880406699927258,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "point object at the centre of a glass sphere, radius 6 cm, refractive index 1.5; find virtual image distance",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "studentId": "CAND-005",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7557257647625956,
+      "vectorLatencyMs": 829,
+      "hybridLatencyMs": 844,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.7557257647625956,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.47464179315643196,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.46211089146257045,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "where does the virtual image form for an object at the centre of a refracting glass sphere",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "studentId": "CAND-006",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6126785590782661,
+      "vectorLatencyMs": 798,
+      "hybridLatencyMs": 811,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.6126785590782661,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.4166849894591529,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.3802015283030241,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the prism one where angle of incidence equals angle of emergence and both are three quarters of prism angle",
+      "relevantIds": [
+        "88c8bd65-a0f7-4bcf-9192-29eac98d0db3"
+      ],
+      "studentId": "CAND-007",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.669839631324155,
+      "vectorLatencyMs": 754,
+      "hybridLatencyMs": 710,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.669839631324155,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.38712215022234964,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        },
+        {
+          "rank": 3,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.34541067261597047,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        },
+        {
+          "rank": 3,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "calculate deviation and refractive index for a ray passing symmetrically through an equilateral prism",
+      "relevantIds": [
+        "88c8bd65-a0f7-4bcf-9192-29eac98d0db3"
+      ],
+      "studentId": "CAND-008",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.728821033681692,
+      "vectorLatencyMs": 939,
+      "hybridLatencyMs": 667,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.728821033681692,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.4129069045307475,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.39658181391541003,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "A ray passes through an equilateral glass prism with angle of incidence equal to angle of emergence.",
+      "relevantIds": [
+        "88c8bd65-a0f7-4bcf-9192-29eac98d0db3"
+      ],
+      "studentId": "CAND-009",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7856716633089987,
+      "vectorLatencyMs": 705,
+      "hybridLatencyMs": 724,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.7856716633089987,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.39271827479166577,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.37040040392649076,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "that capacitor question with voltage changing at 10 to the power 8 volts per second",
+      "relevantIds": [
+        "26f1a76c-a785-4eda-885d-ea035c2cd332"
+      ],
+      "studentId": "CAND-010",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5330797075441231,
+      "vectorLatencyMs": 736,
+      "hybridLatencyMs": 715,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.5330797075441231,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.46537406367956446,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 3,
+          "id": "560d1d00-3f99-4ac0-8ad3-0d06746a6df4",
+          "score": 0.33895362414579844,
+          "preview": "9. The large scale transmission of electrical energy over long distances is done"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 3,
+          "id": "560d1d00-3f99-4ac0-8ad3-0d06746a6df4",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "9. The large scale transmission of electrical energy over long distances is done"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "parallel plate capacitor area 0.001 m2, gap 0.0001 m, dV/dt = 10^8 V/s; find displacement current",
+      "relevantIds": [
+        "26f1a76c-a785-4eda-885d-ea035c2cd332"
+      ],
+      "studentId": "CAND-011",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7418860747915351,
+      "vectorLatencyMs": 710,
+      "hybridLatencyMs": 735,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.7418860747915351,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.5377007177259372,
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.48861557374994047,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "how do you calculate displacement current when the voltage across a capacitor changes with time",
+      "relevantIds": [
+        "26f1a76c-a785-4eda-885d-ea035c2cd332"
+      ],
+      "studentId": "CAND-012",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5925565623480984,
+      "vectorLatencyMs": 684,
+      "hybridLatencyMs": 717,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.5925565623480984,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.4476759727125944,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 3,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.35344200068011133,
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 3,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the long wire question comparing magnetic field half a radius above and below its surface",
+      "relevantIds": [
+        "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+      ],
+      "studentId": "CAND-013",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.537754855726012,
+      "vectorLatencyMs": 725,
+      "hybridLatencyMs": 404,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.537754855726012,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 2,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.42989952907643236,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.4186729305661241,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 2,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "compare magnetic field at a/2 outside and a/2 inside a uniformly current-carrying cylindrical wire",
+      "relevantIds": [
+        "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+      ],
+      "studentId": "CAND-014",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5550429648474079,
+      "vectorLatencyMs": 706,
+      "hybridLatencyMs": 1007,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.5550429648474079,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 2,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.5095404528185584,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 3,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.4807115665578776,
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 2,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 3,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "wire radius a carries uniform current; find ratio of B at 1.5a from centre and 0.5a from centre",
+      "relevantIds": [
+        "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+      ],
+      "studentId": "CAND-015",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6032951943078175,
+      "vectorLatencyMs": 681,
+      "hybridLatencyMs": 962,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.6032951943078175,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 2,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.5012040753183733,
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.4531906649680073,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 2,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the square wire resistor problem with a 1 ohm wire AP and B and P at the same potential",
+      "relevantIds": [
+        "6fcb5293-8191-415d-824c-e2a9c01640a2"
+      ],
+      "studentId": "CAND-016",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6371159267346369,
+      "vectorLatencyMs": 713,
+      "hybridLatencyMs": 687,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.6371159267346369,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        },
+        {
+          "rank": 2,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.43851715169671923,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 3,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "score": 0.3875432467824349,
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        },
+        {
+          "rank": 2,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 3,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "a square of total wire resistance 4 ohm has a 1 ohm branch from A to point P on DC; find DP resistance",
+      "relevantIds": [
+        "6fcb5293-8191-415d-824c-e2a9c01640a2"
+      ],
+      "studentId": "CAND-017",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.760842726699585,
+      "vectorLatencyMs": 722,
+      "hybridLatencyMs": 431,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.760842726699585,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        },
+        {
+          "rank": 2,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.478907317736575,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 3,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "score": 0.44276838061252544,
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        },
+        {
+          "rank": 2,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 3,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "in a square resistance network, B and P are equipotential; how can the unknown segment DP be found",
+      "relevantIds": [
+        "6fcb5293-8191-415d-824c-e2a9c01640a2"
+      ],
+      "studentId": "CAND-018",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5636739701789812,
+      "vectorLatencyMs": 691,
+      "hybridLatencyMs": 421,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.5636739701789812,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        },
+        {
+          "rank": 2,
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "score": 0.3998329686912161,
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region"
+        },
+        {
+          "rank": 3,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "score": 0.3829136203819379,
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        },
+        {
+          "rank": 2,
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region"
+        },
+        {
+          "rank": 3,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "which device uses a pn diode to change AC into DC and draw its full-wave circuit",
+      "relevantIds": [
+        "b601b296-0074-4755-8be3-1e2614079947"
+      ],
+      "studentId": "CAND-019",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6748751306430522,
+      "vectorLatencyMs": 725,
+      "hybridLatencyMs": 777,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.6748751306430522,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 2,
+          "id": "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "score": 0.34446152127305374,
+          "preview": "Q32. (I) Explain briefly, with the help of a labelled diagram, the basic princip"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.3027682184456032,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 2,
+          "id": "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q32. (I) Explain briefly, with the help of a labelled diagram, the basic princip"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "what circuit converts alternating current into direct current using a diode",
+      "relevantIds": [
+        "b601b296-0074-4755-8be3-1e2614079947"
+      ],
+      "studentId": "CAND-020",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.4589122273422388,
+      "vectorLatencyMs": 664,
+      "hybridLatencyMs": 708,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.4589122273422388,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 2,
+          "id": "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "score": 0.3142147863328295,
+          "preview": "Q32. (I) Explain briefly, with the help of a labelled diagram, the basic princip"
+        },
+        {
+          "rank": 3,
+          "id": "560d1d00-3f99-4ac0-8ad3-0d06746a6df4",
+          "score": 0.2938717465507932,
+          "preview": "9. The large scale transmission of electrical energy over long distances is done"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 2,
+          "id": "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q32. (I) Explain briefly, with the help of a labelled diagram, the basic princip"
+        },
+        {
+          "rank": 3,
+          "id": "560d1d00-3f99-4ac0-8ad3-0d06746a6df4",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "9. The large scale transmission of electrical energy over long distances is done"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "Name the device that uses the unilateral action of a pn diode to convert ac into dc.",
+      "relevantIds": [
+        "b601b296-0074-4755-8be3-1e2614079947"
+      ],
+      "studentId": "CAND-021",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.736203743495181,
+      "vectorLatencyMs": 437,
+      "hybridLatencyMs": 719,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.736203743495181,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 2,
+          "id": "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "score": 0.3453446721128841,
+          "preview": "Q32. (I) Explain briefly, with the help of a labelled diagram, the basic princip"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.28729825647719787,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 2,
+          "id": "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q32. (I) Explain briefly, with the help of a labelled diagram, the basic princip"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the assertion reason question about putting p-type and n-type slabs directly in contact",
+      "relevantIds": [
+        "ede7c94f-5024-411c-a617-ebf8d2ea22d0"
+      ],
+      "studentId": "CAND-022",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5775635075409775,
+      "vectorLatencyMs": 451,
+      "hybridLatencyMs": 468,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "score": 0.5775635075409775,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "29a4b030-7e22-4eb9-8843-9d341fea9da4",
+          "score": 0.33031843613425593,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.3242781351569013,
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "29a4b030-7e22-4eb9-8843-9d341fea9da4",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "why can't simply pressing a p-type slab against an n-type slab make a proper pn junction",
+      "relevantIds": [
+        "ede7c94f-5024-411c-a617-ebf8d2ea22d0"
+      ],
+      "studentId": "CAND-023",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.47057293808313605,
+      "vectorLatencyMs": 689,
+      "hybridLatencyMs": 412,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "score": 0.47057293808313605,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.32349818104473704,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 3,
+          "id": "4b91769f-9be0-4c3f-9b8c-dff441d6bc28",
+          "score": 0.27663573744525705,
+          "preview": "Q11. The number of electrons made available for conduction by dopant atoms depen"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 3,
+          "id": "4b91769f-9be0-4c3f-9b8c-dff441d6bc28",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q11. The number of electrons made available for conduction by dopant atoms depen"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "Putting a p type semiconductor slab directly in physical contact with an n type semiconductor slab cannot form the pn junction.",
+      "relevantIds": [
+        "ede7c94f-5024-411c-a617-ebf8d2ea22d0"
+      ],
+      "studentId": "CAND-024",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5073807382582574,
+      "vectorLatencyMs": 723,
+      "hybridLatencyMs": 447,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "score": 0.5073807382582574,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.2849062451703741,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 3,
+          "id": "4b91769f-9be0-4c3f-9b8c-dff441d6bc28",
+          "score": 0.2815354809230086,
+          "preview": "Q11. The number of electrons made available for conduction by dopant atoms depen"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 3,
+          "id": "4b91769f-9be0-4c3f-9b8c-dff441d6bc28",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q11. The number of electrons made available for conduction by dopant atoms depen"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the telescope question with objective focal length 15 metres and eyepiece focal length 1 cm",
+      "relevantIds": [
+        "65074e52-d13a-4486-a6cb-396894d6f810"
+      ],
+      "studentId": "CAND-025",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.584907728429775,
+      "vectorLatencyMs": 674,
+      "hybridLatencyMs": 696,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.584907728429775,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5774461529365867,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.4421573304513544,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "objective focal length 15 m and eyepiece focal length 1.0 cm; find angular magnification in normal adjustment",
+      "relevantIds": [
+        "65074e52-d13a-4486-a6cb-396894d6f810"
+      ],
+      "studentId": "CAND-026",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5822977189489518,
+      "vectorLatencyMs": 693,
+      "hybridLatencyMs": 727,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.5822977189489518,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5766151021505599,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.3859884194807742,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "how do focal lengths of objective and eyepiece determine telescope magnification",
+      "relevantIds": [
+        "2d363ee3-7dac-45fa-8731-ea1169724781"
+      ],
+      "studentId": "CAND-027",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5706217344064175,
+      "vectorLatencyMs": 715,
+      "hybridLatencyMs": 889,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5706217344064175,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.5308012419271778,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 3,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.3204935427758504,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 3,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "why do different colours appear on a compact disc",
+      "relevantIds": [
+        "379ec404-6ffe-4c97-a703-db2b98db5682"
+      ],
+      "studentId": "CAND-028",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5516242981253137,
+      "vectorLatencyMs": 425,
+      "hybridLatencyMs": 722,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.5516242981253137,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.364423601918769,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.2508263356854068,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "the multiple choice question asking whether colours on a CD are caused by diffraction or dispersion",
+      "relevantIds": [
+        "379ec404-6ffe-4c97-a703-db2b98db5682"
+      ],
+      "studentId": "CAND-029",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7002481863876717,
+      "vectorLatencyMs": 690,
+      "hybridLatencyMs": 715,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.7002481863876717,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.4535028031337265,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.38885203010679326,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "vectorRank": 1,
+          "lexicalRank": 1,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "Colours observed on a CD are due to which phenomenon?",
+      "relevantIds": [
+        "379ec404-6ffe-4c97-a703-db2b98db5682"
+      ],
+      "studentId": "CAND-030",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7055785763219388,
+      "vectorLatencyMs": 677,
+      "hybridLatencyMs": 453,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.7055785763219388,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.41748026304485153,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.35918810032630155,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "which colour of light gives the maximum stopping potential",
+      "relevantIds": [
+        "b3808c1e-f279-420d-8dd3-b63ad41d6275"
+      ],
+      "studentId": "CAND-031",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5776316157734139,
+      "vectorLatencyMs": 676,
+      "hybridLatencyMs": 701,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.5776316157734139,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 2,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.4096392759646298,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.3629137927151125,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 2,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "in the photoelectric effect, which visible colour produces the greatest stopping potential",
+      "relevantIds": [
+        "b3808c1e-f279-420d-8dd3-b63ad41d6275"
+      ],
+      "studentId": "CAND-032",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5533125999553888,
+      "vectorLatencyMs": 691,
+      "hybridLatencyMs": 683,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.5533125999553888,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 2,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.43582914176293286,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.34693093510718165,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 2,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "A metallic plate exposed to white light emits electrons. For which colour will stopping potential be maximum?",
+      "relevantIds": [
+        "b3808c1e-f279-420d-8dd3-b63ad41d6275"
+      ],
+      "studentId": "CAND-033",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7737760451555109,
+      "vectorLatencyMs": 720,
+      "hybridLatencyMs": 713,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.7737760451555109,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 2,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.5305721820359746,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.3689090851413839,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 2,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the gold foil experiment question asking why most alpha particles go straight through",
+      "relevantIds": [
+        "6d4a7b50-5b40-49c1-9546-4684026720db"
+      ],
+      "studentId": "CAND-034",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7162174754894867,
+      "vectorLatencyMs": 737,
+      "hybridLatencyMs": 712,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "score": 0.7162174754894867,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go strai"
+        },
+        {
+          "rank": 2,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "score": 0.3797640070164361,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.31924689223782776,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go strai"
+        },
+        {
+          "rank": 2,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "what did Rutherford's alpha-particle scattering experiment reveal about empty space inside atoms",
+      "relevantIds": [
+        "6d4a7b50-5b40-49c1-9546-4684026720db"
+      ],
+      "studentId": "CAND-035",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.4329146771617961,
+      "vectorLatencyMs": 700,
+      "hybridLatencyMs": 418,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "score": 0.4329146771617961,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go strai"
+        },
+        {
+          "rank": 2,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "score": 0.3302037357933333,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.28351177540982575,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go strai"
+        },
+        {
+          "rank": 2,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "Most alpha particles pass straight through a thin gold foil because most of the atom is empty space.",
+      "relevantIds": [
+        "6d4a7b50-5b40-49c1-9546-4684026720db"
+      ],
+      "studentId": "CAND-036",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.787744496114248,
+      "vectorLatencyMs": 496,
+      "hybridLatencyMs": 681,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "score": 0.787744496114248,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go strai"
+        },
+        {
+          "rank": 2,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "score": 0.3666697975993737,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.28089268294085723,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go strai"
+        },
+        {
+          "rank": 2,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the hydrogen atom question about what the negative sign of electron energy means",
+      "relevantIds": [
+        "8b53a186-f8be-4f46-89a4-b721e1aac05d"
+      ],
+      "studentId": "CAND-037",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6797928587402765,
+      "vectorLatencyMs": 434,
+      "hybridLatencyMs": 727,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "score": 0.6797928587402765,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}"
+        },
+        {
+          "rank": 2,
+          "id": "7de7d248-15a9-42c7-9f62-10c63518d99f",
+          "score": 0.37225008294232675,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.35263268189489017,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}"
+        },
+        {
+          "rank": 2,
+          "id": "7de7d248-15a9-42c7-9f62-10c63518d99f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "why is the energy of an electron in a hydrogen atom negative",
+      "relevantIds": [
+        "8b53a186-f8be-4f46-89a4-b721e1aac05d"
+      ],
+      "studentId": "CAND-038",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6682666963390881,
+      "vectorLatencyMs": 710,
+      "hybridLatencyMs": 724,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "score": 0.6682666963390881,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}"
+        },
+        {
+          "rank": 2,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "score": 0.39846981348155075,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.3424393133953285,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}"
+        },
+        {
+          "rank": 2,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 3,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "En = -13.6/n^2 eV; what does the negative sign tell us about the electron",
+      "relevantIds": [
+        "8b53a186-f8be-4f46-89a4-b721e1aac05d"
+      ],
+      "studentId": "CAND-039",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6479226501099014,
+      "vectorLatencyMs": 725,
+      "hybridLatencyMs": 722,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "score": 0.6479226501099014,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}"
+        },
+        {
+          "rank": 2,
+          "id": "1e7a6af8-6812-42bb-9bf3-f8e8f84fe7cf",
+          "score": 0.3894453808579196,
+          "preview": "5. An electron is moving along positive x-axis in a magnetic field which is para"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.3544980675673868,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}"
+        },
+        {
+          "rank": 2,
+          "id": "1e7a6af8-6812-42bb-9bf3-f8e8f84fe7cf",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "5. An electron is moving along positive x-axis in a magnetic field which is para"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the assertion reason question where a falling body's de Broglie wavelength decreases",
+      "relevantIds": [
+        "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+      ],
+      "studentId": "CAND-040",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.620427520030652,
+      "vectorLatencyMs": 885,
+      "hybridLatencyMs": 459,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.620427520030652,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "score": 0.45405993008849976,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "29a4b030-7e22-4eb9-8843-9d341fea9da4",
+          "score": 0.43984353592361836,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "29a4b030-7e22-4eb9-8843-9d341fea9da4",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "how does increasing momentum affect de Broglie wavelength for a freely falling body",
+      "relevantIds": [
+        "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+      ],
+      "studentId": "CAND-041",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 2,
+      "hybridRank": 2,
+      "vectorTopScore": 0.461914876631337,
+      "vectorLatencyMs": 436,
+      "hybridLatencyMs": 733,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "score": 0.461914876631337,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 2,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.4548701655429158,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.3340943069948652,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 2,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "The de Broglie wavelength of a freely falling body keeps decreasing with time because its momentum increases.",
+      "relevantIds": [
+        "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+      ],
+      "studentId": "CAND-042",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.4997163165877747,
+      "vectorLatencyMs": 442,
+      "hybridLatencyMs": 682,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.4997163165877747,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "score": 0.4452695008822791,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.28521817831995944,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 2,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the dipole question with field 2 times 10^5 newtons per coulomb, angle 30 degrees and torque 4 Nm",
+      "relevantIds": [
+        "73164ae4-0a8a-4975-b046-632aae6a3d88"
+      ],
+      "studentId": "CAND-043",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7290267174233281,
+      "vectorLatencyMs": 664,
+      "hybridLatencyMs": 573,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.7290267174233281,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.47641956116097517,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.45065840061456486,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "an electric dipole in E = 2×10^5 N/C at 30° experiences 4 Nm torque; find the charge for dipole length 2 cm",
+      "relevantIds": [
+        "73164ae4-0a8a-4975-b046-632aae6a3d88"
+      ],
+      "studentId": "CAND-044",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.8521290929015164,
+      "vectorLatencyMs": 592,
+      "hybridLatencyMs": 722,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.8521290929015164,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.4841471834108708,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.48393713459517307,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "calculate dipole moment from torque, electric field strength and angle",
+      "relevantIds": [
+        "73164ae4-0a8a-4975-b046-632aae6a3d88"
+      ],
+      "studentId": "CAND-045",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6569174936791592,
+      "vectorLatencyMs": 428,
+      "hybridLatencyMs": 684,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.6569174936791592,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.39989506435983546,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.3830856245923615,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the charged ball in a vertical pipe moving east to west in a 2 tesla magnetic field",
+      "relevantIds": [
+        "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+      ],
+      "studentId": "CAND-046",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6419612268147378,
+      "vectorLatencyMs": 680,
+      "hybridLatencyMs": 696,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.6419612268147378,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.4467906372981967,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.41357981405458344,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "a 10 g ball with charge +10 mC is inside a pipe moving west in B = 2 T; find the minimum speed so it does not slide",
+      "relevantIds": [
+        "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+      ],
+      "studentId": "CAND-047",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7228902929272314,
+      "vectorLatencyMs": 719,
+      "hybridLatencyMs": 988,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.7228902929272314,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.4808309361873956,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.45145837223051766,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "balance gravity with magnetic force for a charged sphere in a moving pipe",
+      "relevantIds": [
+        "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+      ],
+      "studentId": "CAND-048",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5818053459993904,
+      "vectorLatencyMs": 693,
+      "hybridLatencyMs": 763,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.5818053459993904,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.3796942182531049,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.34852637597313296,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the question about electron drift velocity changing with relaxation time",
+      "relevantIds": [
+        "292e853c-7ae8-4737-a3a5-1edb36e710bd"
+      ],
+      "studentId": "CAND-049",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5528213396010767,
+      "vectorLatencyMs": 752,
+      "hybridLatencyMs": 705,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.5528213396010767,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.4353309919558257,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.3465539035611853,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "draw the relation between drift velocity and relaxation time in a conductor",
+      "relevantIds": [
+        "292e853c-7ae8-4737-a3a5-1edb36e710bd"
+      ],
+      "studentId": "CAND-050",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6066394029439532,
+      "vectorLatencyMs": 412,
+      "hybridLatencyMs": 710,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.6066394029439532,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.34317630600862903,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.3330917163041658,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "a conductor's current varies sinusoidally; determine average electron drift velocity over one complete cycle",
+      "relevantIds": [
+        "292e853c-7ae8-4737-a3a5-1edb36e710bd"
+      ],
+      "studentId": "CAND-051",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6182152889888314,
+      "vectorLatencyMs": 703,
+      "hybridLatencyMs": 700,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.6182152889888314,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.45301809937552295,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.4070614706643383,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 2,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the convex lens question proving the minimum distance between object and real image is 4f",
+      "relevantIds": [
+        "2d363ee3-7dac-45fa-8731-ea1169724781"
+      ],
+      "studentId": "CAND-052",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.70698029561684,
+      "vectorLatencyMs": 714,
+      "hybridLatencyMs": 730,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.70698029561684,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.47928165029656755,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.43659094509269436,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "why is the minimum object-to-real-image distance for a convex lens equal to four focal lengths",
+      "relevantIds": [
+        "2d363ee3-7dac-45fa-8731-ea1169724781"
+      ],
+      "studentId": "CAND-053",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6703352855272704,
+      "vectorLatencyMs": 696,
+      "hybridLatencyMs": 683,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.6703352855272704,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.43280532235725544,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.41441567119751155,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "Show that the least possible distance between an object and its real image in a convex lens is 4f.",
+      "relevantIds": [
+        "2d363ee3-7dac-45fa-8731-ea1169724781"
+      ],
+      "studentId": "CAND-054",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7942349735291293,
+      "vectorLatencyMs": 690,
+      "hybridLatencyMs": 715,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.7942349735291293,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.4848804201037572,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.44572646858747855,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 1,
+          "lexicalRank": 1,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the two-mirror telescope problem with mirrors 20 mm apart and radii 200 mm and 150 mm",
+      "relevantIds": [
+        "b1f9f287-c30a-4657-89ac-df286297b2fe"
+      ],
+      "studentId": "CAND-055",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 2,
+      "hybridRank": 2,
+      "vectorTopScore": 0.4769319607059833,
+      "vectorLatencyMs": 680,
+      "hybridLatencyMs": 703,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.4769319607059833,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.47572110970067905,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.47003179653042104,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "Cassegrain telescope mirrors separated by 20 mm, large mirror radius 200 mm, small mirror radius 150 mm; locate final image",
+      "relevantIds": [
+        "b1f9f287-c30a-4657-89ac-df286297b2fe"
+      ],
+      "studentId": "CAND-056",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5516057448184587,
+      "vectorLatencyMs": 700,
+      "hybridLatencyMs": 422,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.5516057448184587,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.47851532686375364,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.4413382448598413,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "where is the final image in a Cassegrain telescope when the object is at infinity",
+      "relevantIds": [
+        "b1f9f287-c30a-4657-89ac-df286297b2fe"
+      ],
+      "studentId": "CAND-057",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5212653239589993,
+      "vectorLatencyMs": 712,
+      "hybridLatencyMs": 690,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.5212653239589993,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.45642665982084707,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.3598819688225423,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "what was that definition about a body resisting a change in its motion",
+      "relevantIds": [
+        "927411e9-1a8a-4077-a247-917dd4acde54"
+      ],
+      "studentId": "CAND-058",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6706488649215052,
+      "vectorLatencyMs": 703,
+      "hybridLatencyMs": 989,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.6706488649215052,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.38198710843209405,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.28777347422943533,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "define inertia as resistance to a change in the state of rest or motion",
+      "relevantIds": [
+        "927411e9-1a8a-4077-a247-917dd4acde54"
+      ],
+      "studentId": "CAND-059",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 2,
+      "vectorTopScore": 0.8186308955578976,
+      "vectorLatencyMs": 679,
+      "hybridLatencyMs": 993,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.8186308955578976,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.39783200761319937,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.2561011313529853,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "vectorRank": 2,
+          "lexicalRank": 1,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "vectorRank": 1,
+          "lexicalRank": 3,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "vectorRank": 8,
+          "lexicalRank": 2,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron w"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the question asking to state Newton's second law",
+      "relevantIds": [
+        "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+      ],
+      "studentId": "CAND-060",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.7137122931856876,
+      "vectorLatencyMs": 970,
+      "hybridLatencyMs": 701,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.7137122931856876,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.4081942166516448,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.3899788386320153,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "what does Newton's second law say about force, mass and acceleration",
+      "relevantIds": [
+        "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+      ],
+      "studentId": "CAND-061",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6775074852412416,
+      "vectorLatencyMs": 719,
+      "hybridLatencyMs": 435,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.6775074852412416,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.42886394522109317,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 3,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.34210028864849384,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 3,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "physics",
+      "query": "a 2 kg box pushed with net force 8 N",
+      "relevantIds": [
+        "581a3c26-2918-4c0c-8ed9-971825a13a17"
+      ],
+      "studentId": "CAND-062",
+      "subject": " find acceleration",
+      "queryStyle": "physics",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.8538704051860863,
+      "vectorLatencyMs": 425,
+      "hybridLatencyMs": 715,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8538704051860863,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3845176910230693,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.3392469832410685,
+          "preview": "State Newton's second law of motion."
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "vectorRank": 1,
+          "lexicalRank": 1,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "State Newton's second law of motion."
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "numeric",
+      "query": "calculate acceleration when a net force of 8 newtons acts on a 2 kilogram box",
+      "relevantIds": [
+        "581a3c26-2918-4c0c-8ed9-971825a13a17"
+      ],
+      "studentId": "CAND-063",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.8072363654568447,
+      "vectorLatencyMs": 961,
+      "hybridLatencyMs": 695,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8072363654568447,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.4333640279078841,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3256802368162097,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the organic chemistry question with C6H5COOCOCH3 reacting with water",
+      "relevantIds": [
+        "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"
+      ],
+      "studentId": "CAND-064",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6001402471088636,
+      "vectorLatencyMs": 714,
+      "hybridLatencyMs": 756,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.6001402471088636,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 2,
+          "id": "9437a727-c002-41da-95de-f7680da798f1",
+          "score": 0.47381104321331735,
+          "preview": "32 a. Give reasons for the following:\n(i)The reaction of ethanol with acetyl chl"
+        },
+        {
+          "rank": 3,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.47109393310922676,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 2,
+          "id": "9437a727-c002-41da-95de-f7680da798f1",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "32 a. Give reasons for the following:\n(i)The reaction of ethanol with acetyl chl"
+        },
+        {
+          "rank": 3,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "what products form when the compound C6H5COOCOCH3 is treated with H2O",
+      "relevantIds": [
+        "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"
+      ],
+      "studentId": "CAND-065",
+      "subject": "Chemistry",
+      "queryStyle": "conceptual",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.6422066011700109,
+      "vectorLatencyMs": 1075,
+      "hybridLatencyMs": 946,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.6422066011700109,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 2,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.4536449223191248,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        },
+        {
+          "rank": 3,
+          "id": "265909ea-400e-4575-9aa3-2abd97776e13",
+          "score": 0.43489160477852007,
+          "preview": "12 Which of the following compound gives an oxime with hydroxylamine:\na. CH_{3}C"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 2,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        },
+        {
+          "rank": 3,
+          "id": "265909ea-400e-4575-9aa3-2abd97776e13",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "12 Which of the following compound gives an oxime with hydroxylamine:\na. CH_{3}C"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "exact",
+      "query": "C6H5COOCOCH3 is treated with water; choose the products formed.",
+      "relevantIds": [
+        "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"
+      ],
+      "studentId": "CAND-066",
+      "subject": "Chemistry",
+      "queryStyle": "exact",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.66792346745214,
+      "vectorLatencyMs": 721,
+      "hybridLatencyMs": 701,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.66792346745214,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 2,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.4881673617820408,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        },
+        {
+          "rank": 3,
+          "id": "265909ea-400e-4575-9aa3-2abd97776e13",
+          "score": 0.4797501742932482,
+          "preview": "12 Which of the following compound gives an oxime with hydroxylamine:\na. CH_{3}C"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 2,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        },
+        {
+          "rank": 3,
+          "id": "265909ea-400e-4575-9aa3-2abd97776e13",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "12 Which of the following compound gives an oxime with hydroxylamine:\na. CH_{3}C"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the chemistry MCQ asking for products after an organic compound reacts with water",
+      "relevantIds": [
+        "c707251d-4af1-498d-bb2f-cc2c38dac415"
+      ],
+      "studentId": "CAND-099",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5128478401110155,
+      "vectorLatencyMs": 725,
+      "hybridLatencyMs": 425,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.5128478401110155,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        },
+        {
+          "rank": 2,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.5105135248436349,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 3,
+          "id": "9437a727-c002-41da-95de-f7680da798f1",
+          "score": 0.4937001584976817,
+          "preview": "32 a. Give reasons for the following:\n(i)The reaction of ethanol with acetyl chl"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcoho"
+        },
+        {
+          "rank": 2,
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\n"
+        },
+        {
+          "rank": 3,
+          "id": "9437a727-c002-41da-95de-f7680da798f1",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "32 a. Give reasons for the following:\n(i)The reaction of ethanol with acetyl chl"
+        }
+      ]
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "that optics question about an object at infinity and where the final image forms in a telescope",
+      "relevantIds": [
+        "2d363ee3-7dac-45fa-8731-ea1169724781"
+      ],
+      "studentId": "CAND-100",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorRank": 1,
+      "hybridRank": 1,
+      "vectorTopScore": 0.5225806347839193,
+      "vectorLatencyMs": 680,
+      "hybridLatencyMs": 713,
+      "vectorHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5225806347839193,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.5092472783845727,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.4789498668077288,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "hybridHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "vectorRank": 1,
+          "lexicalRank": null,
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "vectorRank": 2,
+          "lexicalRank": null,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "vectorRank": 3,
+          "lexicalRank": null,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    }
+  ],
+  "negatives": [
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Who painted the Mona Lisa?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-067",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.13322059676003772,
+      "vectorLatencyMs": 682,
+      "hybridLatencyMs": 724,
+      "hybridTopId": "2d363ee3-7dac-45fa-8731-ea1169724781",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What is the capital of Japan?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-068",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.09665143248501962,
+      "vectorLatencyMs": 985,
+      "hybridLatencyMs": 691,
+      "hybridTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Who wrote Hamlet?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-069",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.1700025710291877,
+      "vectorLatencyMs": 418,
+      "hybridLatencyMs": 715,
+      "hybridTopId": "265909ea-400e-4575-9aa3-2abd97776e13",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What caused the French Revolution?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-070",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.14537619990445838,
+      "vectorLatencyMs": 697,
+      "hybridLatencyMs": 469,
+      "hybridTopId": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Who won the 2022 FIFA World Cup?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-071",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.12273287141840461,
+      "vectorLatencyMs": 559,
+      "hybridLatencyMs": 428,
+      "hybridTopId": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "How do I configure an Nginx reverse proxy for a Node.js API?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-072",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.10259711337816357,
+      "vectorLatencyMs": 409,
+      "hybridLatencyMs": 703,
+      "hybridTopId": "a633aa61-2583-43f6-aafb-bf9a7c548ea6",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "How long should I bake a chocolate cake?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-073",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.1209248680563122,
+      "vectorLatencyMs": 710,
+      "hybridLatencyMs": 429,
+      "hybridTopId": "a633aa61-2583-43f6-aafb-bf9a7c548ea6",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What is the current price of gold in Dubai?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-074",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.18639798956638254,
+      "vectorLatencyMs": 960,
+      "hybridLatencyMs": 687,
+      "hybridTopId": "07d8195f-ce4c-4cd3-8bf7-1bcfe21654b6",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Explain the human digestive system.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-075",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.17523937903912568,
+      "vectorLatencyMs": 689,
+      "hybridLatencyMs": 715,
+      "hybridTopId": "55be52e0-c0e0-4c1a-9967-e0d019efb99c",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "How many moons does Mars have?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-076",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.1996449408676908,
+      "vectorLatencyMs": 950,
+      "hybridLatencyMs": 712,
+      "hybridTopId": "65074e52-d13a-4486-a6cb-396894d6f810",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Write a React component for a login form.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-077",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.18195985579276142,
+      "vectorLatencyMs": 673,
+      "hybridLatencyMs": 692,
+      "hybridTopId": "9437a727-c002-41da-95de-f7680da798f1",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Where is the Eiffel Tower located?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-078",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.1819517102130348,
+      "vectorLatencyMs": 719,
+      "hybridLatencyMs": 739,
+      "hybridTopId": "6c812f85-b95d-43b8-8e64-122308637b54",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Who composed the Four Seasons?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-079",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.13913665268603115,
+      "vectorLatencyMs": 663,
+      "hybridLatencyMs": 710,
+      "hybridTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What is the difference between revenue and profit?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-080",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.12725006627385216,
+      "vectorLatencyMs": 706,
+      "hybridLatencyMs": 435,
+      "hybridTopId": "7de7d248-15a9-42c7-9f62-10c63518d99f",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What are common symptoms of seasonal allergies?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-081",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.14105976819960198,
+      "vectorLatencyMs": 675,
+      "hybridLatencyMs": 448,
+      "hybridTopId": "fed82f84-0e22-4321-8a22-3a6c406e53e7",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What is the legal process for registering a trademark in India?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-082",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.19276632933949933,
+      "vectorLatencyMs": 465,
+      "hybridLatencyMs": 715,
+      "hybridTopId": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Summarize the plot of Pride and Prejudice.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-083",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.16944879117162115,
+      "vectorLatencyMs": 450,
+      "hybridLatencyMs": 431,
+      "hybridTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What should I visit on a three-day trip to Jaipur?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-084",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.14021338573291564,
+      "vectorLatencyMs": 726,
+      "hybridLatencyMs": 704,
+      "hybridTopId": "228d4c31-bea9-4089-9970-64b2410746a2",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "What is inflation and how does it affect consumers?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-085",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.20589102843760787,
+      "vectorLatencyMs": 675,
+      "hybridLatencyMs": 688,
+      "hybridTopId": "927411e9-1a8a-4077-a247-917dd4acde54",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "unrelated",
+      "query": "Explain how DNS resolution works.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-086",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "vectorTopScore": 0.1913972387650218,
+      "vectorLatencyMs": 687,
+      "hybridLatencyMs": 432,
+      "hybridTopId": "379ec404-6ffe-4c97-a703-db2b98db5682",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "What is the speed of light in vacuum?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-087",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.3543783800970195,
+      "vectorLatencyMs": 710,
+      "hybridLatencyMs": 714,
+      "hybridTopId": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Explain the periodic trend in atomic radius across period 3.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-088",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.396354135776287,
+      "vectorLatencyMs": 438,
+      "hybridLatencyMs": 1023,
+      "hybridTopId": "af3a7244-cb40-4f80-b761-cfcc3ba88312",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Find the derivative of sin(x^2).",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-089",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.2622601757304719,
+      "vectorLatencyMs": 733,
+      "hybridLatencyMs": 734,
+      "hybridTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Solve the integral of x e^x.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-090",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.2720854990795054,
+      "vectorLatencyMs": 693,
+      "hybridLatencyMs": 715,
+      "hybridTopId": "02584fed-663c-40ed-9510-45a806e3ad2f",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Calculate the escape velocity from Earth's surface.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-091",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.320839442022423,
+      "vectorLatencyMs": 993,
+      "hybridLatencyMs": 686,
+      "hybridTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Explain the mechanism of aldol condensation.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-092",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.44380674382852137,
+      "vectorLatencyMs": 700,
+      "hybridLatencyMs": 426,
+      "hybridTopId": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Describe DNA replication in prokaryotes.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-093",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.20540999118546477,
+      "vectorLatencyMs": 666,
+      "hybridLatencyMs": 499,
+      "hybridTopId": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Find the eigenvalues of a 3 by 3 matrix.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-094",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.22128157524419878,
+      "vectorLatencyMs": 706,
+      "hybridLatencyMs": 722,
+      "hybridTopId": "af3a7244-cb40-4f80-b761-cfcc3ba88312",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "Derive the expression for the magnetic field inside a solenoid.",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-095",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.4365278584744101,
+      "vectorLatencyMs": 438,
+      "hybridLatencyMs": 472,
+      "hybridTopId": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "hard-negative",
+      "query": "What is the difference between SN1 and SN2 reactions?",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-096",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "vectorTopScore": 0.380974843807353,
+      "vectorLatencyMs": 733,
+      "hybridLatencyMs": 419,
+      "hybridTopId": "fed82f84-0e22-4321-8a22-3a6c406e53e7",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "informal",
+      "query": "the question about the relation between changing magnetic flux and induced emf",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-097",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "vectorTopScore": 0.41123677319088947,
+      "vectorLatencyMs": 701,
+      "hybridLatencyMs": 401,
+      "hybridTopId": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    },
+    {
+      "set": "candidate",
+      "type": "conceptual",
+      "query": "how does electric field relate to electric potential difference",
+      "decision": "no-relevant-result",
+      "studentId": "CAND-098",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "vectorTopScore": 0.40079263339877036,
+      "vectorLatencyMs": 705,
+      "hybridLatencyMs": 476,
+      "hybridTopId": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+      "retrievalFalsePositiveVector": false,
+      "answerStatus": "out_of_scope",
+      "outOfScope": true,
+      "answerCorrectlyRejected": true
+    }
+  ]
+}

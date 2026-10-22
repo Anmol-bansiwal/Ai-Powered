@@ -1,0 +1,2044 @@
+{
+  "generatedAt": "2026-10-16T06:08:55.841Z",
+  "baseUrl": "http://localhost:3517",
+  "promotionDecision": "No production rollout. Keep /questions/search/rewritten experimental and text-embedding-3-small in production until rewritten Recall@1/MRR and hard-negative rates clearly beat the original baseline.",
+  "corpusNote": "Labeled queries for the hybrid-search experiment. Score only confirmed. reviewedConfirmed holds labels accepted after checking the stored text. unresolved is not scored. Do not treat this seven-question corpus as evidence for a production search change. Score positives with relevantIds. Hard negatives include unrelated and no-relevant-result labels. unresolved is not scored.",
+  "counts": {
+    "positives": 29,
+    "hardNegatives": 9,
+    "unrelatedChecked": 6,
+    "rewriteApplied": 28
+  },
+  "retrieval": {
+    "overall": {
+      "original": {
+        "n": 29,
+        "recallAt1": 0.8620689655172413,
+        "recallAt3": 1,
+        "mrr": 0.9310344827586207
+      },
+      "rewritten": {
+        "n": 29,
+        "recallAt1": 0.7931034482758621,
+        "recallAt3": 1,
+        "mrr": 0.896551724137931
+      }
+    },
+    "bySet": {
+      "confirmed": {
+        "original": {
+          "n": 6,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        },
+        "rewritten": {
+          "n": 6,
+          "recallAt1": 1,
+          "recallAt3": 1,
+          "mrr": 1
+        }
+      },
+      "informal": {
+        "original": {
+          "n": 4,
+          "recallAt1": 0.75,
+          "recallAt3": 1,
+          "mrr": 0.875
+        },
+        "rewritten": {
+          "n": 4,
+          "recallAt1": 0.75,
+          "recallAt3": 1,
+          "mrr": 0.875
+        }
+      },
+      "reviewedConfirmed": {
+        "original": {
+          "n": 10,
+          "recallAt1": 0.8,
+          "recallAt3": 1,
+          "mrr": 0.9
+        },
+        "rewritten": {
+          "n": 10,
+          "recallAt1": 0.8,
+          "recallAt3": 1,
+          "mrr": 0.9
+        }
+      },
+      "expandedConfirmed": {
+        "original": {
+          "n": 9,
+          "recallAt1": 0.8888888888888888,
+          "recallAt3": 1,
+          "mrr": 0.9444444444444444
+        },
+        "rewritten": {
+          "n": 9,
+          "recallAt1": 0.6666666666666666,
+          "recallAt3": 1,
+          "mrr": 0.8333333333333334
+        }
+      }
+    },
+    "rankingWins": {
+      "rewrittenBetter": 0,
+      "originalBetter": 2,
+      "tied": 27
+    }
+  },
+  "hardNegatives": {
+    "relatedThreshold": 0.45,
+    "retrievalFalsePositiveRate": {
+      "original": 0.3333333333333333,
+      "rewritten": 0.3333333333333333
+    },
+    "answerability": {
+      "outOfScopeRate": 1,
+      "correctlyRejectedRate": 1,
+      "answeredFalsePositiveRate": 0,
+      "byStatus": {
+        "out_of_scope": 6
+      }
+    },
+    "note": "Retrieval always returns nearest neighbours. A retrieval false positive is top score >= 0.45 with no labelled relevant id. Answerability false positive is status answered on an unrelated query."
+  },
+  "positives": [
+    {
+      "set": "confirmed",
+      "type": "exact",
+      "query": "Newton's second law of motion",
+      "relevantIds": [
+        "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "State Newton's second law of motion.",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.8958494113483977,
+      "rewrittenTopScore": 1,
+      "originalTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "rewrittenTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.8958494113483977,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.4175717033518902,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.38208017294669805,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 1,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.4515805365280695,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.3675035842952872,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      ]
+    },
+    {
+      "set": "confirmed",
+      "type": "paraphrase",
+      "query": "tendency of a body to resist a change in motion",
+      "relevantIds": [
+        "927411e9-1a8a-4077-a247-917dd4acde54"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Definition of the tendency of a body to resist a change in its state of motion",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6916651829684902,
+      "rewrittenTopScore": 0.7609498660859866,
+      "originalTopId": "927411e9-1a8a-4077-a247-917dd4acde54",
+      "rewrittenTopId": "927411e9-1a8a-4077-a247-917dd4acde54",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.6916651829684902,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.43460683055289173,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.29818630766939846,
+          "pageReference": "4",
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.7609498660859866,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.43366647710308825,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.32777366738012925,
+          "pageReference": "4",
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "confirmed",
+      "type": "numeric",
+      "query": "glass sphere of radius 6 cm and refractive index 1.5",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "glass sphere with radius 6 cm and refractive index 1.5",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6350235006340352,
+      "rewrittenTopScore": 0.6415434617108516,
+      "originalTopId": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "rewrittenTopId": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.6350235006340352,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.5031903544939113,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.3983743347401143,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.6415434617108516,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.4964945530025271,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.40064332437965877,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "confirmed",
+      "type": "technical-term",
+      "query": "series LCR circuit, 10 V across each element",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "In a series LCR circuit, if there is 10 V across each element, what are the implications or calculations involved?",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5532865203224494,
+      "rewrittenTopScore": 0.6005926950090749,
+      "originalTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "rewrittenTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5532865203224494,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.3367250660705119,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "a633aa61-2583-43f6-aafb-bf9a7c548ea6",
+          "score": 0.33082915099998833,
+          "pageReference": "4",
+          "preview": "20. A heating element using nichrome connected to a 230 V supply draws an initia"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.6005926950090749,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.3842314131860123,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 3,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.37484023300944647,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        }
+      ]
+    },
+    {
+      "set": "confirmed",
+      "type": "numeric",
+      "query": "2 kg box pushed with a net force of 8 N",
+      "relevantIds": [
+        "581a3c26-2918-4c0c-8ed9-971825a13a17"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Calculate the acceleration of a 2 kg box when a net force of 8 N is applied.",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.8267753175717903,
+      "rewrittenTopScore": 0.8887884744578817,
+      "originalTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "rewrittenTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8267753175717903,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3894479189093836,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.2982075980640716,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8887884744578817,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.37941930645652655,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3494855986392804,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "confirmed",
+      "type": "technical-term",
+      "query": "parallel plate capacitor with a dielectric slab",
+      "relevantIds": [
+        "bbb1988e-d60a-40c6-bd18-20a84c45874d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Explain the characteristics and behavior of a parallel plate capacitor containing a dielectric slab between the plates.",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5482595156243164,
+      "rewrittenTopScore": 0.5535017400881098,
+      "originalTopId": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+      "rewrittenTopId": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.5482595156243164,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.437279495430972,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3227346449547216,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.5535017400881098,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.407664688143053,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.26231394490983706,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "informal",
+      "type": "informal",
+      "query": "that LCR one where 10 volt is across each",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "In the LCR circuit problem where 10 V is applied across each component, analyze the circuit behavior.",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5121391429087182,
+      "rewrittenTopScore": 0.5453406319768969,
+      "originalTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "rewrittenTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5121391429087182,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.3374015690361961,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.32032693135704715,
+          "pageReference": "2",
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5453406319768969,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.38806940429264714,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 3,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.36041350806536354,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        }
+      ]
+    },
+    {
+      "set": "informal",
+      "type": "informal",
+      "query": "the glass ball one with 1.5 refractive index",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Problem involving a glass sphere with a refractive index of 1.5",
+      "originalRank": 2,
+      "rewrittenRank": 2,
+      "originalTopScore": 0.4583459276623083,
+      "rewrittenTopScore": 0.548606525943347,
+      "originalTopId": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+      "rewrittenTopId": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.4583459276623083,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.43312379954133395,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.3248967633613291,
+          "pageReference": "7",
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.548606525943347,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.5457687390287653,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.40438317278100977,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "informal",
+      "type": "informal",
+      "query": "box thing where they push 2 kg with 8 N",
+      "relevantIds": [
+        "581a3c26-2918-4c0c-8ed9-971825a13a17"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "A box with a mass of 2 kg is pushed with a force of 8 N. Calculate the resulting acceleration.",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6526237257121731,
+      "rewrittenTopScore": 0.8964065557207301,
+      "originalTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "rewrittenTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.6526237257121731,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.30716691942515206,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.2900000289566993,
+          "pageReference": "8",
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8964065557207301,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.3714386694484032,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3576223129469349,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "informal",
+      "type": "informal",
+      "query": "that inertia resist change in motion thing",
+      "relevantIds": [
+        "927411e9-1a8a-4077-a247-917dd4acde54"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What is the property of matter that resists changes in its state of motion called?",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6995476872875714,
+      "rewrittenTopScore": 0.6450966149327105,
+      "originalTopId": "927411e9-1a8a-4077-a247-917dd4acde54",
+      "rewrittenTopId": "927411e9-1a8a-4077-a247-917dd4acde54",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.6995476872875714,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.4492505179188635,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.2726421650921026,
+          "pageReference": "4",
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.6450966149327105,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 2,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.38044891947749115,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 3,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.2927981975166425,
+          "pageReference": "4",
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "technical-term",
+      "query": "series LCR circuit",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "series LCR circuit analysis",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.4485883156180869,
+      "rewrittenTopScore": 0.4751249295585299,
+      "originalTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "rewrittenTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.4485883156180869,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.29912247375650214,
+          "pageReference": "5",
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        },
+        {
+          "rank": 3,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.28719691204967845,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.4751249295585299,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.3362000324313271,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 3,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.321036592972455,
+          "pageReference": "5",
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "technical-term",
+      "query": "refractive index 1.5",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What is the refractive index of a material with a value of 1.5?",
+      "originalRank": 2,
+      "rewrittenRank": 2,
+      "originalTopScore": 0.4785288182577512,
+      "rewrittenTopScore": 0.4463464170947886,
+      "originalTopId": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+      "rewrittenTopId": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.4785288182577512,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.403939777656649,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.3382368699901561,
+          "pageReference": "4",
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.4463464170947886,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.37190527910444016,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.351033250324446,
+          "pageReference": "4",
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "technical-term",
+      "query": "net force of 8 N",
+      "relevantIds": [
+        "581a3c26-2918-4c0c-8ed9-971825a13a17"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What is the net force when it is 8 N?",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.614210132519779,
+      "rewrittenTopScore": 0.6550839013773984,
+      "originalTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "rewrittenTopId": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.614210132519779,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.46748886522792965,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.37767574058135933,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.6550839013773984,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.39115664941240125,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.3568835686448739,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "numeric",
+      "query": "radius 6 cm",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "radius = 6 cm",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5100174159255999,
+      "rewrittenTopScore": 0.5255737494086183,
+      "originalTopId": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "rewrittenTopId": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.5100174159255999,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.2909268919207245,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "score": 0.2822193228284281,
+          "pageReference": "3",
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves wit"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.5255737494086183,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.3050227073419549,
+          "pageReference": "8",
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3007764502368844,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "paraphrase",
+      "query": "object at the centre of a glass ball",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "object located at the center of a glass sphere",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.46076399470291807,
+      "rewrittenTopScore": 0.48062575215875025,
+      "originalTopId": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "rewrittenTopId": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.46076399470291807,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.2741895949090106,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.26383640515525786,
+          "pageReference": "8",
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.48062575215875025,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 2,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.2879092022658395,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 3,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.24256797478573422,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "paraphrase",
+      "query": "potential at points in a uniform electric field",
+      "relevantIds": [
+        "45b183ed-2893-4d1b-a4b7-4a007ef52bfb"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Potential at points within a uniform electric field",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5680871007062945,
+      "rewrittenTopScore": 0.5466910243063992,
+      "originalTopId": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+      "rewrittenTopId": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "score": 0.5680871007062945,
+          "pageReference": "2",
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region"
+        },
+        {
+          "rank": 2,
+          "id": "c63782e4-a5bd-4d44-a412-d16f55033411",
+          "score": 0.46799831160852967,
+          "pageReference": "1",
+          "preview": "1. Which of the following is not the property of an equipotential surface?\n(a) T"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.44414051901066065,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "score": 0.5466910243063992,
+          "pageReference": "2",
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region"
+        },
+        {
+          "rank": 2,
+          "id": "c63782e4-a5bd-4d44-a412-d16f55033411",
+          "score": 0.46544551484868824,
+          "pageReference": "1",
+          "preview": "1. Which of the following is not the property of an equipotential surface?\n(a) T"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.4302006966231845,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "typo",
+      "query": "Newtons secod law of motion",
+      "relevantIds": [
+        "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Newton's second law of motion",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.78560966359977,
+      "rewrittenTopScore": 0.8958494113483977,
+      "originalTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "rewrittenTopId": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.78560966359977,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.366480598392106,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.3632966541858451,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.8958494113483977,
+          "pageReference": "96",
+          "preview": "State Newton's second law of motion."
+        },
+        {
+          "rank": 2,
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.4175717033518902,
+          "pageReference": "2",
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of m"
+        },
+        {
+          "rank": 3,
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.38208017294669805,
+          "pageReference": "1",
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "typo",
+      "query": "refractive indx 1.5",
+      "relevantIds": [
+        "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "refractive index equal to 1.5",
+      "originalRank": 2,
+      "rewrittenRank": 2,
+      "originalTopScore": 0.4784465834052706,
+      "rewrittenTopScore": 0.5107461620638467,
+      "originalTopId": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+      "rewrittenTopId": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.4784465834052706,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.37965796554720943,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.3523716814153086,
+          "pageReference": "5",
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.5107461620638467,
+          "pageReference": "4",
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in su"
+        },
+        {
+          "rank": 2,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.4221007230415079,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        },
+        {
+          "rank": 3,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.35257275311458813,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "typo",
+      "query": "paralell plate capaciter dielectric slab",
+      "relevantIds": [
+        "bbb1988e-d60a-40c6-bd18-20a84c45874d"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "parallel plate capacitor with dielectric slab",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5358777501630181,
+      "rewrittenTopScore": 0.5446031514718757,
+      "originalTopId": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+      "rewrittenTopId": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.5358777501630181,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.4266049186500538,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.3239055340244923,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.5446031514718757,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 2,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.44235506864940466,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.3233019633407409,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "typo",
+      "query": "seris LCR circut",
+      "relevantIds": [
+        "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "series LCR circuit",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.3728551201923065,
+      "rewrittenTopScore": 0.44855399866735457,
+      "originalTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "rewrittenTopId": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.3728551201923065,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.2710161655313368,
+          "pageReference": "4",
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to conver"
+        },
+        {
+          "rank": 3,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.2608698998529705,
+          "pageReference": "5",
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.44855399866735457,
+          "pageReference": "2",
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and "
+        },
+        {
+          "rank": 2,
+          "id": "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "score": 0.2990657978781841,
+          "pageReference": "5",
+          "preview": "28. a. Define mutual inductance and write its SI unit.\nb. Two circular loops, on"
+        },
+        {
+          "rank": 3,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.28712243416631344,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "exact",
+      "query": "The diffraction effect can be observed in",
+      "relevantIds": [
+        "0286ff02-b519-4173-bf77-9d42d440d337"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "In which phenomena or situations can the diffraction effect be observed?",
+      "originalRank": 1,
+      "rewrittenRank": 2,
+      "originalTopScore": 0.5468147388542922,
+      "rewrittenTopScore": 0.5074860984227035,
+      "originalTopId": "0286ff02-b519-4173-bf77-9d42d440d337",
+      "rewrittenTopId": "379ec404-6ffe-4c97-a703-db2b98db5682",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "0286ff02-b519-4173-bf77-9d42d440d337",
+          "score": 0.5468147388542922,
+          "pageReference": "2",
+          "preview": "Q4. The diffraction effect can be observed in\n(A) sound waves only (B) light wav"
+        },
+        {
+          "rank": 2,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.5362736611881569,
+          "pageReference": "3",
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.4684247812754143,
+          "pageReference": "5",
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.5074860984227035,
+          "pageReference": "3",
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "0286ff02-b519-4173-bf77-9d42d440d337",
+          "score": 0.5010799976126403,
+          "pageReference": "2",
+          "preview": "Q4. The diffraction effect can be observed in\n(A) sound waves only (B) light wav"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.45752425614775993,
+          "pageReference": "5",
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "exact",
+      "query": "Colours observed on a CD",
+      "relevantIds": [
+        "379ec404-6ffe-4c97-a703-db2b98db5682"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What causes the colours observed on a CD?",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6264527783455903,
+      "rewrittenTopScore": 0.6173842349245353,
+      "originalTopId": "379ec404-6ffe-4c97-a703-db2b98db5682",
+      "rewrittenTopId": "379ec404-6ffe-4c97-a703-db2b98db5682",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.6264527783455903,
+          "pageReference": "3",
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.44379665881572716,
+          "pageReference": "2",
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.3428126013795336,
+          "pageReference": "5",
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.6173842349245353,
+          "pageReference": "3",
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffra"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.3912604385660152,
+          "pageReference": "2",
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "1387812d-a4c0-4262-8f97-ea22bc1f5911",
+          "score": 0.3080519073887704,
+          "pageReference": "5",
+          "preview": "27. Identify the part of the electromagnetic spectrum which:\na) produces heating"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "numeric",
+      "query": "parallel plates of area 0.001 m2 separated by 0.0001 m with voltage changing at 10^8 V/s",
+      "relevantIds": [
+        "26f1a76c-a785-4eda-885d-ea035c2cd332"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Parallel plate capacitor with plate area 0.001 m^2 and plate separation 0.0001 m, subjected to a voltage changing at a rate of 10^8 V/s",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.5576215445685597,
+      "rewrittenTopScore": 0.6476631390907974,
+      "originalTopId": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+      "rewrittenTopId": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.5576215445685597,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.40460790779658207,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 3,
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.39523390693404026,
+          "pageReference": "8",
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with c"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.6476631390907974,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.519418805166632,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        },
+        {
+          "rank": 3,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.4059245820530173,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "numeric",
+      "query": "copper wire radius decreases by 0.1 percent",
+      "relevantIds": [
+        "e5ed64ef-e880-46a4-8150-6e0f8a92a446"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Effect on properties of copper wire when its radius decreases by 0.1%",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6090727565758567,
+      "rewrittenTopScore": 0.611639666440994,
+      "originalTopId": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+      "rewrittenTopId": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "score": 0.6090727565758567,
+          "pageReference": "3",
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        },
+        {
+          "rank": 2,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.3769292973969358,
+          "pageReference": "2",
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.3548183065067818,
+          "pageReference": "5",
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "e5ed64ef-e880-46a4-8150-6e0f8a92a446",
+          "score": 0.611639666440994,
+          "pageReference": "3",
+          "preview": "Q12. If copper wire is stretched to make its radius decrease by 0.1%, then the p"
+        },
+        {
+          "rank": 2,
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.3782631457034191,
+          "pageReference": "2",
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a stea"
+        },
+        {
+          "rank": 3,
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.3664500187614089,
+          "pageReference": "5",
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "technical-term",
+      "query": "displacement current through a capacitor",
+      "relevantIds": [
+        "26f1a76c-a785-4eda-885d-ea035c2cd332"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What is the displacement current through a capacitor?",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.6296486338575382,
+      "rewrittenTopScore": 0.6290362218370922,
+      "originalTopId": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+      "rewrittenTopId": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.6296486338575382,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.38318463626724486,
+          "pageReference": "1",
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at"
+        },
+        {
+          "rank": 3,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.3786094668493307,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.6290362218370922,
+          "pageReference": "2",
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section o"
+        },
+        {
+          "rank": 2,
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.37155607307205885,
+          "pageReference": "6",
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected t"
+        },
+        {
+          "rank": 3,
+          "id": "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "score": 0.3686033065496266,
+          "pageReference": "7",
+          "preview": "Q23. Find the expression for the capacitance of a parallel plate capacitor of pl"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "technical-term",
+      "query": "de Broglie wavelength of a freely falling body",
+      "relevantIds": [
+        "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What is the de Broglie wavelength of a freely falling body?",
+      "originalRank": 2,
+      "rewrittenRank": 2,
+      "originalTopScore": 0.4898928370079504,
+      "rewrittenTopScore": 0.5020176559887742,
+      "originalTopId": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+      "rewrittenTopId": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "score": 0.4898928370079504,
+          "pageReference": "4",
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 2,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.42354901153251,
+          "pageReference": "4",
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.3948804005695187,
+          "pageReference": "4",
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "score": 0.5020176559887742,
+          "pageReference": "4",
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of"
+        },
+        {
+          "rank": 2,
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.42297362472777555,
+          "pageReference": "4",
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and"
+        },
+        {
+          "rank": 3,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.3813577282577023,
+          "pageReference": "4",
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "paraphrase",
+      "query": "platinum surface with work function 5.63 eV illuminated at 1.6 times 10 to the 15 Hz",
+      "relevantIds": [
+        "6c812f85-b95d-43b8-8e64-122308637b54"
+      ],
+      "rewritten": false,
+      "rewrittenQuery": "platinum surface with work function 5.63 eV illuminated at 1.6 times 10 to the 15 Hz",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.808201889376367,
+      "rewrittenTopScore": 0.808201889376367,
+      "originalTopId": "6c812f85-b95d-43b8-8e64-122308637b54",
+      "rewrittenTopId": "6c812f85-b95d-43b8-8e64-122308637b54",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.808201889376367,
+          "pageReference": "4",
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.3975317159735079,
+          "pageReference": "2",
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.36436536385238116,
+          "pageReference": "5",
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.808201889376367,
+          "pageReference": "4",
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochr"
+        },
+        {
+          "rank": 2,
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.3975317159735079,
+          "pageReference": "2",
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the fol"
+        },
+        {
+          "rank": 3,
+          "id": "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "score": 0.36436536385238116,
+          "pageReference": "5",
+          "preview": "Q18. (I) A beam of light consisting of two wavelengths, 4000 Å and 6000 Å, is us"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "technical-term",
+      "query": "Cassegrain telescope",
+      "relevantIds": [
+        "b1f9f287-c30a-4657-89ac-df286297b2fe"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "What is a Cassegrain telescope and how does it function?",
+      "originalRank": 1,
+      "rewrittenRank": 1,
+      "originalTopScore": 0.4960896579225219,
+      "rewrittenTopScore": 0.4523774292979448,
+      "originalTopId": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+      "rewrittenTopId": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.4960896579225219,
+          "pageReference": "7",
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.4116641457198055,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.31839066399035043,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.4523774292979448,
+          "pageReference": "7",
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.33479537599949816,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.2682125585991818,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        }
+      ]
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "numeric",
+      "query": "objective focal length 15 m and eyepiece focal length 1.0 cm",
+      "relevantIds": [
+        "65074e52-d13a-4486-a6cb-396894d6f810"
+      ],
+      "rewritten": true,
+      "rewrittenQuery": "Calculate the properties of a telescope with an objective focal length of 15 m and an eyepiece focal length of 1.0 cm.",
+      "originalRank": 1,
+      "rewrittenRank": 2,
+      "originalTopScore": 0.5505085398350226,
+      "rewrittenTopScore": 0.5913498658850581,
+      "originalTopId": "65074e52-d13a-4486-a6cb-396894d6f810",
+      "rewrittenTopId": "2d363ee3-7dac-45fa-8731-ea1169724781",
+      "originalHits": [
+        {
+          "rank": 1,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.5505085398350226,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 2,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5412409028139678,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.398588177918052,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ],
+      "rewrittenHits": [
+        {
+          "rank": 1,
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5913498658850581,
+          "pageReference": "4",
+          "preview": "21. Show that the least possible distance between an object and its real image i"
+        },
+        {
+          "rank": 2,
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.5873309042032242,
+          "pageReference": "13",
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens"
+        },
+        {
+          "rank": 3,
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.41517616641227295,
+          "pageReference": "3",
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and "
+        }
+      ]
+    }
+  ],
+  "negatives": [
+    {
+      "set": "confirmed",
+      "type": "unrelated",
+      "query": "capital of France",
+      "decision": null,
+      "rewritten": true,
+      "rewrittenQuery": "What is the capital city of France?",
+      "originalTopScore": 0.11072490052359651,
+      "rewrittenTopScore": 0.13075257348587943,
+      "retrievalFalsePositiveOriginal": false,
+      "retrievalFalsePositiveRewritten": false,
+      "answerStatus": "out_of_scope",
+      "answerCorrectlyRejected": true,
+      "outOfScope": true
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "equation",
+      "query": "10√2 V",
+      "decision": "no-relevant-result",
+      "rewritten": false,
+      "rewrittenQuery": "10√2 V",
+      "originalTopScore": 0.5076605822034892,
+      "rewrittenTopScore": 0.5076605822034892,
+      "retrievalFalsePositiveOriginal": true,
+      "retrievalFalsePositiveRewritten": true,
+      "answerStatus": "insufficient",
+      "answerCorrectlyRejected": true,
+      "outOfScope": false
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "equation",
+      "query": "VA < VB",
+      "decision": "no-relevant-result",
+      "rewritten": true,
+      "rewrittenQuery": "Inequality VA < VB in circuit analysis",
+      "originalTopScore": 0.5209788625574193,
+      "rewrittenTopScore": 0.5243541332662011,
+      "retrievalFalsePositiveOriginal": true,
+      "retrievalFalsePositiveRewritten": true,
+      "answerStatus": "insufficient",
+      "answerCorrectlyRejected": true,
+      "outOfScope": false
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "paraphrase",
+      "query": "voltage across the inductance when the capacitance is short circuited",
+      "decision": "no-relevant-result",
+      "rewritten": true,
+      "rewrittenQuery": "Voltage across the inductance when the capacitance is short-circuited",
+      "originalTopScore": 0.5973013590700973,
+      "rewrittenTopScore": 0.5801247214387542,
+      "retrievalFalsePositiveOriginal": true,
+      "retrievalFalsePositiveRewritten": true,
+      "answerStatus": "insufficient",
+      "answerCorrectlyRejected": true,
+      "outOfScope": false
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "unrelated",
+      "query": "Who wrote Hamlet?",
+      "decision": "no-relevant-result",
+      "rewritten": true,
+      "rewrittenQuery": "Who is the author of the play Hamlet?",
+      "originalTopScore": 0.1700025710291877,
+      "rewrittenTopScore": 0.1614564464916124,
+      "retrievalFalsePositiveOriginal": false,
+      "retrievalFalsePositiveRewritten": false,
+      "answerStatus": "out_of_scope",
+      "answerCorrectlyRejected": true,
+      "outOfScope": true
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "unrelated",
+      "query": "What is the boiling point of ethanol?",
+      "decision": "no-relevant-result",
+      "rewritten": false,
+      "rewrittenQuery": "What is the boiling point of ethanol?",
+      "originalTopScore": 0.3741493231581646,
+      "rewrittenTopScore": 0.3741493231581646,
+      "retrievalFalsePositiveOriginal": false,
+      "retrievalFalsePositiveRewritten": false,
+      "answerStatus": "out_of_scope",
+      "answerCorrectlyRejected": true,
+      "outOfScope": true
+    },
+    {
+      "set": "reviewedConfirmed",
+      "type": "unrelated",
+      "query": "Explain photosynthesis.",
+      "decision": "no-relevant-result",
+      "rewritten": true,
+      "rewrittenQuery": "Explain the process of photosynthesis.",
+      "originalTopScore": 0.24648865937117292,
+      "rewrittenTopScore": 0.2684922123927034,
+      "retrievalFalsePositiveOriginal": false,
+      "retrievalFalsePositiveRewritten": false,
+      "answerStatus": "out_of_scope",
+      "answerCorrectlyRejected": true,
+      "outOfScope": true
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "unrelated",
+      "query": "Who painted the Mona Lisa?",
+      "decision": "no-relevant-result",
+      "rewritten": true,
+      "rewrittenQuery": "Who is the artist that painted the Mona Lisa?",
+      "originalTopScore": 0.13322059676003772,
+      "rewrittenTopScore": 0.13388947268698959,
+      "retrievalFalsePositiveOriginal": false,
+      "retrievalFalsePositiveRewritten": false,
+      "answerStatus": "out_of_scope",
+      "answerCorrectlyRejected": true,
+      "outOfScope": true
+    },
+    {
+      "set": "expandedConfirmed",
+      "type": "unrelated",
+      "query": "What is the capital of Japan?",
+      "decision": "no-relevant-result",
+      "rewritten": true,
+      "rewrittenQuery": "What is the capital city of Japan?",
+      "originalTopScore": 0.09665143248501962,
+      "rewrittenTopScore": 0.08617242458972307,
+      "retrievalFalsePositiveOriginal": false,
+      "retrievalFalsePositiveRewritten": false,
+      "answerStatus": "out_of_scope",
+      "answerCorrectlyRejected": true,
+      "outOfScope": true
+    }
+  ]
+}

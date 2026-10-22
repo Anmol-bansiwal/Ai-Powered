@@ -1,0 +1,50 @@
+{
+  "purpose": "Independently collected student queries for the Physics and Chemistry retrieval benchmark (next promotion milestone — see NEXT_MILESTONE.md). Students write queries without seeing the stored questions. Label relevant IDs afterward. Only entries with label.status relevant or no-relevant-result are scored. pending and unresolved are never scored. Freeze this set before tuning hybrid weights.",
+  "corpus": {
+    "database": "edusearch_ai",
+    "questionCount": 68,
+    "subjects": ["Physics", "Chemistry"]
+  },
+  "target": {
+    "proposedMinimumQueries": 50,
+    "note": "Proposed engineering target, not a statistical guarantee of production readiness."
+  },
+  "instructions": {
+    "collection": [
+      "Open eval/student-query-form.html in a browser to copy JSON records.",
+      "Ask each student to write a question they would search for, without showing them the stored questions.",
+      "Paste the query exactly as written, keeping spelling, capitalisation, punctuation, numbers, units, and equations. Do not correct or rephrase it.",
+      "Keep unrelated questions if students write them. Do not add queries to balance the set.",
+      "Do not record student names. studentRef is an optional anonymous code such as S01.",
+      "Set sawBank to false for the independent set. Records with sawBank true are validated but excluded from scoring."
+    ],
+    "labelling": [
+      "After collection is complete, a reviewer who did not write the queries maps each query to question IDs.",
+      "relevant: the stored question is what the student was looking for. List every relevant id.",
+      "no-relevant-result: the bank does not contain a suitable question. relevantIds must be empty.",
+      "unresolved: the reviewer cannot confidently determine relevance. Use suggestedIds only. Not scored.",
+      "pending: not yet labelled. Not scored.",
+      "A glass prism question is not automatically relevant to a glass sphere query.",
+      "Run npm run validate:student-queries before scoring."
+    ],
+    "entryFormat": {
+      "id": "s001 (unique, never reused)",
+      "query": "exact student text",
+      "subject": "Physics | Chemistry | Mathematics | Other",
+      "queryStyle": "informal | conceptual | numeric | exact | incomplete",
+      "studentRef": "optional anonymous code",
+      "collectedOn": "YYYY-MM-DD",
+      "sawBank": "must be false for a scored independent entry",
+      "notes": "optional collector notes",
+      "label": {
+        "status": "pending | relevant | no-relevant-result | unresolved",
+        "relevantIds": ["question UUID, only for relevant"],
+        "suggestedIds": ["candidate UUIDs, only for unresolved"],
+        "type": "optional category override used in per-type metrics",
+        "reason": "why the label was chosen",
+        "labeledBy": "labeller initials"
+      }
+    }
+  },
+  "queries": []
+}

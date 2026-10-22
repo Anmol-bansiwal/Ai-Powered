@@ -1,0 +1,1815 @@
+{
+  "purpose": "Labeller-constructed 100-query candidate set for exploratory vector-vs-hybrid comparison. NOT independent student submissions. Do not copy into student-queries.json as promotion evidence.",
+  "kind": "labeller-constructed-candidate-100",
+  "notIndependentPromotionSample": true,
+  "corpus": {
+    "database": "edusearch_ai",
+    "questionCount": 68,
+    "subjects": [
+      "Physics",
+      "Chemistry"
+    ]
+  },
+  "queries": [
+    {
+      "id": "CAND-001",
+      "query": "that LCR question where the voltage across resistance capacitance and inductance is 10 volts each",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "LCR circuit",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-002",
+      "query": "series LCR circuit, VR = VC = VL = 10 V; what happens if the capacitor is short-circuited?",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "LCR circuit",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-003",
+      "query": "find the voltage across the inductor after shorting the capacitor in the LCR problem",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "LCR circuit",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-004",
+      "query": "the glass ball problem with radius 6 cm and refractive index 1.5",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Glass sphere refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-005",
+      "query": "point object at the centre of a glass sphere, radius 6 cm, refractive index 1.5; find virtual image distance",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Glass sphere refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-006",
+      "query": "where does the virtual image form for an object at the centre of a refracting glass sphere",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Glass sphere refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-007",
+      "query": "the prism one where angle of incidence equals angle of emergence and both are three quarters of prism angle",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Prism refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-008",
+      "query": "calculate deviation and refractive index for a ray passing symmetrically through an equilateral prism",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Prism refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-009",
+      "query": "A ray passes through an equilateral glass prism with angle of incidence equal to angle of emergence.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Prism refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-010",
+      "query": "that capacitor question with voltage changing at 10 to the power 8 volts per second",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Displacement current",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-011",
+      "query": "parallel plate capacitor area 0.001 m2, gap 0.0001 m, dV/dt = 10^8 V/s; find displacement current",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Displacement current",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-012",
+      "query": "how do you calculate displacement current when the voltage across a capacitor changes with time",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Displacement current",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-013",
+      "query": "the long wire question comparing magnetic field half a radius above and below its surface",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Magnetic field in wire",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-014",
+      "query": "compare magnetic field at a/2 outside and a/2 inside a uniformly current-carrying cylindrical wire",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Magnetic field in wire",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-015",
+      "query": "wire radius a carries uniform current; find ratio of B at 1.5a from centre and 0.5a from centre",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Magnetic field in wire",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-016",
+      "query": "the square wire resistor problem with a 1 ohm wire AP and B and P at the same potential",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Balanced resistor network",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-017",
+      "query": "a square of total wire resistance 4 ohm has a 1 ohm branch from A to point P on DC; find DP resistance",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Balanced resistor network",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-018",
+      "query": "in a square resistance network, B and P are equipotential; how can the unknown segment DP be found",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Balanced resistor network",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-019",
+      "query": "which device uses a pn diode to change AC into DC and draw its full-wave circuit",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rectifier",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-020",
+      "query": "what circuit converts alternating current into direct current using a diode",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rectifier",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-021",
+      "query": "Name the device that uses the unilateral action of a pn diode to convert ac into dc.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rectifier",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-022",
+      "query": "the assertion reason question about putting p-type and n-type slabs directly in contact",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "pn junction formation",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-023",
+      "query": "why can't simply pressing a p-type slab against an n-type slab make a proper pn junction",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "pn junction formation",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-024",
+      "query": "Putting a p type semiconductor slab directly in physical contact with an n type semiconductor slab cannot form the pn junction.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "pn junction formation",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-025",
+      "query": "the telescope question with objective focal length 15 metres and eyepiece focal length 1 cm",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Telescope magnification",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-026",
+      "query": "objective focal length 15 m and eyepiece focal length 1.0 cm; find angular magnification in normal adjustment",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Telescope magnification",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-027",
+      "query": "how do focal lengths of objective and eyepiece determine telescope magnification",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Telescope magnification",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-028",
+      "query": "why do different colours appear on a compact disc",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "CD diffraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-029",
+      "query": "the multiple choice question asking whether colours on a CD are caused by diffraction or dispersion",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "CD diffraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-030",
+      "query": "Colours observed on a CD are due to which phenomenon?",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "CD diffraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-031",
+      "query": "which colour of light gives the maximum stopping potential",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Photoelectric stopping potential",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-032",
+      "query": "in the photoelectric effect, which visible colour produces the greatest stopping potential",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Photoelectric stopping potential",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-033",
+      "query": "A metallic plate exposed to white light emits electrons. For which colour will stopping potential be maximum?",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Photoelectric stopping potential",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-034",
+      "query": "the gold foil experiment question asking why most alpha particles go straight through",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rutherford scattering",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-035",
+      "query": "what did Rutherford's alpha-particle scattering experiment reveal about empty space inside atoms",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rutherford scattering",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-036",
+      "query": "Most alpha particles pass straight through a thin gold foil because most of the atom is empty space.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rutherford scattering",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-037",
+      "query": "the hydrogen atom question about what the negative sign of electron energy means",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrogen energy levels",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-038",
+      "query": "why is the energy of an electron in a hydrogen atom negative",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrogen energy levels",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-039",
+      "query": "En = -13.6/n^2 eV; what does the negative sign tell us about the electron",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrogen energy levels",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-040",
+      "query": "the assertion reason question where a falling body's de Broglie wavelength decreases",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "de Broglie wavelength",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-041",
+      "query": "how does increasing momentum affect de Broglie wavelength for a freely falling body",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "de Broglie wavelength",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-042",
+      "query": "The de Broglie wavelength of a freely falling body keeps decreasing with time because its momentum increases.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "de Broglie wavelength",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-043",
+      "query": "the dipole question with field 2 times 10^5 newtons per coulomb, angle 30 degrees and torque 4 Nm",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electric dipole torque",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-044",
+      "query": "an electric dipole in E = 2×10^5 N/C at 30° experiences 4 Nm torque; find the charge for dipole length 2 cm",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electric dipole torque",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-045",
+      "query": "calculate dipole moment from torque, electric field strength and angle",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electric dipole torque",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-046",
+      "query": "the charged ball in a vertical pipe moving east to west in a 2 tesla magnetic field",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Charge in moving pipe",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-047",
+      "query": "a 10 g ball with charge +10 mC is inside a pipe moving west in B = 2 T; find the minimum speed so it does not slide",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Charge in moving pipe",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-048",
+      "query": "balance gravity with magnetic force for a charged sphere in a moving pipe",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Charge in moving pipe",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-049",
+      "query": "the question about electron drift velocity changing with relaxation time",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Drift velocity",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-050",
+      "query": "draw the relation between drift velocity and relaxation time in a conductor",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Drift velocity",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-051",
+      "query": "a conductor's current varies sinusoidally; determine average electron drift velocity over one complete cycle",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Drift velocity",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-052",
+      "query": "the convex lens question proving the minimum distance between object and real image is 4f",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Lens image distance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-053",
+      "query": "why is the minimum object-to-real-image distance for a convex lens equal to four focal lengths",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Lens image distance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-054",
+      "query": "Show that the least possible distance between an object and its real image in a convex lens is 4f.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Lens image distance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-055",
+      "query": "the two-mirror telescope problem with mirrors 20 mm apart and radii 200 mm and 150 mm",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Cassegrain telescope",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-056",
+      "query": "Cassegrain telescope mirrors separated by 20 mm, large mirror radius 200 mm, small mirror radius 150 mm; locate final image",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Cassegrain telescope",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-057",
+      "query": "where is the final image in a Cassegrain telescope when the object is at infinity",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Cassegrain telescope",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-058",
+      "query": "what was that definition about a body resisting a change in its motion",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Inertia",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-059",
+      "query": "define inertia as resistance to a change in the state of rest or motion",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Inertia",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-060",
+      "query": "the question asking to state Newton's second law",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Newton second law",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-061",
+      "query": "what does Newton's second law say about force, mass and acceleration",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Newton second law",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-062",
+      "query": "a 2 kg box pushed with net force 8 N",
+      "subject": " find acceleration",
+      "queryStyle": "physics",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "[]",
+      "notes": "Acceleration from force",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "candidate",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-063",
+      "query": "calculate acceleration when a net force of 8 newtons acts on a 2 kilogram box",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Acceleration from force",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "numeric",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-064",
+      "query": "the organic chemistry question with C6H5COOCOCH3 reacting with water",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrolysis of anhydride",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-065",
+      "query": "what products form when the compound C6H5COOCOCH3 is treated with H2O",
+      "subject": "Chemistry",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrolysis of anhydride",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-066",
+      "query": "C6H5COOCOCH3 is treated with water; choose the products formed.",
+      "subject": "Chemistry",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrolysis of anhydride",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "exact",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-067",
+      "query": "Who painted the Mona Lisa?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated general knowledge",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-068",
+      "query": "What is the capital of Japan?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated geography",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-069",
+      "query": "Who wrote Hamlet?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated literature",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-070",
+      "query": "What caused the French Revolution?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated history",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-071",
+      "query": "Who won the 2022 FIFA World Cup?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated sports",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-072",
+      "query": "How do I configure an Nginx reverse proxy for a Node.js API?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated computing",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-073",
+      "query": "How long should I bake a chocolate cake?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated cooking",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-074",
+      "query": "What is the current price of gold in Dubai?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated finance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-075",
+      "query": "Explain the human digestive system.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated biology",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-076",
+      "query": "How many moons does Mars have?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated astronomy",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-077",
+      "query": "Write a React component for a login form.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated programming",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-078",
+      "query": "Where is the Eiffel Tower located?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated geography",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-079",
+      "query": "Who composed the Four Seasons?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated music",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-080",
+      "query": "What is the difference between revenue and profit?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated business",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-081",
+      "query": "What are common symptoms of seasonal allergies?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated health",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-082",
+      "query": "What is the legal process for registering a trademark in India?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated law",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-083",
+      "query": "Summarize the plot of Pride and Prejudice.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated literature",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-084",
+      "query": "What should I visit on a three-day trip to Jaipur?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated travel",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-085",
+      "query": "What is inflation and how does it affect consumers?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated economics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-086",
+      "query": "Explain how DNS resolution works.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated networking",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-087",
+      "query": "What is the speed of light in vacuum?",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Physics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-088",
+      "query": "Explain the periodic trend in atomic radius across period 3.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Chemistry",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-089",
+      "query": "Find the derivative of sin(x^2).",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Mathematics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-090",
+      "query": "Solve the integral of x e^x.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Mathematics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-091",
+      "query": "Calculate the escape velocity from Earth's surface.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Physics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-092",
+      "query": "Explain the mechanism of aldol condensation.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Chemistry",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-093",
+      "query": "Describe DNA replication in prokaryotes.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Biology",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-094",
+      "query": "Find the eigenvalues of a 3 by 3 matrix.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Mathematics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-095",
+      "query": "Derive the expression for the magnetic field inside a solenoid.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Physics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-096",
+      "query": "What is the difference between SN1 and SN2 reactions?",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Chemistry",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-097",
+      "query": "the question about the relation between changing magnetic flux and induced emf",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electromagnetic induction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-098",
+      "query": "how does electric field relate to electric potential difference",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electrostatics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-099",
+      "query": "the chemistry MCQ asking for products after an organic compound reacts with water",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Organic reaction products",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    },
+    {
+      "id": "CAND-100",
+      "query": "that optics question about an object at infinity and where the final image forms in a telescope",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Optical instruments",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "pending",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "",
+        "labeledBy": ""
+      }
+    }
+  ]
+}

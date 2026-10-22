@@ -1,0 +1,289 @@
+{
+  "purpose": "Labeller-constructed candidate queries from published CBSE/NCERT-style material for preliminary vector-vs-hybrid testing. NOT independent student submissions. Do not treat as the promotion sample. See student-queries.json for real independent collection.",
+  "kind": "labeller-constructed-from-published-papers",
+  "notIndependentPromotionSample": true,
+  "sources": [
+    "https://cbseacademic.nic.in/SQP_CLASSXII_2024-25.html",
+    "NCERT Exemplar / CBSE sample-paper style wording"
+  ],
+  "corpus": {
+    "database": "edusearch_ai",
+    "questionCount": 68,
+    "subjects": ["Physics", "Chemistry"]
+  },
+  "queries": [
+    {
+      "id": "c001",
+      "query": "that LCR circuit one where voltage across R L and C is 10 volts each",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "notes": "Constructed informal paraphrase; expected Q6 series LCR 10 V each.",
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["e9188da0-76f0-4de0-bd49-15c98e80e4d9"],
+        "suggestedIds": [],
+        "reason": "Matches stored Q6 series LCR with 10 V across R, L and C.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c002",
+      "query": "the glass ball question with radius 6 cm and refractive index 1.5",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "notes": "Constructed informal paraphrase of glass sphere Q9.",
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+        "suggestedIds": [],
+        "reason": "Matches Q9 glass sphere radius 6 cm, n=1.5. Prism is a hard negative.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c003",
+      "query": "that question asking why a CD shows different colours",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["379ec404-6ffe-4c97-a703-db2b98db5682"],
+        "suggestedIds": [],
+        "reason": "Matches Q10 colours observed on a CD.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c004",
+      "query": "voltage changes at 10^8 volts per second across a capacitor, find displacement current",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "numeric",
+        "relevantIds": ["26f1a76c-a785-4eda-885d-ea035c2cd332"],
+        "suggestedIds": [],
+        "reason": "Matches Q5 capacitor with dV/dt = 10^8 V/s / displacement current.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c005",
+      "query": "the alpha particle one where it comes closer to the nucleus and distance becomes half",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["4839d3ac-7a83-4573-9aaf-647d9af49112"],
+        "suggestedIds": [],
+        "reason": "Matches Q8 distance of closest approach for alpha particle.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c006",
+      "query": "which colour gives maximum stopping potential in photoelectric effect",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["b3808c1e-f279-420d-8dd3-b63ad41d6275"],
+        "suggestedIds": [],
+        "reason": "Matches MCQ on stopping potential vs colour of light.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c007",
+      "query": "the prism question where angle of incidence equals angle of emergence",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["88c8bd65-a0f7-4bcf-9192-29eac98d0db3"],
+        "suggestedIds": [],
+        "reason": "Matches equilateral prism with i = e.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c008",
+      "query": "the question about electrons drifting opposite to the electric field",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["292e853c-7ae8-4737-a3a5-1edb36e710bd"],
+        "suggestedIds": [],
+        "reason": "Matches Q21 drift velocity / electrons opposite to E.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c009",
+      "query": "A point object is placed at the centre of a glass sphere of radius 6 cm and refractive index 1.5.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "exact",
+        "relevantIds": ["7ab34996-26de-4471-8ac2-bb9a1c4eb28d"],
+        "suggestedIds": [],
+        "reason": "Near-exact stem of Q9.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c010",
+      "query": "In a series LCR circuit, the voltage across the resistance, capacitance and inductance is 10 V each.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "exact",
+        "relevantIds": ["e9188da0-76f0-4de0-bd49-15c98e80e4d9"],
+        "suggestedIds": [],
+        "reason": "Near-exact stem of Q6.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c011",
+      "query": "why does most of an atom consist of empty space according to the gold foil experiment",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "conceptual",
+        "relevantIds": ["6d4a7b50-5b40-49c1-9546-4684026720db"],
+        "suggestedIds": [],
+        "reason": "Matches gold-foil / alpha particles go straight through MCQ.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c012",
+      "query": "the organic chemistry question where C6H5COOCOCH3 reacts with water",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "notes": "Verified against uploaded bank: C_{6}H_{5}COOCOCH_{3} + H_{2}O product MCQ.",
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"],
+        "suggestedIds": [],
+        "reason": "Live bank contains the matching hydrolysis MCQ.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c013",
+      "query": "which methyl halide or ethyl chloride reaction gives an amine that reacts with Hinsberg reagent",
+      "subject": "Chemistry",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "conceptual",
+        "relevantIds": ["b9e90ce7-5410-490e-985d-ed4c5e8caef9"],
+        "suggestedIds": [],
+        "reason": "Matches ammonolysis of ethyl chloride / Hinsberg reagent MCQ.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c014",
+      "query": "the telescope one with objective focal length 15 metres and eyepiece 1 centimetre",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "label": {
+        "status": "relevant",
+        "type": "informal",
+        "relevantIds": ["65074e52-d13a-4486-a6cb-396894d6f810"],
+        "suggestedIds": [],
+        "reason": "Matches Q33 telescope f_o=15 m, f_e=1.0 cm.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c015",
+      "query": "Who painted the Mona Lisa?",
+      "subject": "Other",
+      "queryStyle": "incomplete",
+      "sawBank": true,
+      "label": {
+        "status": "no-relevant-result",
+        "type": "unrelated",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "reason": "No Physics/Chemistry question about the Mona Lisa.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c016",
+      "query": "What is the capital of Japan?",
+      "subject": "Other",
+      "queryStyle": "incomplete",
+      "sawBank": true,
+      "label": {
+        "status": "no-relevant-result",
+        "type": "unrelated",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "reason": "No stored question about Japan.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c017",
+      "query": "Explain the causes of the French Revolution.",
+      "subject": "Other",
+      "queryStyle": "incomplete",
+      "sawBank": true,
+      "label": {
+        "status": "no-relevant-result",
+        "type": "unrelated",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "reason": "No stored question about the French Revolution.",
+        "labeledBy": "lab"
+      }
+    },
+    {
+      "id": "c018",
+      "query": "Who wrote Hamlet?",
+      "subject": "Other",
+      "queryStyle": "incomplete",
+      "sawBank": true,
+      "label": {
+        "status": "no-relevant-result",
+        "type": "unrelated",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "reason": "No stored question about Hamlet.",
+        "labeledBy": "lab"
+      }
+    }
+  ]
+}

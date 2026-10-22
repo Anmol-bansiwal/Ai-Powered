@@ -1,0 +1,2663 @@
+{
+  "purpose": "Labeller-constructed 100-query candidate set for exploratory vector-vs-hybrid comparison. NOT independent student submissions. Do not copy into student-queries.json as promotion evidence. Auto-labelled from live search; review unresolved before trusting promotion-adjacent decisions.",
+  "kind": "labeller-constructed-candidate-100",
+  "notIndependentPromotionSample": true,
+  "corpus": {
+    "database": "edusearch_ai",
+    "questionCount": 68,
+    "subjects": [
+      "Physics",
+      "Chemistry"
+    ]
+  },
+  "queries": [
+    {
+      "id": "CAND-001",
+      "query": "that LCR question where the voltage across resistance capacitance and inductance is 10 volts each",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "LCR circuit",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+        ],
+        "suggestedIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.692 >= 0.48. Confirm topic \"LCR circuit\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.691804264185839,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and inductance is 10 V e"
+        }
+      }
+    },
+    {
+      "id": "CAND-002",
+      "query": "series LCR circuit, VR = VC = VL = 10 V; what happens if the capacitor is short-circuited?",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "LCR circuit",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+        ],
+        "suggestedIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "45b183ed-2893-4d1b-a4b7-4a007ef52bfb"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.584 >= 0.48. Confirm topic \"LCR circuit\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5843150128615326,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and inductance is 10 V e"
+        }
+      }
+    },
+    {
+      "id": "CAND-003",
+      "query": "find the voltage across the inductor after shorting the capacitor in the LCR problem",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "LCR circuit",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "e9188da0-76f0-4de0-bd49-15c98e80e4d9"
+        ],
+        "suggestedIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "a7be8c12-a5c7-47b2-b95a-dc331983d1c6"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.565 >= 0.48. Confirm topic \"LCR circuit\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.5647384154302193,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and inductance is 10 V e"
+        }
+      }
+    },
+    {
+      "id": "CAND-004",
+      "query": "the glass ball problem with radius 6 cm and refractive index 1.5",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Glass sphere refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+        ],
+        "suggestedIds": [
+          "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.639 >= 0.48. Confirm topic \"Glass sphere refraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.6389715464150933,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and refractive index 1.5"
+        }
+      }
+    },
+    {
+      "id": "CAND-005",
+      "query": "point object at the centre of a glass sphere, radius 6 cm, refractive index 1.5; find virtual image distance",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Glass sphere refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+        ],
+        "suggestedIds": [
+          "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.756 >= 0.48. Confirm topic \"Glass sphere refraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.7557257647625956,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and refractive index 1.5"
+        }
+      }
+    },
+    {
+      "id": "CAND-006",
+      "query": "where does the virtual image form for an object at the centre of a refracting glass sphere",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Glass sphere refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+        ],
+        "suggestedIds": [
+          "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.613 >= 0.48. Confirm topic \"Glass sphere refraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "score": 0.6126785590782661,
+          "preview": "Q9. A point object is placed at the centre of a glass sphere of radius 6 cm and refractive index 1.5"
+        }
+      }
+    },
+    {
+      "id": "CAND-007",
+      "query": "the prism one where angle of incidence equals angle of emergence and both are three quarters of prism angle",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Prism refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "88c8bd65-a0f7-4bcf-9192-29eac98d0db3"
+        ],
+        "suggestedIds": [
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "b1f9f287-c30a-4657-89ac-df286297b2fe"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.670 >= 0.48. Confirm topic \"Prism refraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.669839631324155,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in such a\nway that the an"
+        }
+      }
+    },
+    {
+      "id": "CAND-008",
+      "query": "calculate deviation and refractive index for a ray passing symmetrically through an equilateral prism",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Prism refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "88c8bd65-a0f7-4bcf-9192-29eac98d0db3"
+        ],
+        "suggestedIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.729 >= 0.48. Confirm topic \"Prism refraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.728821033681692,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in such a\nway that the an"
+        }
+      }
+    },
+    {
+      "id": "CAND-009",
+      "query": "A ray passes through an equilateral glass prism with angle of incidence equal to angle of emergence.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Prism refraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "88c8bd65-a0f7-4bcf-9192-29eac98d0db3"
+        ],
+        "suggestedIds": [
+          "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.786 >= 0.48. Confirm topic \"Prism refraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "88c8bd65-a0f7-4bcf-9192-29eac98d0db3",
+          "score": 0.7856817377889811,
+          "preview": "19. A ray of monochromatic light passes through an equilateral glass prism in such a\nway that the an"
+        }
+      }
+    },
+    {
+      "id": "CAND-010",
+      "query": "that capacitor question with voltage changing at 10 to the power 8 volts per second",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Displacement current",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332"
+        ],
+        "suggestedIds": [
+          "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "560d1d00-3f99-4ac0-8ad3-0d06746a6df4"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.533 >= 0.48. Confirm topic \"Displacement current\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.5330797075441231,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section of 0.001 m^{2}, separ"
+        }
+      }
+    },
+    {
+      "id": "CAND-011",
+      "query": "parallel plate capacitor area 0.001 m2, gap 0.0001 m, dV/dt = 10^8 V/s; find displacement current",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Displacement current",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332"
+        ],
+        "suggestedIds": [
+          "bbb1988e-d60a-40c6-bd18-20a84c45874d",
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.742 >= 0.48. Confirm topic \"Displacement current\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.7418860747915351,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section of 0.001 m^{2}, separ"
+        }
+      }
+    },
+    {
+      "id": "CAND-012",
+      "query": "how do you calculate displacement current when the voltage across a capacitor changes with time",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Displacement current",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332"
+        ],
+        "suggestedIds": [
+          "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "bbb1988e-d60a-40c6-bd18-20a84c45874d"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.593 >= 0.48. Confirm topic \"Displacement current\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "score": 0.5925565623480984,
+          "preview": "Q5. A capacitor consists of two parallel plates, with an area of cross-section of 0.001 m^{2}, separ"
+        }
+      }
+    },
+    {
+      "id": "CAND-013",
+      "query": "the long wire question comparing magnetic field half a radius above and below its surface",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Magnetic field in wire",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+        ],
+        "suggestedIds": [
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.538 >= 0.48. Confirm topic \"Magnetic field in wire\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.537754855726012,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a steady current I. The cu"
+        }
+      }
+    },
+    {
+      "id": "CAND-014",
+      "query": "compare magnetic field at a/2 outside and a/2 inside a uniformly current-carrying cylindrical wire",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Magnetic field in wire",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+        ],
+        "suggestedIds": [
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "a7be8c12-a5c7-47b2-b95a-dc331983d1c6"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.555 >= 0.48. Confirm topic \"Magnetic field in wire\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.5550429648474079,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a steady current I. The cu"
+        }
+      }
+    },
+    {
+      "id": "CAND-015",
+      "query": "wire radius a carries uniform current; find ratio of B at 1.5a from centre and 0.5a from centre",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Magnetic field in wire",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+        ],
+        "suggestedIds": [
+          "a7be8c12-a5c7-47b2-b95a-dc331983d1c6",
+          "6fcb5293-8191-415d-824c-e2a9c01640a2"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.603 >= 0.48. Confirm topic \"Magnetic field in wire\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.6032951943078175,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a steady current I. The cu"
+        }
+      }
+    },
+    {
+      "id": "CAND-016",
+      "query": "the square wire resistor problem with a 1 ohm wire AP and B and P at the same potential",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Balanced resistor network",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "6fcb5293-8191-415d-824c-e2a9c01640a2"
+        ],
+        "suggestedIds": [
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "e5ed64ef-e880-46a4-8150-6e0f8a92a446"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.637 >= 0.48. Confirm topic \"Balanced resistor network\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.6371159267346369,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of square\nABCD. Point "
+        }
+      }
+    },
+    {
+      "id": "CAND-017",
+      "query": "a square of total wire resistance 4 ohm has a 1 ohm branch from A to point P on DC; find DP resistance",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Balanced resistor network",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "6fcb5293-8191-415d-824c-e2a9c01640a2"
+        ],
+        "suggestedIds": [
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "e5ed64ef-e880-46a4-8150-6e0f8a92a446"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.761 >= 0.48. Confirm topic \"Balanced resistor network\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.760842726699585,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of square\nABCD. Point "
+        }
+      }
+    },
+    {
+      "id": "CAND-018",
+      "query": "in a square resistance network, B and P are equipotential; how can the unknown segment DP be found",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Balanced resistor network",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "6fcb5293-8191-415d-824c-e2a9c01640a2"
+        ],
+        "suggestedIds": [
+          "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "e5ed64ef-e880-46a4-8150-6e0f8a92a446"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.564 >= 0.48. Confirm topic \"Balanced resistor network\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "6fcb5293-8191-415d-824c-e2a9c01640a2",
+          "score": 0.5636739701789812,
+          "preview": "25. A wire of uniform cross-section and resistance 4 ohm is bent in the shape of square\nABCD. Point "
+        }
+      }
+    },
+    {
+      "id": "CAND-019",
+      "query": "which device uses a pn diode to change AC into DC and draw its full-wave circuit",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rectifier",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b601b296-0074-4755-8be3-1e2614079947"
+        ],
+        "suggestedIds": [
+          "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "6fcb5293-8191-415d-824c-e2a9c01640a2"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.675 >= 0.48. Confirm topic \"Rectifier\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.6748751306430522,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to convert\nac into dc.\n(b) Dr"
+        }
+      }
+    },
+    {
+      "id": "CAND-020",
+      "query": "what circuit converts alternating current into direct current using a diode",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rectifier",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b601b296-0074-4755-8be3-1e2614079947"
+        ],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "Human: matches rectifier / pn diode AC to DC question 17.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.4589122273422388,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to convert\nac into dc.\n(b) Dr"
+        }
+      }
+    },
+    {
+      "id": "CAND-021",
+      "query": "Name the device that uses the unilateral action of a pn diode to convert ac into dc.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rectifier",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b601b296-0074-4755-8be3-1e2614079947"
+        ],
+        "suggestedIds": [
+          "d0e96f0c-86b1-43e8-8035-6664a1bd5c73",
+          "6fcb5293-8191-415d-824c-e2a9c01640a2"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.736 >= 0.48. Confirm topic \"Rectifier\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b601b296-0074-4755-8be3-1e2614079947",
+          "score": 0.73620677937911,
+          "preview": "17. (a) Name the device which utilizes unilateral action of a pn diode to convert\nac into dc.\n(b) Dr"
+        }
+      }
+    },
+    {
+      "id": "CAND-022",
+      "query": "the assertion reason question about putting p-type and n-type slabs directly in contact",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "pn junction formation",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "ede7c94f-5024-411c-a617-ebf8d2ea22d0"
+        ],
+        "suggestedIds": [
+          "29a4b030-7e22-4eb9-8843-9d341fea9da4",
+          "bbb1988e-d60a-40c6-bd18-20a84c45874d"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.578 >= 0.48. Confirm topic \"pn junction formation\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "score": 0.5775635075409775,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other\nlabelled Reas"
+        }
+      }
+    },
+    {
+      "id": "CAND-023",
+      "query": "why can't simply pressing a p-type slab against an n-type slab make a proper pn junction",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "pn junction formation",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "ede7c94f-5024-411c-a617-ebf8d2ea22d0"
+        ],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "Human: Assertion 14 is exactly about p-type and n-type slabs in contact.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "score": 0.47057293808313605,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other\nlabelled Reas"
+        }
+      }
+    },
+    {
+      "id": "CAND-024",
+      "query": "Putting a p type semiconductor slab directly in physical contact with an n type semiconductor slab cannot form the pn junction.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "pn junction formation",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "ede7c94f-5024-411c-a617-ebf8d2ea22d0"
+        ],
+        "suggestedIds": [
+          "b601b296-0074-4755-8be3-1e2614079947",
+          "4b91769f-9be0-4c3f-9b8c-dff441d6bc28"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.507 >= 0.48. Confirm topic \"pn junction formation\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "ede7c94f-5024-411c-a617-ebf8d2ea22d0",
+          "score": 0.5073807382582574,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other\nlabelled Reas"
+        }
+      }
+    },
+    {
+      "id": "CAND-025",
+      "query": "the telescope question with objective focal length 15 metres and eyepiece focal length 1 cm",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Telescope magnification",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "suggestedIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.585 >= 0.48. Confirm topic \"Telescope magnification\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.584907728429775,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens of focal length 15 "
+        }
+      }
+    },
+    {
+      "id": "CAND-026",
+      "query": "objective focal length 15 m and eyepiece focal length 1.0 cm; find angular magnification in normal adjustment",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Telescope magnification",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "suggestedIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.582 >= 0.48. Confirm topic \"Telescope magnification\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.5822977189489518,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens of focal length 15 "
+        }
+      }
+    },
+    {
+      "id": "CAND-027",
+      "query": "how do focal lengths of objective and eyepiece determine telescope magnification",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Telescope magnification",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "suggestedIds": [
+          "65074e52-d13a-4486-a6cb-396894d6f810",
+          "b1f9f287-c30a-4657-89ac-df286297b2fe"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.571 >= 0.48. Confirm topic \"Telescope magnification\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5706217344064175,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    },
+    {
+      "id": "CAND-028",
+      "query": "why do different colours appear on a compact disc",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "CD diffraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "379ec404-6ffe-4c97-a703-db2b98db5682"
+        ],
+        "suggestedIds": [
+          "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "d491a052-4cb5-46b5-a31b-e25e4a954432"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.552 >= 0.48. Confirm topic \"CD diffraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.5516242981253137,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffraction (C) Dispersion"
+        }
+      }
+    },
+    {
+      "id": "CAND-029",
+      "query": "the multiple choice question asking whether colours on a CD are caused by diffraction or dispersion",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "CD diffraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "379ec404-6ffe-4c97-a703-db2b98db5682"
+        ],
+        "suggestedIds": [
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e",
+          "d491a052-4cb5-46b5-a31b-e25e4a954432"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.700 >= 0.48. Confirm topic \"CD diffraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.7002481863876717,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffraction (C) Dispersion"
+        }
+      }
+    },
+    {
+      "id": "CAND-030",
+      "query": "Colours observed on a CD are due to which phenomenon?",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "CD diffraction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "379ec404-6ffe-4c97-a703-db2b98db5682"
+        ],
+        "suggestedIds": [
+          "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.706 >= 0.48. Confirm topic \"CD diffraction\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.7055785763219388,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffraction (C) Dispersion"
+        }
+      }
+    },
+    {
+      "id": "CAND-031",
+      "query": "which colour of light gives the maximum stopping potential",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Photoelectric stopping potential",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b3808c1e-f279-420d-8dd3-b63ad41d6275"
+        ],
+        "suggestedIds": [
+          "6c812f85-b95d-43b8-8e64-122308637b54",
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.578 >= 0.48. Confirm topic \"Photoelectric stopping potential\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.5776316157734139,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the following\ncolours of li"
+        }
+      }
+    },
+    {
+      "id": "CAND-032",
+      "query": "in the photoelectric effect, which visible colour produces the greatest stopping potential",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Photoelectric stopping potential",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b3808c1e-f279-420d-8dd3-b63ad41d6275"
+        ],
+        "suggestedIds": [
+          "6c812f85-b95d-43b8-8e64-122308637b54",
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.553 >= 0.48. Confirm topic \"Photoelectric stopping potential\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.5533125999553888,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the following\ncolours of li"
+        }
+      }
+    },
+    {
+      "id": "CAND-033",
+      "query": "A metallic plate exposed to white light emits electrons. For which colour will stopping potential be maximum?",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Photoelectric stopping potential",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b3808c1e-f279-420d-8dd3-b63ad41d6275"
+        ],
+        "suggestedIds": [
+          "6c812f85-b95d-43b8-8e64-122308637b54",
+          "e7fc5f20-7015-4d3c-953e-d39f6d6c586e"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.774 >= 0.48. Confirm topic \"Photoelectric stopping potential\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.7737760451555109,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the following\ncolours of li"
+        }
+      }
+    },
+    {
+      "id": "CAND-034",
+      "query": "the gold foil experiment question asking why most alpha particles go straight through",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rutherford scattering",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "6d4a7b50-5b40-49c1-9546-4684026720db"
+        ],
+        "suggestedIds": [
+          "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "d491a052-4cb5-46b5-a31b-e25e4a954432"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.716 >= 0.48. Confirm topic \"Rutherford scattering\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "score": 0.7162174754894867,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go straight\nthrough the foil"
+        }
+      }
+    },
+    {
+      "id": "CAND-035",
+      "query": "what did Rutherford's alpha-particle scattering experiment reveal about empty space inside atoms",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rutherford scattering",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "6d4a7b50-5b40-49c1-9546-4684026720db"
+        ],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "Human: gold-foil MCQ option (c) most of atom is empty space.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "score": 0.4329146771617961,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go straight\nthrough the foil"
+        }
+      }
+    },
+    {
+      "id": "CAND-036",
+      "query": "Most alpha particles pass straight through a thin gold foil because most of the atom is empty space.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Rutherford scattering",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "6d4a7b50-5b40-49c1-9546-4684026720db"
+        ],
+        "suggestedIds": [
+          "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "6c812f85-b95d-43b8-8e64-122308637b54"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.788 >= 0.48. Confirm topic \"Rutherford scattering\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "6d4a7b50-5b40-49c1-9546-4684026720db",
+          "score": 0.787744496114248,
+          "preview": "4. When alpha particles are sent through a thin gold foil, most of them go straight\nthrough the foil"
+        }
+      }
+    },
+    {
+      "id": "CAND-037",
+      "query": "the hydrogen atom question about what the negative sign of electron energy means",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrogen energy levels",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "8b53a186-f8be-4f46-89a4-b721e1aac05d"
+        ],
+        "suggestedIds": [
+          "7de7d248-15a9-42c7-9f62-10c63518d99f",
+          "d491a052-4cb5-46b5-a31b-e25e4a954432"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.680 >= 0.48. Confirm topic \"Hydrogen energy levels\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "score": 0.6797928587402765,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}𝑒𝑉.The\nnegative si"
+        }
+      }
+    },
+    {
+      "id": "CAND-038",
+      "query": "why is the energy of an electron in a hydrogen atom negative",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrogen energy levels",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "8b53a186-f8be-4f46-89a4-b721e1aac05d"
+        ],
+        "suggestedIds": [
+          "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "d491a052-4cb5-46b5-a31b-e25e4a954432"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.668 >= 0.48. Confirm topic \"Hydrogen energy levels\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "score": 0.6682666963390881,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}𝑒𝑉.The\nnegative si"
+        }
+      }
+    },
+    {
+      "id": "CAND-039",
+      "query": "En = -13.6/n^2 eV; what does the negative sign tell us about the electron",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrogen energy levels",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "8b53a186-f8be-4f46-89a4-b721e1aac05d"
+        ],
+        "suggestedIds": [
+          "1e7a6af8-6812-42bb-9bf3-f8e8f84fe7cf",
+          "6c812f85-b95d-43b8-8e64-122308637b54"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.648 >= 0.48. Confirm topic \"Hydrogen energy levels\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "8b53a186-f8be-4f46-89a4-b721e1aac05d",
+          "score": 0.6479226501099014,
+          "preview": "12. The energy of an electron in nth orbit of hydrogen atom is En= - 13.6/𝑛^{2}𝑒𝑉.The\nnegative si"
+        }
+      }
+    },
+    {
+      "id": "CAND-040",
+      "query": "the assertion reason question where a falling body's de Broglie wavelength decreases",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "de Broglie wavelength",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+        ],
+        "suggestedIds": [
+          "d491a052-4cb5-46b5-a31b-e25e4a954432",
+          "29a4b030-7e22-4eb9-8843-9d341fea9da4"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.620 >= 0.48. Confirm topic \"de Broglie wavelength\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.6204231997798715,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other labelled\nReas"
+        }
+      }
+    },
+    {
+      "id": "CAND-041",
+      "query": "how does increasing momentum affect de Broglie wavelength for a freely falling body",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "de Broglie wavelength",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+        ],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "Human: Q16 Assertion/Reason is de Broglie wavelength of freely falling body vs momentum.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "score": 0.461914876631337,
+          "preview": "18. The wavelength λ of a photon and the de Broglie wavelength of an electron of mass\nm have the sam"
+        }
+      }
+    },
+    {
+      "id": "CAND-042",
+      "query": "The de Broglie wavelength of a freely falling body keeps decreasing with time because its momentum increases.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "de Broglie wavelength",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+        ],
+        "suggestedIds": [
+          "b75b0014-653c-4f40-a6a9-09bd9c145f1a",
+          "6c812f85-b95d-43b8-8e64-122308637b54"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.500 >= 0.48. Confirm topic \"de Broglie wavelength\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.4997163165877747,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other labelled\nReas"
+        }
+      }
+    },
+    {
+      "id": "CAND-043",
+      "query": "the dipole question with field 2 times 10^5 newtons per coulomb, angle 30 degrees and torque 4 Nm",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electric dipole torque",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.729 >= 0.48. Confirm topic \"Electric dipole torque\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.7290267174233281,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at an angle of\n30° exp"
+        }
+      }
+    },
+    {
+      "id": "CAND-044",
+      "query": "an electric dipole in E = 2×10^5 N/C at 30° experiences 4 Nm torque; find the charge for dipole length 2 cm",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electric dipole torque",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "suggestedIds": [
+          "26f1a76c-a785-4eda-885d-ea035c2cd332",
+          "02584fed-663c-40ed-9510-45a806e3ad2f"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.852 >= 0.48. Confirm topic \"Electric dipole torque\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.8521290929015164,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at an angle of\n30° exp"
+        }
+      }
+    },
+    {
+      "id": "CAND-045",
+      "query": "calculate dipole moment from torque, electric field strength and angle",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electric dipole torque",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.657 >= 0.48. Confirm topic \"Electric dipole torque\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "score": 0.6569174936791592,
+          "preview": "2. An electric dipole placed in an electric field of intensity 2 × 10^{5} N/C at an angle of\n30° exp"
+        }
+      }
+    },
+    {
+      "id": "CAND-046",
+      "query": "the charged ball in a vertical pipe moving east to west in a 2 tesla magnetic field",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Charge in moving pipe",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.642 >= 0.48. Confirm topic \"Charge in moving pipe\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.6419612268147378,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with charged spherical bal"
+        }
+      }
+    },
+    {
+      "id": "CAND-047",
+      "query": "a 10 g ball with charge +10 mC is inside a pipe moving west in B = 2 T; find the minimum speed so it does not slide",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Charge in moving pipe",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.723 >= 0.48. Confirm topic \"Charge in moving pipe\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.7228902929272314,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with charged spherical bal"
+        }
+      }
+    },
+    {
+      "id": "CAND-048",
+      "query": "balance gravity with magnetic force for a charged sphere in a moving pipe",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Charge in moving pipe",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "9a5797a7-4b17-471c-b2c6-d1591f6bd43f"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.582 >= 0.48. Confirm topic \"Charge in moving pipe\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.5818053459993904,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with charged spherical bal"
+        }
+      }
+    },
+    {
+      "id": "CAND-049",
+      "query": "the question about electron drift velocity changing with relaxation time",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Drift velocity",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "292e853c-7ae8-4737-a3a5-1edb36e710bd"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "6c812f85-b95d-43b8-8e64-122308637b54"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.553 >= 0.48. Confirm topic \"Drift velocity\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.5528213396010767,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected to a DC source. Under"
+        }
+      }
+    },
+    {
+      "id": "CAND-050",
+      "query": "draw the relation between drift velocity and relaxation time in a conductor",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Drift velocity",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "292e853c-7ae8-4737-a3a5-1edb36e710bd"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.607 >= 0.48. Confirm topic \"Drift velocity\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.6066394029439532,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected to a DC source. Under"
+        }
+      }
+    },
+    {
+      "id": "CAND-051",
+      "query": "a conductor's current varies sinusoidally; determine average electron drift velocity over one complete cycle",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Drift velocity",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "292e853c-7ae8-4737-a3a5-1edb36e710bd"
+        ],
+        "suggestedIds": [
+          "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "c3a9262b-94b1-477b-bef8-15af2fcf917b"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.618 >= 0.48. Confirm topic \"Drift velocity\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "292e853c-7ae8-4737-a3a5-1edb36e710bd",
+          "score": 0.6182152889888314,
+          "preview": "Q21. A cylindrical conductor of length l and cross-section area A is connected to a DC source. Under"
+        }
+      }
+    },
+    {
+      "id": "CAND-052",
+      "query": "the convex lens question proving the minimum distance between object and real image is 4f",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Lens image distance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "suggestedIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.707 >= 0.48. Confirm topic \"Lens image distance\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.70698029561684,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    },
+    {
+      "id": "CAND-053",
+      "query": "why is the minimum object-to-real-image distance for a convex lens equal to four focal lengths",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Lens image distance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "suggestedIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.670 >= 0.48. Confirm topic \"Lens image distance\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.6703352855272704,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    },
+    {
+      "id": "CAND-054",
+      "query": "Show that the least possible distance between an object and its real image in a convex lens is 4f.",
+      "subject": "Physics",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Lens image distance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "suggestedIds": [
+          "7ab34996-26de-4471-8ac2-bb9a1c4eb28d",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.794 >= 0.48. Confirm topic \"Lens image distance\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.7942349735291293,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    },
+    {
+      "id": "CAND-055",
+      "query": "the two-mirror telescope problem with mirrors 20 mm apart and radii 200 mm and 150 mm",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Cassegrain telescope",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b1f9f287-c30a-4657-89ac-df286297b2fe"
+        ],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "Human: Q24 Cassegrain includes 20 mm separation, radii 200 mm and 150 mm.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.4769319607059833,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    },
+    {
+      "id": "CAND-056",
+      "query": "Cassegrain telescope mirrors separated by 20 mm, large mirror radius 200 mm, small mirror radius 150 mm; locate final image",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Cassegrain telescope",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b1f9f287-c30a-4657-89ac-df286297b2fe"
+        ],
+        "suggestedIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.552 >= 0.48. Confirm topic \"Cassegrain telescope\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.5516057448184587,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope.\n(II)Why these type"
+        }
+      }
+    },
+    {
+      "id": "CAND-057",
+      "query": "where is the final image in a Cassegrain telescope when the object is at infinity",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Cassegrain telescope",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "b1f9f287-c30a-4657-89ac-df286297b2fe"
+        ],
+        "suggestedIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.521 >= 0.48. Confirm topic \"Cassegrain telescope\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "score": 0.521253689456083,
+          "preview": "Q24. (I) Draw a ray diagram for the formation of image by a Cassegrain telescope.\n(II)Why these type"
+        }
+      }
+    },
+    {
+      "id": "CAND-058",
+      "query": "what was that definition about a body resisting a change in its motion",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Inertia",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "927411e9-1a8a-4077-a247-917dd4acde54"
+        ],
+        "suggestedIds": [
+          "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.671 >= 0.48. Confirm topic \"Inertia\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.6706488649215052,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-059",
+      "query": "define inertia as resistance to a change in the state of rest or motion",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Inertia",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "927411e9-1a8a-4077-a247-917dd4acde54"
+        ],
+        "suggestedIds": [
+          "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.819 >= 0.48. Confirm topic \"Inertia\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.8186308955578976,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-060",
+      "query": "the question asking to state Newton's second law",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Newton second law",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+        ],
+        "suggestedIds": [
+          "927411e9-1a8a-4077-a247-917dd4acde54",
+          "581a3c26-2918-4c0c-8ed9-971825a13a17"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.714 >= 0.48. Confirm topic \"Newton second law\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.7137122931856876,
+          "preview": "State Newton's second law of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-061",
+      "query": "what does Newton's second law say about force, mass and acceleration",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Newton second law",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+        ],
+        "suggestedIds": [
+          "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "927411e9-1a8a-4077-a247-917dd4acde54"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.678 >= 0.48. Confirm topic \"Newton second law\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.6775074852412416,
+          "preview": "State Newton's second law of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-062",
+      "query": "a 2 kg box pushed with net force 8 N",
+      "subject": " find acceleration",
+      "queryStyle": "physics",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "[]",
+      "notes": "Acceleration from force",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "581a3c26-2918-4c0c-8ed9-971825a13a17"
+        ],
+        "suggestedIds": [
+          "73164ae4-0a8a-4975-b046-632aae6a3d88",
+          "2b137a0c-a1c6-4e1d-bf03-882086acc5ad"
+        ],
+        "type": "physics",
+        "reason": "Auto: top hit score 0.854 >= 0.48. Confirm topic \"[]\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8538704051860863,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      }
+    },
+    {
+      "id": "CAND-063",
+      "query": "calculate acceleration when a net force of 8 newtons acts on a 2 kilogram box",
+      "subject": "Physics",
+      "queryStyle": "numeric",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Acceleration from force",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "581a3c26-2918-4c0c-8ed9-971825a13a17"
+        ],
+        "suggestedIds": [
+          "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "73164ae4-0a8a-4975-b046-632aae6a3d88"
+        ],
+        "type": "numeric",
+        "reason": "Auto: top hit score 0.807 >= 0.48. Confirm topic \"Acceleration from force\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.8072363654568447,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      }
+    },
+    {
+      "id": "CAND-064",
+      "query": "the organic chemistry question with C6H5COOCOCH3 reacting with water",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrolysis of anhydride",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"
+        ],
+        "suggestedIds": [
+          "9437a727-c002-41da-95de-f7680da798f1",
+          "c707251d-4af1-498d-bb2f-cc2c38dac415"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.600 >= 0.48. Confirm topic \"Hydrolysis of anhydride\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.6001402471088636,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\na. Benzoic acid and "
+        }
+      }
+    },
+    {
+      "id": "CAND-065",
+      "query": "what products form when the compound C6H5COOCOCH3 is treated with H2O",
+      "subject": "Chemistry",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrolysis of anhydride",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"
+        ],
+        "suggestedIds": [
+          "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "265909ea-400e-4575-9aa3-2abd97776e13"
+        ],
+        "type": "conceptual",
+        "reason": "Auto: top hit score 0.642 >= 0.48. Confirm topic \"Hydrolysis of anhydride\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.6422066011700109,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\na. Benzoic acid and "
+        }
+      }
+    },
+    {
+      "id": "CAND-066",
+      "query": "C6H5COOCOCH3 is treated with water; choose the products formed.",
+      "subject": "Chemistry",
+      "queryStyle": "exact",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Hydrolysis of anhydride",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a"
+        ],
+        "suggestedIds": [
+          "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "265909ea-400e-4575-9aa3-2abd97776e13"
+        ],
+        "type": "exact",
+        "reason": "Auto: top hit score 0.668 >= 0.48. Confirm topic \"Hydrolysis of anhydride\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "score": 0.66792346745214,
+          "preview": "6 When C_{6}H_{5}COOCOCH_{3} is treated with H_{2}O , the product obtained is :\na. Benzoic acid and "
+        }
+      }
+    },
+    {
+      "id": "CAND-067",
+      "query": "Who painted the Mona Lisa?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated general knowledge",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.133 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.13322059676003772,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    },
+    {
+      "id": "CAND-068",
+      "query": "What is the capital of Japan?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated geography",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.097 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "e9188da0-76f0-4de0-bd49-15c98e80e4d9",
+          "score": 0.09665143248501962,
+          "preview": "Q6. In a series LCR circuit, the voltage across the resistance, capacitance and inductance is 10 V e"
+        }
+      }
+    },
+    {
+      "id": "CAND-069",
+      "query": "Who wrote Hamlet?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated literature",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.170 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "265909ea-400e-4575-9aa3-2abd97776e13",
+          "score": 0.1700025710291877,
+          "preview": "12 Which of the following compound gives an oxime with hydroxylamine:\na. CH_{3}COCH_{3}\nb. CH_{3}COO"
+        }
+      }
+    },
+    {
+      "id": "CAND-070",
+      "query": "What caused the French Revolution?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated history",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.145 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "1c567c2e-7d2c-4c20-96e1-4dc0d3dcd35a",
+          "score": 0.14537619990445838,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other labelled\nReas"
+        }
+      }
+    },
+    {
+      "id": "CAND-071",
+      "query": "Who won the 2022 FIFA World Cup?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated sports",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.123 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "b3808c1e-f279-420d-8dd3-b63ad41d6275",
+          "score": 0.12273287141840461,
+          "preview": "3. A metallic plate exposed to white light emits electrons. For which of the following\ncolours of li"
+        }
+      }
+    },
+    {
+      "id": "CAND-072",
+      "query": "How do I configure an Nginx reverse proxy for a Node.js API?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated computing",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.103 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "a633aa61-2583-43f6-aafb-bf9a7c548ea6",
+          "score": 0.10262443317218517,
+          "preview": "20. A heating element using nichrome connected to a 230 V supply draws an initial\ncurrent of 3.2 A w"
+        }
+      }
+    },
+    {
+      "id": "CAND-073",
+      "query": "How long should I bake a chocolate cake?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated cooking",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.121 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "a633aa61-2583-43f6-aafb-bf9a7c548ea6",
+          "score": 0.1209248680563122,
+          "preview": "20. A heating element using nichrome connected to a 230 V supply draws an initial\ncurrent of 3.2 A w"
+        }
+      }
+    },
+    {
+      "id": "CAND-074",
+      "query": "What is the current price of gold in Dubai?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated finance",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.186 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "07d8195f-ce4c-4cd3-8bf7-1bcfe21654b6",
+          "score": 0.1863641218058849,
+          "preview": "28 The equilibrium constant of cell reaction :\nSn4+(.aq) + Al(s) → Al3+ + Sn2+ (aq) is 4.617 x 10^{1"
+        }
+      }
+    },
+    {
+      "id": "CAND-075",
+      "query": "Explain the human digestive system.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated biology",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.175 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "55be52e0-c0e0-4c1a-9967-e0d019efb99c",
+          "score": 0.17523937903912568,
+          "preview": "25 a. Give the structure of all the possible dipeptides formed when the following\ntwo amino acids fo"
+        }
+      }
+    },
+    {
+      "id": "CAND-076",
+      "query": "How many moons does Mars have?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated astronomy",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.200 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "65074e52-d13a-4486-a6cb-396894d6f810",
+          "score": 0.1996449408676908,
+          "preview": "Q33. (I) a) A giant refracting telescope at an observatory has an objective lens of focal length 15 "
+        }
+      }
+    },
+    {
+      "id": "CAND-077",
+      "query": "Write a React component for a login form.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated programming",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.182 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "9437a727-c002-41da-95de-f7680da798f1",
+          "score": 0.18195985579276142,
+          "preview": "32 a. Give reasons for the following:\n(i)The reaction of ethanol with acetyl chloride is carried out"
+        }
+      }
+    },
+    {
+      "id": "CAND-078",
+      "query": "Where is the Eiffel Tower located?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated geography",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.182 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "6c812f85-b95d-43b8-8e64-122308637b54",
+          "score": 0.1819517102130348,
+          "preview": "Q17. A platinum surface having work function 5.63 eV is illuminated by a monochromatic source of 1.6"
+        }
+      }
+    },
+    {
+      "id": "CAND-079",
+      "query": "Who composed the Four Seasons?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated music",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.139 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.13913665268603115,
+          "preview": "State Newton's second law of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-080",
+      "query": "What is the difference between revenue and profit?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated business",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.127 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "7de7d248-15a9-42c7-9f62-10c63518d99f",
+          "score": 0.12725006627385216,
+          "preview": "For Questions 13 to 16, two statements are given –one labelled Assertion (A) and other\nlabelled Reas"
+        }
+      }
+    },
+    {
+      "id": "CAND-081",
+      "query": "What are common symptoms of seasonal allergies?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated health",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.141 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "fed82f84-0e22-4321-8a22-3a6c406e53e7",
+          "score": 0.14108558750112676,
+          "preview": "27 Various isomeric haloalkanes with the general formula C_{4}H_{9}Cl undergo\nhydrolysis reaction. A"
+        }
+      }
+    },
+    {
+      "id": "CAND-082",
+      "query": "What is the legal process for registering a trademark in India?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated law",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.193 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.19276632933949933,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcohols.\nShe carried out "
+        }
+      }
+    },
+    {
+      "id": "CAND-083",
+      "query": "Summarize the plot of Pride and Prejudice.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated literature",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.169 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.16944879117162115,
+          "preview": "State Newton's second law of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-084",
+      "query": "What should I visit on a three-day trip to Jaipur?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated travel",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.140 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "228d4c31-bea9-4089-9970-64b2410746a2",
+          "score": 0.14021338573291564,
+          "preview": "17 a. Nitrogen gas is soluble in water. At temperature 293 K, the value of KH is\n76.48 kbar . How wo"
+        }
+      }
+    },
+    {
+      "id": "CAND-085",
+      "query": "What is inflation and how does it affect consumers?",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated economics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.206 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "927411e9-1a8a-4077-a247-917dd4acde54",
+          "score": 0.20589102843760787,
+          "preview": "2. Define inertia as the tendency of a body to resist a change in its state of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-086",
+      "query": "Explain how DNS resolution works.",
+      "subject": "Other",
+      "queryStyle": "unrelated",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Unrelated networking",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "unrelated",
+        "reason": "Auto: top score 0.191 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "379ec404-6ffe-4c97-a703-db2b98db5682",
+          "score": 0.1913972387650218,
+          "preview": "Q10. Colours observed on a CD (Compact Disk) is due to\n(A) Reflection (B) Diffraction (C) Dispersion"
+        }
+      }
+    },
+    {
+      "id": "CAND-087",
+      "query": "What is the speed of light in vacuum?",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Physics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.354 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "4839d3ac-7a83-4573-9aaf-647d9af49112",
+          "score": 0.3543783800970195,
+          "preview": "Q8. The distance of closest approach of an alpha particle is d when it moves with a speed V towards "
+        }
+      }
+    },
+    {
+      "id": "CAND-088",
+      "query": "Explain the periodic trend in atomic radius across period 3.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Chemistry",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.396 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "af3a7244-cb40-4f80-b761-cfcc3ba88312",
+          "score": 0.396354135776287,
+          "preview": "3 Match the properties given in column I with the metals in column II\nColumn I Column II\n(i) Actinoi"
+        }
+      }
+    },
+    {
+      "id": "CAND-089",
+      "query": "Find the derivative of sin(x^2).",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Mathematics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.262 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2b137a0c-a1c6-4e1d-bf03-882086acc5ad",
+          "score": 0.2622601757304719,
+          "preview": "State Newton's second law of motion."
+        }
+      }
+    },
+    {
+      "id": "CAND-090",
+      "query": "Solve the integral of x e^x.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Mathematics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.272 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "02584fed-663c-40ed-9510-45a806e3ad2f",
+          "score": 0.2720854990795054,
+          "preview": "Q29. Case Study Based Question: Motion of Charge in Magnetic Field\nAn electron with speed vo << c mo"
+        }
+      }
+    },
+    {
+      "id": "CAND-091",
+      "query": "Calculate the escape velocity from Earth's surface.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Physics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.321 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "581a3c26-2918-4c0c-8ed9-971825a13a17",
+          "score": 0.3208187787630469,
+          "preview": "1. A 2 kg box is pushed with a net force of 8 N. Calculate its acceleration."
+        }
+      }
+    },
+    {
+      "id": "CAND-092",
+      "query": "Explain the mechanism of aldol condensation.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Chemistry",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Human: no aldol condensation question in bank (nearest are alcohols/Etard).",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.44380674382852137,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcohols.\nShe carried out "
+        }
+      }
+    },
+    {
+      "id": "CAND-093",
+      "query": "Describe DNA replication in prokaryotes.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Biology",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.205 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.20540999118546477,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcohols.\nShe carried out "
+        }
+      }
+    },
+    {
+      "id": "CAND-094",
+      "query": "Find the eigenvalues of a 3 by 3 matrix.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Mathematics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.221 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "af3a7244-cb40-4f80-b761-cfcc3ba88312",
+          "score": 0.22128157524419878,
+          "preview": "3 Match the properties given in column I with the metals in column II\nColumn I Column II\n(i) Actinoi"
+        }
+      }
+    },
+    {
+      "id": "CAND-095",
+      "query": "Derive the expression for the magnetic field inside a solenoid.",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Physics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Human: no solenoid B-field derivation in bank.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "c3a9262b-94b1-477b-bef8-15af2fcf917b",
+          "score": 0.4365278584744101,
+          "preview": "Q26. A boy is holding a smooth, hollow and non-conducting pipe vertically with charged spherical bal"
+        }
+      }
+    },
+    {
+      "id": "CAND-096",
+      "query": "What is the difference between SN1 and SN2 reactions?",
+      "subject": "Other",
+      "queryStyle": "hard-negative",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Out-of-bank Chemistry",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "hard-negative",
+        "reason": "Auto: top score 0.381 < 0.4; treated as no relevant bank question.",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "fed82f84-0e22-4321-8a22-3a6c406e53e7",
+          "score": 0.380974843807353,
+          "preview": "27 Various isomeric haloalkanes with the general formula C_{4}H_{9}Cl undergo\nhydrolysis reaction. A"
+        }
+      }
+    },
+    {
+      "id": "CAND-097",
+      "query": "the question about the relation between changing magnetic flux and induced emf",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electromagnetic induction",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "informal",
+        "reason": "Human: no Faraday flux-emf relation question; AC generator is related but not the asked relation.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "9a5797a7-4b17-471c-b2c6-d1591f6bd43f",
+          "score": 0.41123677319088947,
+          "preview": "Q3. A long straight wire of circular cross section of radius ҅ a᾿ carries a steady current I. The cu"
+        }
+      }
+    },
+    {
+      "id": "CAND-098",
+      "query": "how does electric field relate to electric potential difference",
+      "subject": "Physics",
+      "queryStyle": "conceptual",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Electrostatics",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "no-relevant-result",
+        "relevantIds": [],
+        "suggestedIds": [],
+        "type": "conceptual",
+        "reason": "Human: no general E vs potential-difference explanation; Q1 is a different electrostatics MCQ.",
+        "labeledBy": "human",
+        "autoTop": {
+          "id": "45b183ed-2893-4d1b-a4b7-4a007ef52bfb",
+          "score": 0.40079263339877036,
+          "preview": "Q1. A uniform electric field pointing in positive X-direction exists in a region. Let A be the origi"
+        }
+      }
+    },
+    {
+      "id": "CAND-099",
+      "query": "the chemistry MCQ asking for products after an organic compound reacts with water",
+      "subject": "Chemistry",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Organic reaction products",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "c707251d-4af1-498d-bb2f-cc2c38dac415"
+        ],
+        "suggestedIds": [
+          "fb9b3d00-a6fc-4544-9f0d-b83d403d1b4a",
+          "9437a727-c002-41da-95de-f7680da798f1"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.513 >= 0.48. Confirm topic \"Organic reaction products\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "c707251d-4af1-498d-bb2f-cc2c38dac415",
+          "score": 0.5128478401110155,
+          "preview": "26 Neeta was experimenting in the lab to study the chemical reactivity of alcohols.\nShe carried out "
+        }
+      }
+    },
+    {
+      "id": "CAND-100",
+      "query": "that optics question about an object at infinity and where the final image forms in a telescope",
+      "subject": "Physics",
+      "queryStyle": "informal",
+      "sawBank": true,
+      "collectedOn": "2026-10-16",
+      "expectedTopic": "Optical instruments",
+      "notes": "Labeller-constructed candidate; confirm relevance against the live bank before scoring. May be a hard negative if no matching bank question exists.",
+      "label": {
+        "status": "relevant",
+        "relevantIds": [
+          "2d363ee3-7dac-45fa-8731-ea1169724781"
+        ],
+        "suggestedIds": [
+          "b1f9f287-c30a-4657-89ac-df286297b2fe",
+          "65074e52-d13a-4486-a6cb-396894d6f810"
+        ],
+        "type": "informal",
+        "reason": "Auto: top hit score 0.523 >= 0.48. Confirm topic \"Optical instruments\".",
+        "labeledBy": "auto",
+        "autoTop": {
+          "id": "2d363ee3-7dac-45fa-8731-ea1169724781",
+          "score": 0.5225806347839193,
+          "preview": "21. Show that the least possible distance between an object and its real image in a\nconvex lens is 4"
+        }
+      }
+    }
+  ],
+  "autoLabel": {
+    "baseUrl": "http://localhost:3517",
+    "relevantMinScore": 0.48,
+    "negativeMaxScore": 0.4,
+    "generatedAt": "2026-10-16T07:03:33.889Z",
+    "counts": {
+      "relevant": 63,
+      "unresolved": 9,
+      "no-relevant-result": 28
+    },
+    "afterHumanReview": {
+      "relevant": 68,
+      "no-relevant-result": 32
+    }
+  },
+  "humanReview": {
+    "reviewedAt": "2026-10-16T07:13:29.262Z",
+    "resolvedUnresolved": 9,
+    "counts": {
+      "relevant": 68,
+      "no-relevant-result": 32
+    }
+  }
+}
