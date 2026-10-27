@@ -15,9 +15,12 @@ import {
 } from '../storage/storage.types';
 import { associateFigures } from './figure-association';
 import { readFigureFile } from './figure-store';
+import { extractFormulaLatex } from './formula-extractor';
+import { extractExplicitMarks } from './marks-extractor';
 import { validateApprovedPaper } from './paper.validation';
 import { extractPdfFigures } from './pdf-figures';
 import { extractPdfPages } from './pdf-text';
+import { QuestionClassificationService } from './question-classification.service';
 import { splitPagesWithLayout } from './question-splitter';
 import {
   normalizeQuestionText,
@@ -52,6 +55,7 @@ export class PapersService {
   constructor(
     private readonly questionsService: QuestionsService,
     private readonly questionsRepository: QuestionsRepository,
+    private readonly classificationService: QuestionClassificationService,
     @Inject(OBJECT_STORAGE) private readonly storage: ObjectStorage,
   ) {}
 
@@ -70,23 +74,48 @@ export class PapersService {
     const withUrls = (figures: typeof associated.unassigned) =>
       figures.map((figure) => ({
         ...figure,
+        source: 'embedded' as const,
         url: `/papers/figures/${fileHash}/${figure.page}/${figure.index}`,
       }));
+
     const questions = await Promise.all(
-      associated.questions.map(async (question) => ({
-        questionText: question.questionText,
-        pageReference: question.pageReference,
-        figures: await this.maybeHostFigures(
-          fileHash,
-          withUrls(question.figures),
-        ),
-      })),
+      associated.questions.map(async (question) => {
+        const explicitMarks = extractExplicitMarks(question.questionText);
+        const formulas = extractFormulaLatex(question.questionText);
+        const classification = await this.classificationService.classifyQuestion(
+          question.questionText,
+        );
+
+        return {
+          questionText: question.questionText,
+          pageReference: question.pageReference,
+          subject: classification.subject,
+          topic: classification.topic,
+          subtopic: classification.subtopic,
+          examYear: null,
+          examType: null,
+          difficulty: classification.difficulty,
+          questionType: classification.questionType,
+          marks: explicitMarks.explicit
+            ? explicitMarks.marks
+            : (classification.marks ?? explicitMarks.marks),
+          marksExplicit: explicitMarks.explicit,
+          formulaLatex: formulas,
+          classificationConfidence: classification.confidence,
+          figures: await this.maybeHostFigures(
+            fileHash,
+            withUrls(question.figures),
+          ),
+        };
+      }),
     );
+
     return {
       sourceDocument: sanitizeFilename(file?.originalname),
       fileHash,
       pageCount: pages.length,
       storageProvider: this.storage.provider,
+      ocrApplied: pages.some((p) => p.ocrApplied),
       questions,
       unassignedFigures: await this.maybeHostFigures(
         fileHash,
@@ -152,13 +181,13 @@ export class PapersService {
       try {
         const created = await this.questionsService.create({
           questionText: question.questionText,
-          subject: paper.subject,
-          topic: paper.topic,
+          subject: question.subject ?? paper.subject,
+          topic: question.topic ?? paper.topic,
           subtopic: question.subtopic ?? paper.subtopic,
           examYear: paper.examYear,
           examType: paper.examType,
-          difficulty: paper.difficulty,
-          questionType: paper.questionType,
+          difficulty: question.difficulty ?? paper.difficulty,
+          questionType: question.questionType ?? paper.questionType,
           sourceDocument,
           fileUrl,
           pageReference: question.pageReference,

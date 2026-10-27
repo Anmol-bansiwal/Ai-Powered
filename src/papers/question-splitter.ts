@@ -38,6 +38,8 @@ const BARE_START = /^(\d{1,3})(?:\s+\S.*)?$/;
 const SECTION_HEADING = /^SECTION\s*[-–]?\s*[A-E]$/i;
 const MARKS_ONLY = /^(?:\d{1,2}|½|\d\s*½|(?:\d|½)(?:\s*\+\s*(?:\d|½))+)$/;
 const UNMAPPED_GLYPH = String.fromCharCode(0);
+const BOILERPLATE_LINE =
+  /^(?:office use only|do not write in this area|\d{8,12}|blank page|–\s*\d+\s*–|nsw education standards authority|\(?continued\)?|question\s+\d+\s+continues)/i;
 
 type SourceLine = {
   text: string;
@@ -171,6 +173,17 @@ export function splitPagesWithLayout(pages: PdfPageInput[]): QuestionLayout[] {
   }
 
   function absorbBareLine(line: SourceLine, lastOnPage: boolean): void {
+    if (isQuestionStart(line.text)) {
+      flush();
+      const num = questionNumber(line.text);
+      if (num !== null) {
+        lastNumber = num;
+      }
+      skippingRubric = false;
+      current = { lines: [line], pageReference: String(line.page) };
+      return;
+    }
+
     const bare = BARE_START.exec(line.text);
     const startsNext =
       bare !== null &&
@@ -204,14 +217,14 @@ function pageLines(page: PdfPageInput): SourceLine[] {
       top: line.top,
       bottom: line.bottom,
     }))
-    .filter((line) => line.text.length > 0);
+    .filter((line) => line.text.length > 0 && !BOILERPLATE_LINE.test(line.text));
   if (bounded.length > 0) {
     return bounded;
   }
   return page.text
     .split(/\r?\n/)
     .map((text) => text.split(UNMAPPED_GLYPH).join('\uFFFD').trim())
-    .filter((text) => text.length > 0)
+    .filter((text) => text.length > 0 && !BOILERPLATE_LINE.test(text))
     .map((text) => ({ text, page: page.pageNumber }));
 }
 
@@ -249,7 +262,7 @@ function questionNumber(line: string): number | null {
 
 function usesBareNumbers(pages: PdfPageInput[]): boolean {
   const lines = pages.flatMap((page) => pageLines(page));
-  if (lines.some((line) => isQuestionStart(line.text))) {
+  if (lines.some((line) => /^\d{1,3}[.)]\s+\S/.test(line.text))) {
     return false;
   }
   const numbers = new Set(
@@ -259,7 +272,12 @@ function usesBareNumbers(pages: PdfPageInput[]): boolean {
 }
 
 function isInstructionPage(lines: SourceLine[]): boolean {
-  return /general instructions/i.test(
-    lines.map((line) => line.text).join('\n'),
+  const combined = lines.map((line) => line.text).join('\n');
+  return (
+    /general instructions/i.test(combined) ||
+    /^\s*blank page\s*$/i.test(combined) ||
+    /^(?:office use only|do not write in this area|\d{8,12}|–\s*\d+\s*–|nsw education standards authority|\s*)+$/i.test(
+      combined,
+    )
   );
 }

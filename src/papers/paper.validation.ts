@@ -7,7 +7,11 @@ const MAX_QUESTIONS = 100;
 export type ApprovedQuestion = {
   questionText: string;
   pageReference: string;
+  subject?: string | null;
+  topic?: string | null;
   subtopic: string | null;
+  difficulty?: Difficulty | null;
+  questionType?: QuestionType | null;
   figureUrls: string[];
 };
 
@@ -137,7 +141,25 @@ export function validateApprovedPaper(body: unknown): ApprovedPaper {
           'pageReference',
           50,
         ),
+        subject: optionalText(question.subject, 'subject', 200),
+        topic: optionalText(question.topic, 'topic', 200),
         subtopic: optionalText(question.subtopic, 'subtopic', 200),
+        difficulty:
+          question.difficulty !== undefined && question.difficulty !== null
+            ? enumValue(
+                question.difficulty,
+                'difficulty',
+                Object.values(Difficulty),
+              )
+            : null,
+        questionType:
+          question.questionType !== undefined && question.questionType !== null
+            ? enumValue(
+                question.questionType,
+                'questionType',
+                Object.values(QuestionType),
+              )
+            : null,
         figureUrls: uniqueFigureUrls(
           Array.isArray(question.figureUrls)
             ? question.figureUrls.filter(

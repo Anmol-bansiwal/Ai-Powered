@@ -4,7 +4,7 @@ import { join, resolve, sep } from 'path';
 import { BadRequestException, NotFoundException } from '@nestjs/common';
 import { MAX_PDF_PAGES } from './pdf-text';
 
-const MAX_FIGURE_INDEX = 40;
+const MAX_FIGURE_INDEX = 100;
 
 export function writeFigureFile(
   fileHash: string,

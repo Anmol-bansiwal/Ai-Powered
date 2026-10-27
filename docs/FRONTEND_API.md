@@ -1,8 +1,7 @@
 # EduSearch AI — Frontend (Student UI) API Guide
 
 Complete request and response reference for the **student search / chat UI**.
-Admin panel, PDF upload, extract/approve, and question-create APIs are **not**
-included here.
+For admin panel, PDF question extraction, formula rendering, and paper approval APIs, see [`EXTRACTION_FRONTEND_GUIDE.md`](EXTRACTION_FRONTEND_GUIDE.md).
 
 Everything below matches the current source (`src/**`) and e2e tests (`test/**`).
 

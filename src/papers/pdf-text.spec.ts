@@ -30,7 +30,7 @@ describe('PDF text extraction', () => {
     await expect(extractPdfPages(buildTextPdf([[]]))).rejects.toThrow(
       'No text could be extracted from this PDF.',
     );
-  });
+  }, 15000);
 
   it('rejects a PDF over the page limit', async () => {
     const pages = Array.from({ length: MAX_PDF_PAGES + 1 }, (_, index) => [

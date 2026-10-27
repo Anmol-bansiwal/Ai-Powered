@@ -1,9 +1,10 @@
-import {
+﻿import {
   BadRequestException,
   UnprocessableEntityException,
 } from '@nestjs/common';
 import { extractTextItems } from 'unpdf';
 import { assemblePageLayout, PageLine } from './equation-text';
+import { isScannedOrLowText, ocrPdfPage } from './pdf-ocr';
 
 export const MAX_PDF_BYTES = 10 * 1024 * 1024;
 /** HSC / board papers often exceed 30 pages; keep a hard ceiling for safety. */
@@ -13,16 +14,22 @@ export type PdfPage = {
   pageNumber: number;
   text: string;
   lines: PageLine[];
+  ocrApplied?: boolean;
+  ocrConfidence?: number;
 };
 
-// Question text comes from the PDF text layer. Raised and lowered numbers are
-// written as ^{n} and _{n}. Line boxes are kept so an extracted image can be
-// placed beside the question that occupies that part of the page. This pass
-// does not interpret images. Rendering a whole page needs @napi-rs/canvas,
-// which is not installed. Pass a fresh copy of the bytes to every unpdf call:
-// PDF.js transfers the buffer, and reuse throws DataCloneError. OCR and vision
-// are unsupported.
-export async function extractPdfPages(bytes: Buffer): Promise<PdfPage[]> {
+// Question text comes primarily from the native PDF text layer. Raised and
+// lowered numbers are written as ^{n} and _{n}. Line boxes are kept so an
+// extracted image can be placed beside the question that occupies that part
+// of the page. If a page contains no or very little native text (scanned PDF),
+// an intelligent OCR fallback is applied for that specific page.
+export async function extractPdfPages(
+  bytes: Buffer,
+  options?: {
+    enableOcr?: boolean;
+    minTextLength?: number;
+  },
+): Promise<PdfPage[]> {
   assertPdfBytes(bytes);
   try {
     const extracted = await extractTextItems(new Uint8Array(bytes));
@@ -34,14 +41,37 @@ export async function extractPdfPages(bytes: Buffer): Promise<PdfPage[]> {
         `PDF must be at most ${MAX_PDF_PAGES} pages.`,
       );
     }
-    const extractedPages = extracted.items.map((items, index) => {
+    const extractedPages: PdfPage[] = extracted.items.map((items, index) => {
       const layout = assemblePageLayout(items);
       return {
         pageNumber: index + 1,
         text: layout.text,
         lines: layout.lines,
+        ocrApplied: false,
       };
     });
+
+    const ocrAllowed =
+      options?.enableOcr ?? process.env.PAPER_OCR_ENABLED !== 'false';
+    const minText =
+      options?.minTextLength ??
+      Number.parseInt(process.env.PAPER_OCR_MIN_NATIVE_TEXT || '40', 10);
+
+    // Intelligent OCR Fallback: Only scan pages that have little or no native digital text
+    if (ocrAllowed) {
+      for (const page of extractedPages) {
+        if (isScannedOrLowText(page.text, minText)) {
+          const ocrResult = await ocrPdfPage(bytes, page.pageNumber);
+          if (ocrResult && ocrResult.text.trim().length > page.text.trim().length) {
+            page.text = ocrResult.text;
+            page.lines = ocrResult.lines;
+            page.ocrApplied = true;
+            page.ocrConfidence = ocrResult.confidence;
+          }
+        }
+      }
+    }
+
     if (!extractedPages.some((page) => page.text.trim().length > 0)) {
       throw new UnprocessableEntityException(
         'No text could be extracted from this PDF.',

@@ -1,12 +1,14 @@
-import { Module } from '@nestjs/common';
+﻿import { Module } from '@nestjs/common';
 import { QuestionsModule } from '../questions/questions.module';
 import { StorageModule } from '../storage/storage.module';
 import { PapersController } from './papers.controller';
 import { PapersService } from './papers.service';
+import { QuestionClassificationService } from './question-classification.service';
 
 @Module({
   imports: [QuestionsModule, StorageModule],
   controllers: [PapersController],
-  providers: [PapersService],
+  providers: [PapersService, QuestionClassificationService],
+  exports: [PapersService, QuestionClassificationService],
 })
 export class PapersModule {}

@@ -10,6 +10,7 @@ jest.mock('unpdf', () => ({
   extractImages: jest.fn(),
   getDocumentProxy: jest.fn(),
   getResolvedPDFJS: jest.fn(),
+  renderPageAsImage: jest.fn(),
 }));
 
 const OPS = {
@@ -17,6 +18,7 @@ const OPS = {
   restore: 11,
   transform: 12,
   paintImageXObject: 85,
+  constructPath: 20,
 };
 
 describe('PDF figure extraction', () => {

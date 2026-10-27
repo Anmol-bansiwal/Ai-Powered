@@ -1,4 +1,4 @@
-import { createHash } from 'crypto';
+﻿import { createHash } from 'crypto';
 import {
   BadRequestException,
   ServiceUnavailableException,
@@ -6,6 +6,7 @@ import {
 import { QuestionsRepository } from '../questions/questions.repository';
 import { QuestionsService } from '../questions/questions.service';
 import { PapersService } from './papers.service';
+import { QuestionClassificationService } from './question-classification.service';
 import { buildTextPdf } from './text-pdf.fixture';
 
 describe('PapersService', () => {
@@ -20,6 +21,7 @@ describe('PapersService', () => {
       findReadyDuplicate,
       deleteByIds,
     } as unknown as QuestionsRepository,
+    new QuestionClassificationService(),
     {
       provider: 'none',
       uploadPdf,
@@ -106,12 +108,13 @@ describe('PapersService', () => {
 
   it('stores Cloudinary fileUrl on approve when storage is configured', async () => {
     const cloud = new PapersService(
-      { create } as unknown as QuestionsService,
-      {
-        findReadyDuplicate,
-        deleteByIds,
-      } as unknown as QuestionsRepository,
-      {
+    { create } as unknown as QuestionsService,
+    {
+      findReadyDuplicate,
+      deleteByIds,
+    } as unknown as QuestionsRepository,
+    new QuestionClassificationService(),
+    {
         provider: 'cloudinary',
         uploadPdf: uploadPdf.mockResolvedValue({
           provider: 'cloudinary',
@@ -231,3 +234,4 @@ describe('PapersService', () => {
     expect(create).not.toHaveBeenCalled();
   });
 });
+

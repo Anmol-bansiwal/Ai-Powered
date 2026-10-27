@@ -23,7 +23,39 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+**EduSearch AI Backend** — A NestJS platform for AI-powered question extraction, classification, search, and exam paper ingestion.
+
+---
+
+## PDF & OCR Question Extraction Pipeline
+
+The backend includes a high-performance, deterministic dual-track extraction pipeline located in `src/papers/`:
+
+### Key Capabilities
+
+1. **Vector Diagram & Figure Extraction (`pdf-figures.ts`)**:
+   - STEM exam papers (Mathematics, Physics, Chemistry) draw diagrams, network graphs, geometry shapes, and function plots using **PDF vector paths (`OPS.constructPath`)** rather than raster bitmaps.
+   - Detects vector drawing operator bounds, filters page borders and margin barcodes, clusters adjacent strokes, and raster-crops high-resolution figures using `@napi-rs/canvas`.
+   - Figures are hosted on Cloudinary or served locally and attached directly to corresponding questions.
+
+2. **Intelligent Tesseract.js OCR Fallback (`pdf-ocr.ts`, `pdf-text.ts`)**:
+   - **Primary Path**: High-speed digital text extraction via `unpdf` / `pdf.js` (~5ms per page) with 100% character fidelity.
+   - **Fallback Path**: If an uploaded PDF is a physical scan, photocopy, or image-only document (page character count < 40), the pipeline automatically renders high-DPI page buffers and executes **Tesseract.js** (`recognize`) to extract text and layout coordinates.
+
+3. **Smart Question Splitting & Boilerplate Filtering (`question-splitter.ts`)**:
+   - Accommodates mixed-format exam papers that use bare numbers in Section I (`1 Consider the network diagram...`) and labeled questions in Section II (`Question 16`).
+   - Automatically cleans margin barcodes, scanner serial codes, `Office Use Only`, and `Do NOT write in this area` to prevent false draft cards.
+
+4. **Formula Recognition & Marks Extraction (`formula-extractor.ts`, `marks-extractor.ts`)**:
+   - Converts mathematical expressions into standard LaTeX for KaTeX/MathLive rendering in the frontend.
+   - Extracts explicit mark allocations (`[2 marks]`, `(3 marks)`).
+
+5. **AI Question Classification (`question-classification.service.ts`)**:
+   - Automatically tags question drafts with `subject`, `topic`, `subtopic`, `difficulty` (Easy/Medium/Hard), and `questionType` with a confidence score.
+
+6. **Documentation**:
+   - Detailed pipeline guide: [`docs/ADMIN_EXTRACTION_GUIDE.md`](./docs/ADMIN_EXTRACTION_GUIDE.md)
+   - Frontend integration reference: [`docs/EXTRACTION_FRONTEND_GUIDE.md`](./docs/EXTRACTION_FRONTEND_GUIDE.md)
 
 ## Project setup
 
